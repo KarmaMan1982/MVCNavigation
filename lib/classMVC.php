@@ -75,7 +75,7 @@ class View {
         $this->navigation .= $tabs;
         $this->navigation .= $content;
         $this->navigation .= '</div>';
-        $this->navigation .= '<script type="text/javascript" language="JavaScript"> $( "#'.$navigationID.'" ).tabs(); $("#basic_example_1").datetimepicker(); </script>';
+        $this->navigation .= '<script type="text/javascript" language="JavaScript"> $( "#'.$navigationID.'" ).tabs(); </script>';
     }
     public function output() {
         #$main = '<h1>' . $this->model->text .'</h1>';
