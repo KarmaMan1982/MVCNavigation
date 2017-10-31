@@ -8,7 +8,7 @@ class Model {
         $this->navigation = array(
             array(
                 'id' => 'pageWorkingHours',
-                'title' => 'Betriebsstunden Zählerstand',
+                'title' => 'Betriebsstunden Z&auml;hlerstand',
                 'content' => $this->loadPage('pageWorkingHours')
             ),
             array(
@@ -28,7 +28,7 @@ class Model {
             ),
             array(
                 'id' => 'pageOldAlerts',
-                'title' => 'alte Störungen auslesen',
+                'title' => 'alte St&ouml;rungen auslesen',
                 'content' => $this->loadPage('pageOldAlerts')
             ),
             array(
