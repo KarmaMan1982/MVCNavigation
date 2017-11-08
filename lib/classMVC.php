@@ -12,9 +12,9 @@ class Model {
                 'content' => $this->loadPage('pageWorkingHours')
             ),
             array(
-                'id' => 'pageManual',
-                'title' => 'Handbetreib Funktion',
-                'content' => $this->loadPage('pageManual')
+                'id' => 'pageReadValues',
+                'title' => 'Werte auslesen',
+                'content' => $this->loadPage('pageReadValues')
             ),
             array(
                 'id' => 'pageDateClock',
@@ -47,7 +47,7 @@ class Model {
         ob_start();
         include './pages/'.$Page.'.php';
         $globalContent = ob_get_clean();
-        $globalContent .= 'Test: '.$Page;
+        #$globalContent .= 'Test: '.$Page;
         return $globalContent;
     }
     public function getNavigation(){
@@ -57,10 +57,17 @@ class Model {
 
 class View {
     private $model;
+    private $header;
     private $navigation;
+    private $softwareType;
     public function __construct(Model $model) {
         $this->model = $model;
+        $this->softwareType='premium';
         $this->createNavigation("testtabs");
+        $this->createHeader();
+    }
+    private function createHeader(){
+        $this->header = '<div class="klaroHeader"><div class="klaroTitle"><span class="firstLetters">KL</span><span class="klaroType">'.$this->softwareType.'</span></div><img class="klaroLogo" src="./img/KLARO-Logo.png"></div>';
     }
     private function createNavigation($navigationID){
         $tabs = '<ul>';
@@ -77,10 +84,14 @@ class View {
         $this->navigation .= '</div>';
         $this->navigation .= '<script type="text/javascript" language="JavaScript"> $( "#'.$navigationID.'" ).tabs(); </script>';
     }
+    public function setSoftwareType($type){
+        $this->softwareType = $type;
+    }
     public function output() {
         #$main = '<h1>' . $this->model->text .'</h1>';
         #$main .= '<a href="index.php?action=textclicked">' . $this->model->text . '</a>';
-        $main = $this->navigation;
+        $main = $this->header;
+        $main .= $this->navigation;
         return $main;
     }
 }
