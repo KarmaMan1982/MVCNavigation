@@ -2,6 +2,15 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/inetpub/wwwroot/mvc/pages/pageReadValues.php</file>
+            <file>file:/C:/inetpub/wwwroot/mvc/pages/pageWorkingHours.php</file>
+            <file>file:/C:/inetpub/wwwroot/mvc/scripts/updateValues.php</file>
+            <file>file:/C:/inetpub/wwwroot/mvc/pages/pageDateClock.php</file>
+            <file>file:/C:/inetpub/wwwroot/mvc/lib/classUpdateController.php</file>
+            <file>file:/C:/inetpub/wwwroot/mvc/style/header.css</file>
+            <file>file:/C:/inetpub/wwwroot/mvc/lib/classMVC.php</file>
+            <file>file:/C:/inetpub/wwwroot/mvc/index.php</file>
+        </group>
     </open-files>
 </project-private>
