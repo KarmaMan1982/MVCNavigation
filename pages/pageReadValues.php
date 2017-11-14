@@ -26,14 +26,14 @@
     
     
     
-.column{  
+.columnReadValues{  
     width:49%;  
     margin-right:.5%;  
     min-height:300px;  
     background:#fff;  
     float:left;  
 }  
-.column .dragbox{  
+.columnReadValues .dragbox{  
     margin:5px 2px  20px;  
     background:#fff;  
     position:relative;  
@@ -41,7 +41,7 @@
     -moz-border-radius:5px;  
     -webkit-border-radius:5px;  
 }  
-.column .dragbox h2{  
+.columnReadValues .dragbox h2{  
     margin:0;  
     font-size:12px;  
     padding:5px;  
@@ -56,7 +56,7 @@
     min-height:100px; margin:5px;  
     font-family:'Lucida Grande', Verdana; font-size:0.8em; line-height:1.5em;  
 }  
-.column  .placeholder{  
+.columnReadValues  .placeholder{  
     background: #f0f0f0;  
     border:1px dashed #ddd;  
 }  
@@ -94,7 +94,7 @@
     </tbody>    
 </table>
 -->
-<div class="column" id="column1">  
+<div class="columnReadValues" id="columnReadValues1">  
     <div class="dragbox" id="item1" >  
         <h2>Motor-Stauts <?php createUpdateButton('btUpdateMotor'); ?></h2>  
         <div class="dragbox-content" >  
@@ -125,7 +125,7 @@
         </div>  
     </div>
 </div>  
-<div class="column" id="column2" >  
+<div class="columnReadValues" id="columnReadValues2" >  
     <div class="dragbox" id="item4" >  
         <h2>Sensoren <?php createUpdateButton('btUpdateSensor'); ?></h2>  
         <div class="dragbox-content" >  
@@ -143,8 +143,8 @@
 
 
 <script type="text/javascript" language="JavaScript">
-    $('.column').sortable({  
-        connectWith: '.column',  
+    $('.columnReadValues').sortable({  
+        connectWith: '.columnReadValues',  
         handle: 'h2',  
         cursor: 'move',  
         placeholder: 'placeholder',  

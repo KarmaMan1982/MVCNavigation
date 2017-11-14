@@ -2,53 +2,74 @@
 class UpdateController {
     private $data;
     private $dataConverted;
+    private $configHolidayFile;
     public function __construct($data) {
         $this->data = $data;
+        $this->configHolidayFile='../config/Holiday.json';
     }
-    private function receiveTimeFromServer($timeServer,$socket){
-        $fp = fsockopen($timeserver,$socket,$err,$errstr,5) or $fp = fsockopen($timeserver,123,$err,$errstr,5) or $err = "FSOCKOPEN FAILED";
-        if ($fp) {
-            fputs($fp,"\n");
-            $timevalue = fread($fp,49);
-            fclose($fp); // close the connection
+    private function receiveTimeFromServer(){
+    $ret = array();
+    $waste = array("jsont( ", " ) ", ")");
+    $good = array("", "", "");
+
+    $newphrase = str_replace($waste, $good, file_get_contents("http://ntp-a1.nict.go.jp/cgi-bin/jsont"));
+    $timeFromServer=json_decode($newphrase);
+    $serverTime = new DateTime();
+    $serverTime->setTimestamp((int)$timeFromServer->st);
+    $statusUNIXTime = new DateTime();
+    $statusMCTime = new DateTime();
+    $intervallTest = new DateInterval('PT10H30S');
+    $statusMCTime->add($intervallTest);
+    
+    $ret['statusINTERNETTime']=$serverTime->format('H:i:s d.m.Y');
+    $ret['statusUNIXTime']=$statusUNIXTime->format('H:i:s d.m.Y');
+    $ret['statusMCTime']=$statusMCTime->format('H:i:s d.m.Y');
+    return($ret);        
+    }
+    private function saveHolidayStart($date){
+        if (file_exists($this->configHolidayFile)){
+            $configField = json_decode(file_get_contents($this->configHolidayFile));
+            $configField->startHoliday = $date;
         } else {
-            $timevalue = " ";
+            $configField = array();
+            $configField['startHoliday']=$date;
         }
-        $ret = array();
-
-          $ret['success']=false;
-          $ret['serverName'] = $timeserver;
-          $ret['serverText'] = $timevalue;
-          $ret['utcTime'] = '';  
-          $ret['acstTime'] = '';
-          $ret['errorCode'] = $err;     # error code
-          $ret['errorText'] = $errstr;  # error text
-
-          if($timevalue != " "){
-            $timeElements = explode(" ",$timevalue);
-            #var_dump($timeElements);
-            $utc_date = DateTime::createFromFormat(
-              'Y-m-d H:i:s',
-              $timeElements[1].' '.$timeElements[2],
-              new DateTimeZone('UTC')
-            );
-              $acst_date = clone $utc_date; // we don't want PHP's default pass object by reference here
-              $acst_date->setTimeZone(new DateTimeZone('Europe/Berlin'));
-
-              #echo 'UTC:  ' . $utc_date->format('H:i:s d.m.Y') . '<br>';  // UTC:  2011-04-27 2:45 AM
-              #echo 'ACST: ' . $acst_date->format('H:i:s d.m.Y') . '<br>'; // ACST: 2011-04-27 12:15 PM  
-
-
-            $ret['success']=true;
-            $ret['serverName'] = $timeserver;
-            $ret['serverText'] = $timevalue;
-            $ret['utcTime'] = $utc_date->format('H:i:s d.m.Y');  
-            $ret['acstTime'] = $acst_date->format('H:i:s d.m.Y');
-            $ret['errorCode'] = $err;     # error code
-            $ret['errorText'] = $errstr;  # error text
-          }
-          return($ret);        
+            
+        file_put_contents($this->configHolidayFile, json_encode($configField));
     }
+    private function saveHolidayStop($date){
+        if (file_exists($this->configHolidayFile)){
+            $configField = json_decode(file_get_contents($this->configHolidayFile));
+            $configField->stopHoliday = $date;
+        } else {
+            $configField = array();
+            $configField['stopHoliday']=$date;
+        }
+            
+        file_put_contents($this->configHolidayFile, json_encode($configField));
+    }    
+    private function loadHolidayStart(){
+        if (file_exists($this->configHolidayFile)){
+            $configField = json_decode(file_get_contents($this->configHolidayFile));
+        } else {
+            $configField = (object) [
+                'startHoliday' => ''
+            ];
+        }
+        if(isset($configField->startHoliday)) { return $configField->startHoliday; }
+        else { return ''; }
+    }
+    private function loadHolidayStop(){
+        if (file_exists($this->configHolidayFile)){
+            $configField = json_decode(file_get_contents($this->configHolidayFile));
+        } else {
+            $configField = (object) [
+                'stopHoliday' => ''
+            ];
+        }
+        if(isset($configField->stopHoliday)) { return $configField->stopHoliday; }
+        else { return ''; }
+    }      
     public function btUpdateMotor() {
         #var_dump($this->data);
         $Motoren = array();
@@ -117,9 +138,29 @@ class UpdateController {
         }
         $this->dataConverted = json_encode($Inputs);
     }
+    public function btSetStartHoliday(){
+        $this->saveHolidayStart($this->data['startHoliday']);
+        $configField = array();
+        $configField['startHoliday']=$this->loadHolidayStart();
+        $configField['stopHoliday']=$this->loadHolidayStop();
+        $this->dataConverted = json_encode($configField);        
+    }
+    public function btSetStopHoliday(){
+        $this->saveHolidayStop($this->data['stopHoliday']);
+        $configField = array();
+        $configField['startHoliday']=$this->loadHolidayStart();
+        $configField['stopHoliday']=$this->loadHolidayStop();
+        $this->dataConverted = json_encode($configField);        
+    }
     public function tmUpdateTime(){
-        $server='time.nist.gov';
-        $serverTime = $this->receiveTimeFromServer($server,13);
+        $serverTime = $this->receiveTimeFromServer();
+        $this->dataConverted = json_encode($serverTime);
+    }
+    public function tmUpdateHoliday(){
+        $configField = array();
+        $configField['startHoliday']=$this->loadHolidayStart();
+        $configField['stopHoliday']=$this->loadHolidayStop();
+        $this->dataConverted = json_encode($configField);
     }
     public function Output(){
         echo $this->dataConverted;
