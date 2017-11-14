@@ -4,7 +4,16 @@
 }    
 .infoName{
   font-variant: small-caps;
-}   
+}
+.validateSuccess, .validateError{
+    font-weight: bold;
+}
+.validateSuccessField, .validateSuccess{
+    color: #45930b;
+}
+.validateErrorField, .validateError{
+    color: #9e0505;
+}
 .columnHoliday{  
     width:49%;  
     margin-right:.5%;  
@@ -72,6 +81,7 @@
                 <tbody>
                     <tr><td class="infoName">Ferien Start einstellen</td><td><input name="tbStartHoliday" id="tbStartHoliday" type="text"></td><td><button id="btSetStartHoliday" class="ui-button ui-widget ui-corner-all">Startpunkt festlegen</button></td></tr>
                     <tr><td class="infoName">Ferien Stop einstellen</td><td><input name="tbStopHoliday" id="tbStopHoliday" type="text"></td><td><button id="btSetStopHoliday" class="ui-button ui-widget ui-corner-all">Endpunkt festlegen</button></td></tr>
+                    <tr><td id="validationInfo" colspan="3"></td></tr>
                 </tbody>
             </table>   
         </div>  
@@ -143,9 +153,12 @@
     },1000);
     
     $('#btSetStartHoliday').click(function(){
+        $('#tbStartHoliday').removeAttr('class');
+        $('#tbStopHoliday').removeAttr('class');
         var FerienStatus = {
             startHoliday: $('#tbStartHoliday').val(),
-            stopHoliday: $('#tbStopHoliday').val()
+            stopHoliday: $('#tbStopHoliday').val(),
+            validationField: 'tbStartHoliday'
         };        
         $.post('./scripts/updateValues.php',{
             method: 'btSetStartHoliday',
@@ -153,12 +166,18 @@
         }, function(data){
             $('#statusHolidayStart').html(data['startHoliday']);
             $('#statusHolidayStop').html(data['stopHoliday']);
+            $('#validationInfo').html(data['validationText']);
+            $('#validationInfo').attr('class',data['validationClass']);
+            $('#'+data['validationField']).attr('class',data['validationFieldClass']);
        },'json');        
     });
     $('#btSetStopHoliday').click(function(){
+        $('#tbStartHoliday').removeAttr('class');
+        $('#tbStopHoliday').removeAttr('class');       
         var FerienStatus = {
             startHoliday: $('#tbStartHoliday').val(),
-            stopHoliday: $('#tbStopHoliday').val()
+            stopHoliday: $('#tbStopHoliday').val(),
+            validationField: 'tbStopHoliday'
         };        
         $.post('./scripts/updateValues.php',{
             method: 'btSetStopHoliday',
@@ -166,6 +185,9 @@
         }, function(data){
             $('#statusHolidayStart').html(data['startHoliday']);
             $('#statusHolidayStop').html(data['stopHoliday']);
+            $('#validationInfo').html(data['validationText']);
+            $('#validationInfo').attr('class',data['validationClass']);
+            $('#'+data['validationField']).attr('class',data['validationFieldClass']);            
        },'json');        
     });    
 </script>

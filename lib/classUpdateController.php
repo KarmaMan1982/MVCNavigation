@@ -3,9 +3,11 @@ class UpdateController {
     private $data;
     private $dataConverted;
     private $configHolidayFile;
+    private $saveHolidayState;
     public function __construct($data) {
         $this->data = $data;
         $this->configHolidayFile='../config/Holiday.json';
+        $this->saveHolidayState = true;
     }
     private function receiveTimeFromServer(){
     $ret = array();
@@ -25,6 +27,30 @@ class UpdateController {
     $ret['statusUNIXTime']=$statusUNIXTime->format('H:i:s d.m.Y');
     $ret['statusMCTime']=$statusMCTime->format('H:i:s d.m.Y');
     return($ret);        
+    }
+    private function validateHoliday(){
+        $StartDatum = new DateTime($this->data['startHoliday']);
+        $StopDatum = new DateTime($this->data['stopHoliday']);
+        $startStamp = $StartDatum->getTimestamp();
+        $stopStamp = $StopDatum->getTimestamp();
+        $stampDifferenz = $stopStamp - $startStamp;
+        $tageDifferenz = floor($stampDifferenz/86400);
+        $validZyklus = 90;
+        if($tageDifferenz <= $validZyklus && $tageDifferenz >= 0){
+            $this->data['validationText']='Der eingestellte Ferien-Zyklus beträgt '.$tageDifferenz.' Tage!';
+            $this->data['validationClass']='validateSuccess';
+            $this->saveHolidayState = true;
+        } else if ($tageDifferenz < 0) {
+            $tageDifferenz = $tageDifferenz * -1;
+            $this->data['validationText']='Der ausgewählte Ferien Stop liegt '.$tageDifferenz.' Tage vor dem Ferien Start!';
+            $this->data['validationClass']='validateError';
+            $this->saveHolidayState = false;            
+        } else {
+            $this->data['validationText']='Der ausgewählte Ferien-Zyklus beträgt '.$tageDifferenz.' Tage und ist länger als die zulässigen '.$validZyklus.' Tage!';
+            $this->data['validationClass']='validateError';
+            $this->saveHolidayState = false;
+        }
+        $ValidationField = $this->data['validationField'];
     }
     private function saveHolidayStart($date){
         if (file_exists($this->configHolidayFile)){
@@ -139,17 +165,47 @@ class UpdateController {
         $this->dataConverted = json_encode($Inputs);
     }
     public function btSetStartHoliday(){
-        $this->saveHolidayStart($this->data['startHoliday']);
-        $configField = array();
-        $configField['startHoliday']=$this->loadHolidayStart();
-        $configField['stopHoliday']=$this->loadHolidayStop();
+        $this->validateHoliday();
+        if($this->saveHolidayState == true){
+            $this->saveHolidayStart($this->data['startHoliday']);
+            $configField = array();
+            $configField['startHoliday']=$this->loadHolidayStart();
+            $configField['stopHoliday']=$this->loadHolidayStop();
+            $configField['validationText']=$this->data['validationText'];
+            $configField['validationClass']=$this->data['validationClass'];
+            $configField['validationField']=$this->data['validationField'];
+            $configField['validationFieldClass']='validateSuccessField';            
+        } else {
+            $configField = array();
+            $configField['startHoliday']=$this->data['startHoliday'];
+            $configField['stopHoliday']=$this->data['stopHoliday'];
+            $configField['validationText']=$this->data['validationText'];
+            $configField['validationClass']=$this->data['validationClass'];
+            $configField['validationField']=$this->data['validationField'];
+            $configField['validationFieldClass']='validateErrorField';                        
+        }
         $this->dataConverted = json_encode($configField);        
     }
     public function btSetStopHoliday(){
-        $this->saveHolidayStop($this->data['stopHoliday']);
-        $configField = array();
-        $configField['startHoliday']=$this->loadHolidayStart();
-        $configField['stopHoliday']=$this->loadHolidayStop();
+        $this->validateHoliday();
+        if($this->saveHolidayState == true){
+            $this->saveHolidayStop($this->data['stopHoliday']);
+            $configField = array();
+            $configField['startHoliday']=$this->loadHolidayStart();
+            $configField['stopHoliday']=$this->loadHolidayStop();
+            $configField['validationText']=$this->data['validationText'];
+            $configField['validationClass']=$this->data['validationClass'];
+            $configField['validationField']=$this->data['validationField'];
+            $configField['validationFieldClass']='validateSuccessField';             
+        } else {
+            $configField = array();
+            $configField['startHoliday']=$this->data['startHoliday'];
+            $configField['stopHoliday']=$this->data['stopHoliday'];
+            $configField['validationText']=$this->data['validationText'];
+            $configField['validationClass']=$this->data['validationClass'];
+            $configField['validationField']=$this->data['validationField'];
+            $configField['validationFieldClass']='validateErrorField';             
+        }
         $this->dataConverted = json_encode($configField);        
     }
     public function tmUpdateTime(){
