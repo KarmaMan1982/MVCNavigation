@@ -28,7 +28,7 @@ class Model {
             ),
             array(
                 'id' => 'pageOldAlerts',
-                'title' => 'alte Störungen auslesen',
+                'title' => 'Protokoll',
                 'content' => $this->loadPage('pageOldAlerts')
             ),
             array(
