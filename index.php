@@ -9,6 +9,10 @@
         <link href="lib/switchBox/jquerysctipttop.css" rel="stylesheet" type="text/css"/>
         <link href="lib/switchBox/bootstrap.min.css" rel="stylesheet" type="text/css"/>        
         <link href="style/header.css" rel="stylesheet" type="text/css"/>
+        <!--
+        <link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel='stylesheet' />
+        <link href="lib/uploader/css/style.css" rel="stylesheet" />
+        -->
         <script src="lib/jquery-ui-1.12.1/external/jquery/jquery.js" type="text/javascript"></script>
         <script src="lib/jquery-ui-1.12.1/jquery-ui.js" type="text/javascript"></script>
         <script src="lib/jquery-ui-timepicker-addon.js" type="text/javascript"></script>

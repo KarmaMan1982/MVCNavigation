@@ -16,7 +16,7 @@
         width: 49%;
     }
     #columnSettings3{
-        width: 49%;
+        width: 98%;
     }    
     .columnSettings{  
         margin-right:.5%;  
@@ -128,44 +128,72 @@
 </div>
 <div class="columnSettings" id="columnSettings2">  
     <div class="dragbox" id="item1" >  
-        <h2>Alarme</h2>  
+        <h2>SIM-Karte</h2>  
         <div class="dragbox-content" >  
             <table>
-                <thead>
-                    <tr>
-                        <th>Text</th>      <th>Datum</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <tr><td class="infoName">Stromausfall</td><td>12:34:34 15.11.2017</td></tr>
-                <tr><td class="infoName">UV Störung</td><td>12:34:34 15.11.2017</td></tr>
-                <tr><td class="infoName">Warnung Überstau</td><td>12:34:34 15.11.2017</td></tr>
-                <tr><td class="infoName">Verstopfung</td><td>12:34:34 15.11.2017</td></tr>
-                </tbody>
-            </table>   
+            <form id="frmSIMCard" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+            <table class="controlgroup">
+                    <tbody>
+                    <tr><td class="infoName">Benutzername</td><td><input type="text" name="tbSIMUser" id="tbSIMUser"></td></tr>
+                    <tr><td class="infoName">Passwort</td><td><input type="text" name="tbSIMPassword" id="tbSIMPassword"></td></tr>
+                    <tr><td class="infoName">Access Point Name</td><td><input type="text" name="tbSIMAPN" id="tbSIMAPN"></td></tr>
+                    <tr><td class="infoName">IP-Addresse</td><td><input type="text" name="tbSIMIP" id="tbSIMIP"></td></tr>
+                    <tr><td class="infoName">Port</td><td><input type="text" name="tbSIMPort" id="tbSIMPort"></td></tr>                                   
+                    <tr><td colspan="2"><input type="submit" name="btSIMCard" id="btSIMCard" value="Speichern" class="ui-button ui-widget ui-corner-all"></td></tr>
+                    </tbody>
+            </table>         
+            </form>
         </div>  
     </div>  
 </div>
 <div class="columnSettings" id="columnSettings3">  
     <div class="dragbox" id="item1" >  
-        <h2>Archivierte Störungen</h2>  
-        <div class="dragbox-content" >  
-            <table>
-            <thead>
-                    <tr>
-                        <th>Text</th>      <th>Datum</th>       <th>Quitiert</th>
+        <h2>Update + Sprache</h2>  
+        <div class="dragbox-content" >
+        <table width="100%">
+            <tr><td width="50%">
+            <table class="controlgroup" width="100%">
+                    <tbody>
+                    <tr><td class="infoName">Mikrocontroller</td>
+                        <td>
+                            <form id="uploadMC" method="post" action="./lib/uploader/upload.php" enctype="multipart/form-data">
+                            <input type="file" name="upl" class="ui-button ui-widget ui-corner-all"/>
+                            </form>
+                        </td>
                     </tr>
-                </thead>            
-                <tbody>
-                <tr><td class="infoError">Störung 1</td><td>12:34:34 15.11.2017</td><td>13:34:34 15.11.2017</td></tr>
-                <tr><td class="infoError">Störung 2</td><td>12:34:34 15.11.2017</td><td>13:34:34 15.11.2017</td></tr>
-                <tr><td class="infoError">Störung 3</td><td>12:34:34 15.11.2017</td><td>13:34:34 15.11.2017</td></tr>
-                <tr><td class="infoError">Störung 4</td><td>12:34:34 15.11.2017</td><td>13:34:34 15.11.2017</td></tr>
-                </tbody>
-            </table>   
+                    <tr><td class="infoName">Kommunikationscontroller</td>
+                        <td>
+                            <form id="uploadCC" method="post" action="./lib/uploader/upload.php" enctype="multipart/form-data">
+                            <input type="file" name="upl" class="ui-button ui-widget ui-corner-all"/>
+                            </form>
+                        </td>
+                    </tr>
+                    </tbody>
+            </table> 
+            </td><td width="50%">
+
+            </td></tr>
+        </table>
+
         </div>  
     </div>  
 </div>
+		
+<!-- JavaScript Includes -->
+<!--
+<script src="lib/uploader/js/jquery.knob.js"></script>
+-->
+<!-- jQuery File Upload Dependencies -->
+<!--
+<script src="lib/uploader/js/jquery.ui.widget.js"></script>
+<script src="lib/uploader/js/jquery.iframe-transport.js"></script>
+<script src="lib/uploader/js/jquery.fileupload.js"></script>
+-->
+
+<!-- Our main JS file -->
+<!--
+<script src="lib/uploader/js/script.js"></script>
+-->
 
 <script type="text/javascript" language="JavaScript">
         function toggleStationForm(Station){
