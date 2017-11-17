@@ -148,7 +148,7 @@
 </div>
 <div class="columnSettings" id="columnSettings3">  
     <div class="dragbox" id="item1" >  
-        <h2>Update + Sprache</h2>  
+        <h2>Update, Sprache und Kalibrierung</h2>  
         <div class="dragbox-content" >
         <table width="100%">
             <tr><td width="50%">
@@ -158,6 +158,7 @@
                         <td>
                             <form id="uploadMC" method="post" action="./lib/uploader/upload.php" enctype="multipart/form-data">
                             <input type="file" name="upl" class="ui-button ui-widget ui-corner-all"/>
+                            <input type="submit" name="btUploadMC" id="btUploadMC" value="Hochladen">
                             </form>
                         </td>
                     </tr>
@@ -165,13 +166,66 @@
                         <td>
                             <form id="uploadCC" method="post" action="./lib/uploader/upload.php" enctype="multipart/form-data">
                             <input type="file" name="upl" class="ui-button ui-widget ui-corner-all"/>
+                            <input type="submit" name="btUploadCC" id="btUploadCC" value="Hochladen">
                             </form>
                         </td>
                     </tr>
                     </tbody>
             </table> 
             </td><td width="50%">
-
+            <table class="controlgroup" width="100%">
+                    <tbody>
+                    <tr><td class="infoName">Sprache</td>
+                        <td>
+                            <form id="setLanguageMC" method="post" action="" enctype="multipart/form-data">
+                            <select id="languageMC">
+                                <option>Deutsch</option>
+                                <option>Englisch</option>
+                                <option>Französisch</option>
+                                <option>Italienisch</option>
+                                <option>Norwegisch</option>
+                                <option>Polnisch</option>
+                                <option>Schwedisch</option>
+                                <option>Spanisch</option>
+                                <option>Slowenisch</option>
+                                <option>Tschechisch</option>                                                                
+                            </select>
+                            <input type="submit" name="btLanguageMC" id="btLanguageMC" value="Setzen">
+                            </form>
+                        </td>
+                        <td>
+                        <form id="startKalibrierungWork" method="post" action="" enctype="multipart/form-data">
+                            <input type="hidden" name="startKalibrierung" value="Work"><input type="submit" id="btStartKalibrierungWork" name="btStartKalibrierungWork" value="Starte Werksseitige Kalibrierung">
+                        </form>
+                        </td>
+                    </tr>
+                    <tr><td class="infoName">Sprache</td>
+                        <td>
+                            <form id="setLanguageCC" method="post" action="" enctype="multipart/form-data">
+                            <select id="languageCC">
+                                <option>Deutsch</option>
+                                <option>Englisch</option>
+                                <option>Französisch</option>
+                                <option>Italienisch</option>
+                                <option>Norwegisch</option>
+                                <option>Polnisch</option>
+                                <option>Schwedisch</option>
+                                <option>Spanisch</option>
+                                <option>Slowenisch</option>
+                                <option>Tschechisch</option>  
+                            </select>
+                            <input type="submit" name="btLanguageCC" id="btLanguageCC" value="Setzen">
+                            </form>
+                        </td>
+                        <td>
+                        <form id="startKalibrierungService" method="post" action="" enctype="multipart/form-data">
+                            <input type="hidden" name="startKalibrierung" value="Service"><input type="submit" id="btStartKalibrierungService" name="btStartKalibrierungService" value="Starte Serviceseitige Kalibrierung">
+                        </form>
+                        </td>
+                        
+                    </tr>
+                    </tbody>
+            </table>            
             </td></tr>
         </table>
 
