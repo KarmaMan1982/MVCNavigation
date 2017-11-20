@@ -18,12 +18,12 @@ class Model {
             ),
             array(
                 'id' => 'pageDateClock',
-                'title' => 'Datum / Uhrzeit anzeigen und einstellen',
+                'title' => 'Datum / Uhrzeit',
                 'content' => $this->loadPage('pageDateClock')
             ),
             array(
                 'id' => 'pageHoliday',
-                'title' => 'Feriendatum einstellen',
+                'title' => 'Feriendatum',
                 'content' => $this->loadPage('pageHoliday')
             ),
             array(
@@ -33,14 +33,14 @@ class Model {
             ),
             array(
                 'id' => 'pageSettings',
-                'title' => 'Einstellungen anzeigen',
+                'title' => 'Einstellungen',
                 'content' => $this->loadPage('pageSettings')
-            ),
+            )/*,
             array(
                 'id' => 'pageActionCode',
                 'title' => 'Aktions-Code',
                 'content' => $this->loadPage('pageActionCode')
-            )             
+            )*/             
         );
     }
     private function loadPage($Page){

@@ -1,5 +1,6 @@
 <html>
     <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <title>KLARO Web-Dummy</title>
         <link href="lib/jquery-ui-themes-1.12.1/jquery-ui.css" rel="stylesheet" type="text/css"/>
         <link href="lib/jquery-ui-themes-1.12.1/jquery-ui.theme.css" rel="stylesheet" type="text/css"/>
