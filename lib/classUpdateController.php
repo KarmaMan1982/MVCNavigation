@@ -103,16 +103,16 @@ class UpdateController {
             $NewMotor = array();
             $NewMotor['Name'] = $Motor;
             switch ($Wert){
-                case 'Offen':
-                    $NewMotor['Wert'] = 'Geschlossen';
+                case loadString('pageReadValuesSMotorOpen'):
+                    $NewMotor['Wert'] = loadString('pageReadValuesSMotorClosed');
                     $NewMotor['Class'] = 'motorClose';                    
                 break;
-                case 'Geschlossen':
-                    $NewMotor['Wert'] = 'Offen';
+                case loadString('pageReadValuesSMotorClosed'):
+                    $NewMotor['Wert'] = loadString('pageReadValuesSMotorOpen');
                     $NewMotor['Class'] = 'motorOpen';                    
                 break;
                 default:
-                    $NewMotor['Wert'] = 'Undefiniert';
+                    $NewMotor['Wert'] = loadString('pageReadValuesSMotorUndefined');
                     $NewMotor['Class'] = 'motorUndefined';                    
                 break;
             }

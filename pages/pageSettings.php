@@ -173,6 +173,15 @@
                     </tbody>
             </table> 
             </td><td width="50%">
+            <?php
+                $languageRegister = array();
+                $languageBlock = json_decode(file_get_contents('./languageEditor/languages.json'));
+                foreach($languageBlock AS $Block => $Languages){
+                    foreach ($Languages AS $Language => $Element){
+                        if(!in_array($Language, $languageRegister)) { array_push($languageRegister, $Language); }
+                    }
+                }
+            ?>
             <table class="controlgroup" width="100%">
                     <tbody>
                     <tr><td class="infoName">Sprache</td>
@@ -201,18 +210,36 @@
                     </tr>
                     <tr><td class="infoName">Sprache</td>
                         <td>
-                            <form id="setLanguageCC" method="post" action="" enctype="multipart/form-data">
-                            <select id="languageCC">
-                                <option>Deutsch</option>
-                                <option>Englisch</option>
-                                <option>Französisch</option>
-                                <option>Italienisch</option>
-                                <option>Norwegisch</option>
-                                <option>Polnisch</option>
-                                <option>Schwedisch</option>
-                                <option>Spanisch</option>
-                                <option>Slowenisch</option>
-                                <option>Tschechisch</option>  
+                            <form id="setLanguageCC" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data">
+                            <select id="languageCC" name="languageCC">
+                            <?php
+                                $globalSettingsFile = './globalSettings.json';
+                                if(!file_exists($globalSettingsFile)){
+                                    if(isset($_REQUEST['languageCC'])){
+                                        $globalSettings = array(
+                                            'languageCC' => $_REQUEST['languageCC']
+                                        );                                        
+                                    } else {
+                                        $globalSettings = array(
+                                            'languageCC' => ''
+                                        );                                        
+                                    }
+                                    file_put_contents($globalSettingsFile, json_encode($globalSettings));
+                                } else {
+                                    $globalSettings = json_decode(file_get_contents($globalSettingsFile));
+                                    if(isset($_REQUEST['languageCC'])){
+                                        $globalSettings->languageCC = $_REQUEST['languageCC'];
+                                    } else {
+                                        if(!isset($globalSettings->languageCC)) { $globalSettings->languageCC = ''; }
+                                    }
+                                    file_put_contents($globalSettingsFile, json_encode($globalSettings));                                    
+                                    
+                                }
+                                foreach($languageRegister AS $Sprache){
+                                    if($globalSettings->languageCC == $Sprache){ $setSelected = ' selected '; } else { $setSelected = ''; }
+                                    echo '<option value="'.$Sprache.'"'.$setSelected.'>'.$Sprache.'</option>';
+                                }
+                            ?>
                             </select>
                             <input type="submit" name="btLanguageCC" id="btLanguageCC" value="Setzen">
                             </form>

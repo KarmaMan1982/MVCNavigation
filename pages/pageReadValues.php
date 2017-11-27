@@ -1,4 +1,5 @@
 <?php
+    require_once ('./lib/globalFunctions.php');
     function createUpdateButton($buttonID){
         echo '<span class="update"><a href="#" id="'.$buttonID.'"><img src="./img/refresh.png"></a></span>';
     }
@@ -96,14 +97,14 @@
 -->
 <div class="columnReadValues" id="columnReadValues1">  
     <div class="dragbox" id="item1" >  
-        <h2>Motor-Stauts <?php createUpdateButton('btUpdateMotor'); ?></h2>  
+        <h2><?php echo loadString('pageReadValuesHeaderMotorStatus'); ?> <?php createUpdateButton('btUpdateMotor'); ?></h2>  
         <div class="dragbox-content" >  
             <table>
                 <tbody>
-                    <tr><td class="infoName">Schrittmotor 1</td><td><span id="statusMotor1" class="motorOpen">Offen</span></td></tr>
-                    <tr><td class="infoName">Schrittmotor 2</td><td><span id="statusMotor2" class="motorClose">Geschlossen</span></td></tr>
-                    <tr><td class="infoName">Schrittmotor 3</td><td><span id="statusMotor3" class="motorOpen">Offen</span></td></tr>
-                    <tr><td class="infoName">Schrittmotor 4</td><td><span id="statusMotor4" class="motorClose">Geschlossen</span></td></tr>
+                    <tr><td class="infoName"><?php echo loadString('pageReadValuesSMotor'); ?> 1</td><td><span id="statusMotor1" class="motorOpen"><?php echo loadString('pageReadValuesSMotorOpen'); ?></span></td></tr>
+                    <tr><td class="infoName"><?php echo loadString('pageReadValuesSMotor'); ?> 2</td><td><span id="statusMotor2" class="motorClose"><?php echo loadString('pageReadValuesSMotorClosed'); ?></span></td></tr>
+                    <tr><td class="infoName"><?php echo loadString('pageReadValuesSMotor'); ?> 3</td><td><span id="statusMotor3" class="motorOpen"><?php echo loadString('pageReadValuesSMotorOpen'); ?></span></td></tr>
+                    <tr><td class="infoName"><?php echo loadString('pageReadValuesSMotor'); ?> 4</td><td><span id="statusMotor4" class="motorClose"><?php echo loadString('pageReadValuesSMotorClosed'); ?></span></td></tr>
                 </tbody>
             </table>   
         </div>  

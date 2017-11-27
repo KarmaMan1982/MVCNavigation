@@ -1,0 +1,24 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27.11.2017, 09:45:43
+    Author     : ebma
+*/
+.editField {
+    width: 100%;
+}
+input[type=text] {
+    border: none;
+}
+#tbNewElement {
+    background-color: #99ffe7;
+}
+.oddRow, .oddRow input[type=text] {
+    background-color: #d7e3f7;
+}
+.evenRow, .evenRow input[type=text]{
+    background-color: #f7e9a5;
+}

@@ -10,6 +10,7 @@
         <link href="../lib/switchBox/jquerysctipttop.css" rel="stylesheet" type="text/css"/>
         <link href="../lib/switchBox/bootstrap.min.css" rel="stylesheet" type="text/css"/>        
         <link href="../style/header.css" rel="stylesheet" type="text/css"/>
+        <link href="./style/index.css" rel="stylesheet" type="text/css"/>
         <!--
         <link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel='stylesheet' />
         <link href="lib/uploader/css/style.css" rel="stylesheet" />
@@ -36,7 +37,7 @@ foreach($languageBlock AS $Block => $Languages){
 #var_dump($languageRegister);
 #$jsonLanguages = json_encode($languageBlock);
 #if(isset($_REQUEST['editField'])){ var_dump($_REQUEST['editField']); }
-var_dump($_REQUEST);
+#var_dump($_REQUEST);
 ?>        
         <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>" id="frmLanguages">
         <table>
@@ -52,27 +53,41 @@ var_dump($_REQUEST);
             </thead>
             <tbody>
                   <?php
-                  
+                    $row=0;
                     foreach($languageBlock AS $Block => $Languages){
-                        echo '<tr>';
+                        if($row % 2 == 0) { $rowClass='oddRow'; } else { $rowClass='evenRow'; }
+                        echo '<tr class="'.$rowClass.'">';
                         echo '<td>'.$Block.'</td>';
                         foreach ($languageRegister AS $Sprache){
-                            $editField = '<input type="text" name="editField['.$Block.']['.$Sprache.']" value="'.$Languages->$Sprache.'">';
+                            $editField = '<input type="text" class="editField" name="editField['.$Block.']['.$Sprache.']" value="'.$Languages->$Sprache.'">';
                             #echo '<td>'.$Languages->$Sprache.'</td>';
                             echo '<td>'.$editField.'</td>';
                         }
                         echo '</tr>';
-                    }                  
+                        $row++;
+                    }
+                    
+                    if(isset($_REQUEST['tbNewElement']) && $_REQUEST['tbNewElement'] != ""){
+                        if($row % 2 == 0) { $rowClass='oddRow'; } else { $rowClass='evenRow'; }
+                        echo '<tr class="'.$rowClass.'">';
+                        echo '<td>'.$_REQUEST['tbNewElement'].'</td>';
+                        foreach ($languageRegister AS $Sprache){
+                            $editField = '<input type="text" class="editField" name="editField['.$_REQUEST['tbNewElement'].']['.$Sprache.']" value="">';
+                            #echo '<td>'.$Languages->$Sprache.'</td>';
+                            echo '<td>'.$editField.'</td>';
+                        }
+                        echo '</tr>';                        
+                    }
                   
                   ?>
             </tbody>
             <tfoot>
                 <tr>
                   <td colspan="<?php echo sizeof($languageRegister) + 1; ?>">
-                      <input type="submit" name="btSave" id="btSave" value="Texte speichern!">
+                      <input type="submit" name="btSave" id="btSave" value="Texte speichern">
                       <label for="tbNewElement">Neues Element hinzufügen:</label>
                       <input type="text" name="tbNewElement" id="tbNewElement">
-                      <input type="submit" name="btSave" id="btSaveNewElement" value="Element speichern!">
+                      <input type="submit" name="btSave" id="btSaveNewElement" value="Elemente erweitern">
                   </td>
                 </tr>
             </tfoot>

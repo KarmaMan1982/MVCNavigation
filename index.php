@@ -1,3 +1,4 @@
+<?php if (isset($_REQUEST['btLanguageCC'])) { header("Refresh:0"); } ?>
 <html>
     <head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>

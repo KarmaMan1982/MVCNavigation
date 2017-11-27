@@ -1,6 +1,7 @@
 <?php
     $now   = new DateTime;
     $displayNow = $now->format('H:i:s d.m.Y');
+    require_once ('./lib/globalFunctions.php');
 ?>
 <style type="text/css">
     .no-close .ui-dialog-titlebar-close {
@@ -64,19 +65,19 @@
 </style>
 <div class="columnWorkingHours" id="columnWorkingHours1">  
     <div class="dragbox" id="item1" >  
-        <h2>Systemzeit-Informationen</h2>  
+        <h2><?php echo loadString('pageWorkingHourCountHeaderTimeInformation'); ?></h2>  
         <div class="dragbox-content" >  
             <table>
                 <tbody>
-                <tr><td class="infoName">Aktuelle Uhrzeit</td><td><?php echo $displayNow; ?></td></tr>
-                <tr><td class="infoName">Ventil 1</td><td>wahlweise Gesamt-Minuten oder umgerechnet in "Tage - Stunden:Minuten:Sekunden"</td></tr>
-                <tr><td class="infoName">Ventil 2</td><td>wahlweise Gesamt-Minuten oder umgerechnet in "Tage - Stunden:Minuten:Sekunden"</td></tr>
-                <tr><td class="infoName">Ventil 3</td><td>wahlweise Gesamt-Minuten oder umgerechnet in "Tage - Stunden:Minuten:Sekunden"</td></tr>
-                <tr><td class="infoName">Ventil 4</td><td>wahlweise Gesamt-Minuten oder umgerechnet in "Tage - Stunden:Minuten:Sekunden"</td></tr>
-                <tr><td class="infoName">Dosierpumpen (vormals Phosphat-Pumpen)</td><td>wahlweise Gesamt-Minuten oder umgerechnet in "Tage - Stunden:Minuten:Sekunden"</td></tr>
-                <tr><td class="infoName">UV-Lampe</td><td>wahlweise Gesamt-Minuten oder umgerechnet in "Tage - Stunden:Minuten:Sekunden"</td></tr>
-                <tr><td class="infoName">Arbeitsphase-Restzeit</td><td>wahlweise Gesamt-Minuten oder umgerechnet in "Tage - Stunden:Minuten:Sekunden"</td></tr>
-                <tr><td class="infoName">Aktueller Betriebsvorgang</td><td>Pumpen</td></tr>
+                <tr><td class="infoName"><?php echo loadString('pageWorkingHourCountDateTimeNow'); ?></td><td><?php echo $displayNow; ?></td></tr>
+                <tr><td class="infoName"><?php echo loadString('pageWorkingHourCountVentil'); ?> 1</td><td><?php echo loadString('pageWorkingHourCountTimeInformationText'); ?></td></tr>
+                <tr><td class="infoName"><?php echo loadString('pageWorkingHourCountVentil'); ?> 2</td><td><?php echo loadString('pageWorkingHourCountTimeInformationText'); ?></td></tr>
+                <tr><td class="infoName"><?php echo loadString('pageWorkingHourCountVentil'); ?> 3</td><td><?php echo loadString('pageWorkingHourCountTimeInformationText'); ?></td></tr>
+                <tr><td class="infoName"><?php echo loadString('pageWorkingHourCountVentil'); ?> 4</td><td><?php echo loadString('pageWorkingHourCountTimeInformationText'); ?></td></tr>
+                <tr><td class="infoName"><?php echo loadString('pageWorkingHourCountPump'); ?></td><td><?php echo loadString('pageWorkingHourCountTimeInformationText'); ?></td></tr>
+                <tr><td class="infoName"><?php echo loadString('pageWorkingHourCountUVLamp'); ?></td><td><?php echo loadString('pageWorkingHourCountTimeInformationText'); ?></td></tr>
+                <tr><td class="infoName"><?php echo loadString('pageWorkingHourCountWPT'); ?></td><td><?php echo loadString('pageWorkingHourCountTimeInformationText'); ?></td></tr>
+                <tr><td class="infoName"><?php echo loadString('pageWorkingHourCountCOP'); ?></td><td><?php echo loadString('pageWorkingHourCountCOPValue'); ?></td></tr>
                 </tbody>
             </table>   
         </div>  
@@ -84,14 +85,14 @@
 </div>
 <div class="columnWorkingHours" id="columnWorkingHours2">  
     <div class="dragbox" id="item1" >  
-        <h2>Geräte-Informationen</h2>  
+        <h2><?php echo loadString('pageWorkingHourCountHeaderDeviceInformation'); ?></h2>  
         <div class="dragbox-content" >  
             <table>
                 <tbody>
-                <tr><td class="infoName">Seriennummer Mikrocontroller</td><td>12345</td></tr>
-                <tr><td class="infoName">Seriennummer Kommunikationsmodul</td><td>12345</td></tr>
-                <tr><td class="infoName">Version Mikrocontroller</td><td>1.0</td></tr>
-                <tr><td class="infoName">Version Kommunikationsmodul</td><td>2.0</td></tr>
+                <tr><td class="infoName"><?php echo loadString('pageWorkingHourCountSerialMC'); ?></td><td>12345</td></tr>
+                <tr><td class="infoName"><?php echo loadString('pageWorkingHourCountSerialCC'); ?></td><td>12345</td></tr>
+                <tr><td class="infoName"><?php echo loadString('pageWorkingHourCountVersionMC'); ?></td><td>1.0</td></tr>
+                <tr><td class="infoName"><?php echo loadString('pageWorkingHourCountVersionCC'); ?></td><td>2.0</td></tr>
                 </tbody>
             </table>   
         </div>  
@@ -99,14 +100,14 @@
 </div>
 <div class="columnWorkingHours" id="columnWorkingHours3">  
     <div class="dragbox" id="item1" >  
-        <h2>Aktuelle Störungen</h2>  
+        <h2><?php echo loadString('pageWorkingHourCountHeaderCurrentDisorders'); ?></h2>  
         <div class="dragbox-content" >  
             <table>
                 <tbody>
-                <tr><td class="infoError">Störung 1</td><td><button id="btConfirmError1" class="ui-button ui-widget ui-corner-all">Zur Kenntnis genommen</button></td></tr>
-                <tr><td class="infoError">Störung 2</td><td><button id="btConfirmError2" class="ui-button ui-widget ui-corner-all">Zur Kenntnis genommen</button></td></tr>
-                <tr><td class="infoError">Störung 3</td><td><button id="btConfirmError3" class="ui-button ui-widget ui-corner-all">Zur Kenntnis genommen</button></td></tr>
-                <tr><td class="infoError">Störung 4</td><td><button id="btConfirmError4" class="ui-button ui-widget ui-corner-all">Zur Kenntnis genommen</button></td></tr>
+                <tr><td class="infoError"><?php echo loadString('pageWorkingHourCountDisorder'); ?> 1</td><td><button id="btConfirmError1" class="ui-button ui-widget ui-corner-all"><?php echo loadString('pageWorkingHourCountNoted'); ?></button></td></tr>
+                <tr><td class="infoError"><?php echo loadString('pageWorkingHourCountDisorder'); ?> 2</td><td><button id="btConfirmError2" class="ui-button ui-widget ui-corner-all"><?php echo loadString('pageWorkingHourCountNoted'); ?></button></td></tr>
+                <tr><td class="infoError"><?php echo loadString('pageWorkingHourCountDisorder'); ?> 3</td><td><button id="btConfirmError3" class="ui-button ui-widget ui-corner-all"><?php echo loadString('pageWorkingHourCountNoted'); ?></button></td></tr>
+                <tr><td class="infoError"><?php echo loadString('pageWorkingHourCountDisorder'); ?> 4</td><td><button id="btConfirmError4" class="ui-button ui-widget ui-corner-all"><?php echo loadString('pageWorkingHourCountNoted'); ?></button></td></tr>
                 </tbody>
             </table>   
         </div>  

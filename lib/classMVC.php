@@ -1,39 +1,41 @@
 <?php
+require_once ('./lib/globalFunctions.php');
 class Model {
     public $text;
     private $navigation;
     
     public function __construct() {
+        loadString('navigationWorkingHourCount');
         $this->text = 'Hello world!';
         $this->navigation = array(
             array(
                 'id' => 'pageWorkingHours',
-                'title' => 'Betriebsstunden Zählerstand',
+                'title' => loadString('navigationWorkingHourCount'),
                 'content' => $this->loadPage('pageWorkingHours')
             ),
             array(
                 'id' => 'pageReadValues',
-                'title' => 'Werte auslesen',
+                'title' => loadString('navigationReadValues'),
                 'content' => $this->loadPage('pageReadValues')
             ),
             array(
                 'id' => 'pageDateClock',
-                'title' => 'Datum / Uhrzeit',
+                'title' => loadString('navigationDateClock'),
                 'content' => $this->loadPage('pageDateClock')
             ),
             array(
                 'id' => 'pageHoliday',
-                'title' => 'Feriendatum',
+                'title' => loadString('navigationHoliday'),
                 'content' => $this->loadPage('pageHoliday')
             ),
             array(
                 'id' => 'pageOldAlerts',
-                'title' => 'Protokoll',
+                'title' => loadString('navigationProtocol'),
                 'content' => $this->loadPage('pageOldAlerts')
             ),
             array(
                 'id' => 'pageSettings',
-                'title' => 'Einstellungen',
+                'title' => loadString('navigationSettings'),
                 'content' => $this->loadPage('pageSettings')
             )/*,
             array(
