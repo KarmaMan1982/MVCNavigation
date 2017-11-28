@@ -1,6 +1,7 @@
 <?php
     $now   = new DateTime;
     $displayNow = $now->format('H:i:s d.m.Y');
+    require_once ('./lib/globalFunctions.php');
 ?>
 <style type="text/css">
     .no-close .ui-dialog-titlebar-close {

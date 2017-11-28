@@ -1,4 +1,6 @@
 <?php
+//http://zserge.com/jsmn.html
+
 function loadString($stringName){
     $stringContent = '';
     $globalSettingsFile = './globalSettings.json';
