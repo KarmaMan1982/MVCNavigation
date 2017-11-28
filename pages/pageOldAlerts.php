@@ -1,6 +1,7 @@
 <?php
     $now   = new DateTime;
     $displayNow = $now->format('H:i:s d.m.Y');
+    require_once ('./lib/globalFunctions.php');
 ?>
 <style type="text/css">
     .no-close .ui-dialog-titlebar-close {
@@ -64,12 +65,12 @@
 </style>
 <div class="columnProtocoll" id="columnProtocoll1">  
     <div class="dragbox" id="item1" >  
-        <h2>System-Protokoll</h2>  
+        <h2><?php echo loadString('pageOldAlertskHeaderSystemProtocol'); ?></h2>  
         <div class="dragbox-content" >  
         <table>
         <thead>
             <tr>
-                <th>Abschnitt</th>      <th>Definition</th>                                     <th>Beschreibung</th>
+                <th><?php echo loadString('pageOldAlertskTableSection'); ?></th>      <th><?php echo loadString('pageOldAlertskTableDefinition'); ?></th>                                     <th><?php echo loadString('pageOldAlertskTableDescription'); ?></th>
             </tr>
         </thead>
         <tbody>
@@ -230,19 +231,19 @@
 </div>
 <div class="columnProtocoll" id="columnProtocoll2">  
     <div class="dragbox" id="item1" >  
-        <h2>Alarme</h2>  
+        <h2><?php echo loadString('pageOldAlertskHeaderAlarms'); ?></h2>  
         <div class="dragbox-content" >  
             <table>
                 <thead>
                     <tr>
-                        <th>Text</th>      <th>Datum</th>
+                        <th><?php echo loadString('pageOldAlertskTableText'); ?></th>      <th><?php echo loadString('pageOldAlertskTableDate'); ?></th>
                     </tr>
                 </thead>
                 <tbody>
-                <tr><td class="infoName">Stromausfall</td><td>12:34:34 15.11.2017</td></tr>
-                <tr><td class="infoName">UV Störung</td><td>12:34:34 15.11.2017</td></tr>
-                <tr><td class="infoName">Warnung Überstau</td><td>12:34:34 15.11.2017</td></tr>
-                <tr><td class="infoName">Verstopfung</td><td>12:34:34 15.11.2017</td></tr>
+                <tr><td class="infoName"><?php echo loadString('pageOldAlertsPowerFail'); ?></td><td>12:34:34 15.11.2017</td></tr>
+                <tr><td class="infoName"><?php echo loadString('pageOldAlertsUVDisturbance'); ?></td><td>12:34:34 15.11.2017</td></tr>
+                <tr><td class="infoName"><?php echo loadString('pageOldAlertsOverflowWarning'); ?></td><td>12:34:34 15.11.2017</td></tr>
+                <tr><td class="infoName"><?php echo loadString('pageOldAlertsBlockage'); ?></td><td>12:34:34 15.11.2017</td></tr>
                 </tbody>
             </table>   
         </div>  
@@ -250,19 +251,19 @@
 </div>
 <div class="columnProtocoll" id="columnProtocoll3">  
     <div class="dragbox" id="item1" >  
-        <h2>Archivierte Störungen</h2>  
+        <h2><?php echo loadString('pageOldAlertskHeaderArchivedErrors'); ?></h2>  
         <div class="dragbox-content" >  
             <table>
             <thead>
                     <tr>
-                        <th>Text</th>      <th>Datum</th>       <th>Quitiert</th>
+                        <th><?php echo loadString('pageOldAlertskTableText'); ?></th>      <th><?php echo loadString('pageOldAlertskTableDate'); ?></th>       <th><?php echo loadString('pageOldAlertskTableAcknowlede'); ?></th>
                     </tr>
                 </thead>            
                 <tbody>
-                <tr><td class="infoError">Störung 1</td><td>12:34:34 15.11.2017</td><td>13:34:34 15.11.2017</td></tr>
-                <tr><td class="infoError">Störung 2</td><td>12:34:34 15.11.2017</td><td>13:34:34 15.11.2017</td></tr>
-                <tr><td class="infoError">Störung 3</td><td>12:34:34 15.11.2017</td><td>13:34:34 15.11.2017</td></tr>
-                <tr><td class="infoError">Störung 4</td><td>12:34:34 15.11.2017</td><td>13:34:34 15.11.2017</td></tr>
+                <tr><td class="infoError"><?php echo loadString('pageOldAlertsDisorder'); ?> 1</td><td>12:34:34 15.11.2017</td><td>13:34:34 15.11.2017</td></tr>
+                <tr><td class="infoError"><?php echo loadString('pageOldAlertsDisorder'); ?> 2</td><td>12:34:34 15.11.2017</td><td>13:34:34 15.11.2017</td></tr>
+                <tr><td class="infoError"><?php echo loadString('pageOldAlertsDisorder'); ?> 3</td><td>12:34:34 15.11.2017</td><td>13:34:34 15.11.2017</td></tr>
+                <tr><td class="infoError"><?php echo loadString('pageOldAlertsDisorder'); ?> 4</td><td>12:34:34 15.11.2017</td><td>13:34:34 15.11.2017</td></tr>
                 </tbody>
             </table>   
         </div>  

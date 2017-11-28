@@ -1,3 +1,6 @@
+<?php
+require_once ('./lib/globalFunctions.php');
+?>
 <style type="text/css">
 .no-close .ui-dialog-titlebar-close {
   display: none;
@@ -53,12 +56,12 @@
 
 <div class="columnDateClock" id="columnDateClock1">  
     <div class="dragbox" id="item1" >  
-        <h2>Systemzeit anzeigen</h2>  
+        <h2><?php echo loadString('pageDateClockHeaderShowTime'); ?></h2>  
         <div class="dragbox-content" >  
             <table>
                 <tbody>
-                    <tr><td class="infoName">Mikrocontroller</td><td colspan="2"><span id="statusMCTime"></span></td></tr>
-                    <tr><td class="infoName">Kommunikationsmodul</td><td colspan="2"><span id="statusUNIXTime"></span></td></tr>
+                    <tr><td class="infoName"><?php echo loadString('pageDateClockMC'); ?></td><td colspan="2"><span id="statusMCTime"></span></td></tr>
+                    <tr><td class="infoName"><?php echo loadString('pageDateClockCC'); ?></td><td colspan="2"><span id="statusUNIXTime"></span></td></tr>
                 </tbody>
             </table>   
         </div>  
@@ -66,12 +69,12 @@
 </div>
 <div class="columnDateClock" id="columnDateClock2">  
     <div class="dragbox" id="item1" >  
-        <h2>Systemzeit einstellen</h2>  
+        <h2><?php echo loadString('pageDateClockHeaderSetupTime'); ?></h2>  
         <div class="dragbox-content" >  
             <table>
                 <tbody>
-                    <tr><td class="infoName">Internet-Zeit</td><td><span id="statusINTERNETTime"></span></td><td><button id="btSetInternetTime" class="ui-button ui-widget ui-corner-all">Mit Internet-Zeit synchronisieren</button></td></tr>
-                    <tr><td class="infoName">Systemzeit manuell einstellen</td><td><input name="tbManualTime" id="tbManualTime" type="text"></td><td><button id="btSetManualTime" class="ui-button ui-widget ui-corner-all">Mit manueller Zeit synchronisieren</button></td></tr>
+                    <tr><td class="infoName"><?php echo loadString('pageDateClockInternetTime'); ?></td><td><span id="statusINTERNETTime"></span></td><td><button id="btSetInternetTime" class="ui-button ui-widget ui-corner-all"><?php echo loadString('pageDateClockSyncInternetTime'); ?></button></td></tr>
+                    <tr><td class="infoName"><?php echo loadString('pageDateClockManualTime'); ?></td><td><input name="tbManualTime" id="tbManualTime" type="text"></td><td><button id="btSetManualTime" class="ui-button ui-widget ui-corner-all"><?php echo loadString('pageDateClockSyncManualTime'); ?></button></td></tr>
                 </tbody>
             </table>   
         </div>  
@@ -97,13 +100,18 @@
         if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
         return i;
     }    
-
+   
+    $.getJSON( "./lib/getLocalTimeFormat.php", function( data ) {
+        $("#tbManualTime").datetimepicker(data); 
+    });
+    /*
     $("#tbManualTime").datetimepicker({
         firstDay: 1,
         gotoCurrent: true,
         timeFormat: "HH:mm:ss",
         dateFormat: "dd.mm.yy"
-    }); 
+    });
+    */
     setInterval(function(){
         $.post('./scripts/updateValues.php',{
             method: 'tmUpdateTime',

@@ -110,17 +110,17 @@
         </div>  
     </div>  
     <div class="dragbox" id="item2" >  
-        <h2>Eingänge <?php createUpdateButton('btUpdateInput'); ?></h2>  
+        <h2><?php echo loadString('pageReadValuesHeaderInputs'); ?> <?php createUpdateButton('btUpdateInput'); ?></h2>  
         <div class="dragbox-content" >  
             <table>
                 <tbody>
-                    <tr><td id="nameInput1" class="infoName">potentialfreier Kontakt</td><td id="valueInput1" class="colValue">belegt</td></tr>
-                    <tr><td id="nameInput2" class="infoName">frei Wählbarer Eingang</td><td id="valueInput2" class="colValue">nicht belegt</td></tr>
-                    <tr><td id="nameInput3" class="infoName">Schützüberwachung 1</td><td id="valueInput3" class="colValue">Schütz geschaltet</td></tr>
-                    <tr><td id="nameInput4" class="infoName">Schützüberwachung 2</td><td id="valueInput4" class="colValue">Verdichter angeschlossen</td></tr>
-                    <tr><td id="nameInput5" class="infoName">Schwimmer-Schalter 1</td><td id="valueInput5" class="colValue">An</td></tr>
-                    <tr><td id="nameInput6" class="infoName">Schwimmer-Schalter 2</td><td id="valueInput6" class="colValue">Aus</td></tr>
-                    <tr><td id="nameInput7" class="infoName">Schwimmer-Schalter 3</td><td id="valueInput7" class="colValue">An</td></tr>                    
+                    <tr><td id="nameInput1" class="infoName"><?php echo loadString('pageReadValuesPotFreeContact'); ?></td><td id="valueInput1" class="colValue"><?php echo loadString('pageReadValuesStatusUsed'); ?></td></tr>
+                    <tr><td id="nameInput2" class="infoName"><?php echo loadString('pageReadValuesFreeInput'); ?></td><td id="valueInput2" class="colValue"><?php echo loadString('pageReadValuesStatusNotUsed'); ?></td></tr>
+                    <tr><td id="nameInput3" class="infoName"><?php echo loadString('pageReadValuesProtectGuard'); ?> 1</td><td id="valueInput3" class="colValue"><?php echo loadString('pageReadValuesStatusProtectConnected'); ?></td></tr>
+                    <tr><td id="nameInput4" class="infoName"><?php echo loadString('pageReadValuesProtectGuard'); ?> 2</td><td id="valueInput4" class="colValue"><?php echo loadString('pageReadValuesStatusCompressorConnected'); ?></td></tr>
+                    <tr><td id="nameInput5" class="infoName"><?php echo loadString('pageReadValuesSwimmerSwitch'); ?> 1</td><td id="valueInput5" class="colValue"><?php echo loadString('pageReadValuesStatusOn'); ?></td></tr>
+                    <tr><td id="nameInput6" class="infoName"><?php echo loadString('pageReadValuesSwimmerSwitch'); ?> 2</td><td id="valueInput6" class="colValue"><?php echo loadString('pageReadValuesStatusOff'); ?></td></tr>
+                    <tr><td id="nameInput7" class="infoName"><?php echo loadString('pageReadValuesSwimmerSwitch'); ?> 3</td><td id="valueInput7" class="colValue"><?php echo loadString('pageReadValuesStatusOn'); ?></td></tr>                    
                 </tbody>    
             </table>
         </div>  
@@ -128,14 +128,14 @@
 </div>  
 <div class="columnReadValues" id="columnReadValues2" >  
     <div class="dragbox" id="item4" >  
-        <h2>Sensoren <?php createUpdateButton('btUpdateSensor'); ?></h2>  
+        <h2><?php echo loadString('pageReadValuesHeaderSensors'); ?> <?php createUpdateButton('btUpdateSensor'); ?></h2>  
         <div class="dragbox-content" >  
             <table>
                 <tbody>
-                    <tr><td id="nameSensor1" class="infoName">Temperatursensor Platine</td><td id="valueSensor1" class="colValue">70</td><td id="unitSensor1" class="colUnit">Grad</td></tr>
-                    <tr><td id="nameSensor2" class="infoName">Temperatursensor Extern</td><td id="valueSensor2" class="colValue">40</td><td id="unitSensor2" class="colUnit">Grad</td></tr>
-                    <tr><td id="nameSensor3" class="infoName">Drucksensor 1</td><td id="valueSensor3" class="colValue">5</td><td id="unitSensor3" class="colUnit">Bar</td></tr>
-                    <tr><td id="nameSensor4" class="infoName">Drucksensor 2</td><td id="valueSensor4" class="colValue">15</td><td id="unitSensor4" class="colUnit">Bar</td></tr>
+                    <tr><td id="nameSensor1" class="infoName"><?php echo loadString('pageReadValuesTempSensorPlatine'); ?></td><td id="valueSensor1" class="colValue">70</td><td id="unitSensor1" class="colUnit"><?php echo loadString('pageReadValuesUnitDegree'); ?></td></tr>
+                    <tr><td id="nameSensor2" class="infoName"><?php echo loadString('pageReadValuesTempSensorExtern'); ?></td><td id="valueSensor2" class="colValue">40</td><td id="unitSensor2" class="colUnit"><?php echo loadString('pageReadValuesUnitDegree'); ?></td></tr>
+                    <tr><td id="nameSensor3" class="infoName"><?php echo loadString('pageReadValuesPressureSensor'); ?> 1</td><td id="valueSensor3" class="colValue">5</td><td id="unitSensor3" class="colUnit"><?php echo loadString('pageReadValuesUnitAirPressure'); ?></td></tr>
+                    <tr><td id="nameSensor4" class="infoName"><?php echo loadString('pageReadValuesPressureSensor'); ?> 2</td><td id="valueSensor4" class="colValue">15</td><td id="unitSensor4" class="colUnit"><?php echo loadString('pageReadValuesUnitAirPressure'); ?></td></tr>
                 </tbody>    
             </table>
         </div>  

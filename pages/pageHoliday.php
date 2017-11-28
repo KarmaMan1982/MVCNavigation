@@ -1,3 +1,6 @@
+<?php
+require_once ('./lib/globalFunctions.php');
+?>
 <style type="text/css">
 .no-close .ui-dialog-titlebar-close {
   display: none;
@@ -62,12 +65,12 @@
 
 <div class="columnHoliday" id="columnHoliday1">  
     <div class="dragbox" id="item1" >  
-        <h2>Ferien-Zyklus anzeigen</h2>  
+        <h2><?php echo loadString('pageHolidaykHeaderDisplayHolidayPeriod'); ?></h2>  
         <div class="dragbox-content" >  
             <table>
                 <tbody>
-                    <tr><td class="infoName">Ferien Start</td><td><span id="statusHolidayStart"></span></td></tr>
-                    <tr><td class="infoName">Ferien Stop</td><td><span id="statusHolidayStop"></span></td></tr>
+                    <tr><td class="infoName"><?php echo loadString('pageHolidaykDisplayHolidayStart'); ?></td><td><span id="statusHolidayStart"></span></td></tr>
+                    <tr><td class="infoName"><?php echo loadString('pageHolidaykDisplayHolidayStop'); ?></td><td><span id="statusHolidayStop"></span></td></tr>
                 </tbody>
             </table>   
         </div>  
@@ -75,12 +78,12 @@
 </div>
 <div class="columnHoliday" id="columnHoliday2">  
     <div class="dragbox" id="item1" >  
-        <h2>Ferien-Zyklus einstellen</h2>  
+        <h2><?php echo loadString('pageHolidaykHeaderSetupHolidayPeriod'); ?></h2>  
         <div class="dragbox-content" >  
             <table>
                 <tbody>
-                    <tr><td class="infoName">Ferien Start einstellen</td><td><input name="tbStartHoliday" id="tbStartHoliday" type="text"></td><td><button id="btSetStartHoliday" class="ui-button ui-widget ui-corner-all">Startpunkt festlegen</button></td></tr>
-                    <tr><td class="infoName">Ferien Stop einstellen</td><td><input name="tbStopHoliday" id="tbStopHoliday" type="text"></td><td><button id="btSetStopHoliday" class="ui-button ui-widget ui-corner-all">Endpunkt festlegen</button></td></tr>
+                    <tr><td class="infoName"><?php echo loadString('pageHolidaykSetupHolidayStart'); ?></td><td><input name="tbStartHoliday" id="tbStartHoliday" type="text"></td><td><button id="btSetStartHoliday" class="ui-button ui-widget ui-corner-all"><?php echo loadString('pageHolidaykSetupHolidayStartButton'); ?></button></td></tr>
+                    <tr><td class="infoName"><?php echo loadString('pageHolidaykSetupHolidayStop'); ?></td><td><input name="tbStopHoliday" id="tbStopHoliday" type="text"></td><td><button id="btSetStopHoliday" class="ui-button ui-widget ui-corner-all"><?php echo loadString('pageHolidaykSetupHolidayStopButton'); ?></button></td></tr>
                     <tr><td id="validationInfo" colspan="3"></td></tr>
                 </tbody>
             </table>   
@@ -121,6 +124,11 @@
         return i;
     }    
 
+    $.getJSON( "./lib/getLocalTimeFormat.php", function( data ) {
+        $("#tbStartHoliday").datetimepicker(data);
+        $("#tbStopHoliday").datetimepicker(data);
+    });
+    /*
     $("#tbStartHoliday").datetimepicker({
         firstDay: 1,
         gotoCurrent: true,
@@ -133,7 +141,7 @@
         timeFormat: "HH:mm:ss",
         dateFormat: "dd.mm.yy"
     });
-    
+    */
     $.post('./scripts/updateValues.php',{
         method: 'tmUpdateHoliday',
         data: null

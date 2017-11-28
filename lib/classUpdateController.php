@@ -37,16 +37,20 @@ class UpdateController {
         $tageDifferenz = floor($stampDifferenz/86400);
         $validZyklus = 90;
         if($tageDifferenz <= $validZyklus && $tageDifferenz >= 0){
-            $this->data['validationText']='Der eingestellte Ferien-Zyklus beträgt '.$tageDifferenz.' Tage!';
+            
+            $this->data['validationText']=sprintf(loadString('pageHolidaykValidateHolidayPeriodSuccess'), $tageDifferenz);
+            #$this->data['validationText']=sprintf('Der eingestellte Ferien-Zyklus beträgt %s Tage!', $tageDifferenz);
             $this->data['validationClass']='validateSuccess';
             $this->saveHolidayState = true;
         } else if ($tageDifferenz < 0) {
             $tageDifferenz = $tageDifferenz * -1;
-            $this->data['validationText']='Der ausgewählte Ferien Stop liegt '.$tageDifferenz.' Tage vor dem Ferien Start!';
+            $this->data['validationText']=sprintf(loadString('pageHolidaykValidateHolidayPeriodErrorBeforeStart'), $tageDifferenz);
+            #$this->data['validationText']=sprintf('Der ausgewählte Ferien Stop liegt %s Tage vor dem Ferien Start!', $tageDifferenz);
             $this->data['validationClass']='validateError';
             $this->saveHolidayState = false;            
         } else {
-            $this->data['validationText']='Der ausgewählte Ferien-Zyklus beträgt '.$tageDifferenz.' Tage und ist länger als die zulässigen '.$validZyklus.' Tage!';
+            $this->data['validationText']=sprintf(loadString('pageHolidaykValidateHolidayPeriodErrorTooLong'), $tageDifferenz, $validZyklus);            
+            #$this->data['validationText']=sprintf('Der ausgewählte Ferien-Zyklus beträgt %s Tage und ist länger als die zulässigen %s Tage!', $tageDifferenz, $validZyklus);
             $this->data['validationClass']='validateError';
             $this->saveHolidayState = false;
         }
@@ -149,13 +153,13 @@ class UpdateController {
             foreach($Attribut AS $Typ => $Wert){
                 if($Typ == 'valueInput'.$Element){
                     switch($Wert){
-                        case 'belegt': $NewInput[$Typ] = 'nicht belegt'; break;
-                        case 'nicht belegt': $NewInput[$Typ] = 'belegt'; break;
-                        case 'Schütz geschaltet': $NewInput[$Typ] = 'Verdichter angeschlossen'; break;
-                        case 'Verdichter angeschlossen': $NewInput[$Typ] = 'Schütz geschaltet'; break;
-                        case 'An': $NewInput[$Typ] = 'Aus'; break;
-                        case 'Aus': $NewInput[$Typ] = 'An'; break;
-                        default: $NewInput[$Typ] = 'undefiniert'; break;
+                        case loadString('pageReadValuesStatusUsed'): $NewInput[$Typ] = loadString('pageReadValuesStatusNotUsed'); break;
+                        case loadString('pageReadValuesStatusNotUsed'): $NewInput[$Typ] = loadString('pageReadValuesStatusUsed'); break;
+                        case loadString('pageReadValuesStatusProtectConnected'): $NewInput[$Typ] = loadString('pageReadValuesStatusCompressorConnected'); break;
+                        case loadString('pageReadValuesStatusCompressorConnected'): $NewInput[$Typ] = loadString('pageReadValuesStatusProtectConnected'); break;
+                        case loadString('pageReadValuesStatusOn'): $NewInput[$Typ] = loadString('pageReadValuesStatusOff'); break;
+                        case loadString('pageReadValuesStatusOff'): $NewInput[$Typ] = loadString('pageReadValuesStatusOn'); break;
+                        default: $NewInput[$Typ] = loadString('pageReadValuesSMotorUndefined'); break;
                     }
                 }
             }
