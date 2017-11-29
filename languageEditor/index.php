@@ -43,6 +43,7 @@ foreach($languageBlock AS $Block => $Languages){
         <table>
             <thead>
                 <tr>
+                  <th>Nummer</th>
                   <th>Element</th>
                   <?php 
                   foreach ($languageRegister AS $Sprache){
@@ -57,6 +58,7 @@ foreach($languageBlock AS $Block => $Languages){
                     foreach($languageBlock AS $Block => $Languages){
                         if($row % 2 == 0) { $rowClass='oddRow'; } else { $rowClass='evenRow'; }
                         echo '<tr class="'.$rowClass.'">';
+                        echo '<td>'.$row.'</td>';
                         echo '<td>'.$Block.'</td>';
                         foreach ($languageRegister AS $Sprache){
                             $editField = '<input type="text" class="editField" name="editField['.$Block.']['.$Sprache.']" value="'.$Languages->$Sprache.'">';
@@ -70,6 +72,7 @@ foreach($languageBlock AS $Block => $Languages){
                     if(isset($_REQUEST['tbNewElement']) && $_REQUEST['tbNewElement'] != ""){
                         if($row % 2 == 0) { $rowClass='oddRow'; } else { $rowClass='evenRow'; }
                         echo '<tr class="'.$rowClass.'">';
+                        echo '<td>'.$row.'</td>';
                         echo '<td>'.$_REQUEST['tbNewElement'].'</td>';
                         foreach ($languageRegister AS $Sprache){
                             $editField = '<input type="text" class="editField" name="editField['.$_REQUEST['tbNewElement'].']['.$Sprache.']" value="">';
@@ -83,7 +86,7 @@ foreach($languageBlock AS $Block => $Languages){
             </tbody>
             <tfoot>
                 <tr>
-                  <td colspan="<?php echo sizeof($languageRegister) + 1; ?>">
+                  <td colspan="<?php echo sizeof($languageRegister) + 2; ?>">
                       <input type="submit" name="btSave" id="btSave" value="Texte speichern">
                       <label for="tbNewElement">Neues Element hinzufügen:</label>
                       <input type="text" name="tbNewElement" id="tbNewElement">
