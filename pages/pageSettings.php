@@ -73,7 +73,7 @@
 
 <div class="columnSettings" id="columnSettings1">  
     <div class="dragbox" id="item1" >  
-        <h2>WLAN-Einstellungen</h2>  
+        <h2><?php echo loadString('pageSettingsHeaderWLANSettings'); ?></h2>  
         <div class="dragbox-content" >
         <div class="btn-group btn-group-toggle form-control" data-toggle="buttons">
         <label class="btn active" role="button">
@@ -88,22 +88,22 @@
         <form id="frmServer" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
         <table class="controlgroup">
                 <tbody>
-                <tr><td class="infoName">Netzwerk erstellen</td><td><input type="text" name="tbCreateWLANName" id="tbCreateWLANName"></td></tr>
-                <tr><td class="infoName">Passwort</td><td><input type="text" name="tbCreateWLANPasswort" id="tbCreateWLANPasswort"></td></tr>
-                <tr><td class="infoName">Verschlüsselung</td><td>
+                <tr><td class="infoName"><?php echo loadString('pageSettingsWLANCreateNetwork'); ?></td><td><input type="text" name="tbCreateWLANName" id="tbCreateWLANName"></td></tr>
+                <tr><td class="infoName"><?php echo loadString('pageSettingsWLANCreatePassword'); ?></td><td><input type="text" name="tbCreateWLANPasswort" id="tbCreateWLANPasswort"></td></tr>
+                <tr><td class="infoName"><?php echo loadString('pageSettingsWLANCreateEncoding'); ?></td><td>
                     <select id="sbCreateWLANType">
                         <option>WEP</option>
                         <option>WPA</option>
                         <option>WPA2</option>
                     </select>
                 </td></tr>
-                <tr><td class="infoName">Passwort-Typ</td><td>
+                <tr><td class="infoName"><?php echo loadString('pageSettingsWLANCreatePasswordType'); ?></td><td>
                     <select id="sbCreateWLANPasswortType">
                         <option>ASCII</option>
                         <option>HEX</option>
                     </select>
                 </td></tr>                
-                <tr><td colspan="2"><input type="submit" name="btCreateWLAN" id="btCreateWLAN" value="Erstellen" class="ui-button ui-widget ui-corner-all"></td></tr>
+                <tr><td colspan="2"><input type="submit" name="btCreateWLAN" id="btCreateWLAN" value="<?php echo loadString('pageSettingsWLANCreateButtonCreate'); ?>" class="ui-button ui-widget ui-corner-all"></td></tr>
                 </tbody>
         </table>         
         </form>
@@ -111,15 +111,15 @@
         <form id="frmClient" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
         <table class="controlgroup">
                 <tbody>
-                <tr><td class="infoName">Netzwerk beitreten</td><td>
+                <tr><td class="infoName"><?php echo loadString('pageSettingsWLANJoinNetwork'); ?></td><td>
                     <select id="sbJoinWLAN">
-                        <option>Netzwerk 1</option>
-                        <option>Netzwerk 2</option>
-                        <option>Netzwerk 3</option>
+                        <option><?php echo loadString('pageSettingsWLANJoinNetworkDemoName'); ?> 1</option>
+                        <option><?php echo loadString('pageSettingsWLANJoinNetworkDemoName'); ?> 2</option>
+                        <option><?php echo loadString('pageSettingsWLANJoinNetworkDemoName'); ?> 3</option>
                     </select>                
                 </td></tr>
-                <tr><td class="infoName">Passwort</td><td><input type="text" name="tbJoinWLANPasswort" id="tbJoinWLANPasswort"></td></tr>
-                <tr><td colspan="2"><input type="submit" name="btJoinWLAN" id="btJoinWLAN" value="Beitreten" class="ui-button ui-widget ui-corner-all"></td></tr>                                
+                <tr><td class="infoName"><?php echo loadString('pageSettingsWLANJoinNetworkPassword'); ?></td><td><input type="text" name="tbJoinWLANPasswort" id="tbJoinWLANPasswort"></td></tr>
+                <tr><td colspan="2"><input type="submit" name="btJoinWLAN" id="btJoinWLAN" value="<?php echo loadString('pageSettingsWLANJoinButtonJoin'); ?>" class="ui-button ui-widget ui-corner-all"></td></tr>                                
                 </tbody>
         </table>        
         </form>
@@ -129,18 +129,18 @@
 </div>
 <div class="columnSettings" id="columnSettings2">  
     <div class="dragbox" id="item1" >  
-        <h2>SIM-Karte</h2>  
+        <h2><?php echo loadString('pageSettingsHeaderSIMCard'); ?></h2>  
         <div class="dragbox-content" >  
             <table>
             <form id="frmSIMCard" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
             <table class="controlgroup">
                     <tbody>
-                    <tr><td class="infoName">Benutzername</td><td><input type="text" name="tbSIMUser" id="tbSIMUser"></td></tr>
-                    <tr><td class="infoName">Passwort</td><td><input type="text" name="tbSIMPassword" id="tbSIMPassword"></td></tr>
-                    <tr><td class="infoName">Access Point Name</td><td><input type="text" name="tbSIMAPN" id="tbSIMAPN"></td></tr>
-                    <tr><td class="infoName">IP-Addresse</td><td><input type="text" name="tbSIMIP" id="tbSIMIP"></td></tr>
-                    <tr><td class="infoName">Port</td><td><input type="text" name="tbSIMPort" id="tbSIMPort"></td></tr>                                   
-                    <tr><td colspan="2"><input type="submit" name="btSIMCard" id="btSIMCard" value="Speichern" class="ui-button ui-widget ui-corner-all"></td></tr>
+                    <tr><td class="infoName"><?php echo loadString('pageSettingsSIMCardUserName'); ?></td><td><input type="text" name="tbSIMUser" id="tbSIMUser"></td></tr>
+                    <tr><td class="infoName"><?php echo loadString('pageSettingsSIMCardPassword'); ?></td><td><input type="text" name="tbSIMPassword" id="tbSIMPassword"></td></tr>
+                    <tr><td class="infoName"><?php echo loadString('pageSettingsSIMCardAPN'); ?></td><td><input type="text" name="tbSIMAPN" id="tbSIMAPN"></td></tr>
+                    <tr><td class="infoName"><?php echo loadString('pageSettingsSIMCardIPAddress'); ?></td><td><input type="text" name="tbSIMIP" id="tbSIMIP"></td></tr>
+                    <tr><td class="infoName"><?php echo loadString('pageSettingsSIMCardPort'); ?></td><td><input type="text" name="tbSIMPort" id="tbSIMPort"></td></tr>                                   
+                    <tr><td colspan="2"><input type="submit" name="btSIMCard" id="btSIMCard" value="<?php echo loadString('pageSettingsSIMCardButtonSave'); ?>" class="ui-button ui-widget ui-corner-all"></td></tr>
                     </tbody>
             </table>         
             </form>
@@ -149,25 +149,25 @@
 </div>
 <div class="columnSettings" id="columnSettings3">  
     <div class="dragbox" id="item1" >  
-        <h2>Update, Sprache und Kalibrierung</h2>  
+        <h2><?php echo loadString('pageSettingsHeaderUpdateLanguageCalibration'); ?></h2>  
         <div class="dragbox-content" >
         <table width="100%">
             <tr><td width="50%">
             <table class="controlgroup" width="100%">
                     <tbody>
-                    <tr><td class="infoName">Mikrocontroller</td>
+                    <tr><td class="infoName"><?php echo loadString('pageSettingsUpdateLanguageCalibrationMC'); ?></td>
                         <td>
                             <form id="uploadMC" method="post" action="./lib/uploader/upload.php" enctype="multipart/form-data">
                             <input type="file" name="upl" class="ui-button ui-widget ui-corner-all"/>
-                            <input type="submit" name="btUploadMC" id="btUploadMC" value="Hochladen">
+                            <input type="submit" name="btUploadMC" id="btUploadMC" value="<?php echo loadString('pageSettingsUpdateLanguageCalibrationUpload'); ?>">
                             </form>
                         </td>
                     </tr>
-                    <tr><td class="infoName">Kommunikationscontroller</td>
+                    <tr><td class="infoName"><?php echo loadString('pageSettingsUpdateLanguageCalibrationCC'); ?></td>
                         <td>
                             <form id="uploadCC" method="post" action="./lib/uploader/upload.php" enctype="multipart/form-data">
                             <input type="file" name="upl" class="ui-button ui-widget ui-corner-all"/>
-                            <input type="submit" name="btUploadCC" id="btUploadCC" value="Hochladen">
+                            <input type="submit" name="btUploadCC" id="btUploadCC" value="<?php echo loadString('pageSettingsUpdateLanguageCalibrationUpload'); ?>">
                             </form>
                         </td>
                     </tr>
@@ -185,31 +185,31 @@
             ?>
             <table class="controlgroup" width="100%">
                     <tbody>
-                    <tr><td class="infoName">Sprache</td>
+                    <tr><td class="infoName"><?php echo loadString('pageSettingsUpdateLanguageCalibrationLanguage'); ?></td>
                         <td>
                             <form id="setLanguageMC" method="post" action="" enctype="multipart/form-data">
                             <select id="languageMC">
-                                <option>Deutsch</option>
-                                <option>Englisch</option>
-                                <option>Französisch</option>
-                                <option>Italienisch</option>
-                                <option>Norwegisch</option>
-                                <option>Polnisch</option>
-                                <option>Schwedisch</option>
-                                <option>Spanisch</option>
-                                <option>Slowenisch</option>
-                                <option>Tschechisch</option>                                                                
+                                <option><?php echo loadString('pageSettingsUpdateLanguageCalibrationLanguageGerman'); ?></option>
+                                <option><?php echo loadString('pageSettingsUpdateLanguageCalibrationLanguageEnglish'); ?></option>
+                                <option><?php echo loadString('pageSettingsUpdateLanguageCalibrationLanguageFrench'); ?></option>
+                                <option><?php echo loadString('pageSettingsUpdateLanguageCalibrationLanguageItalian'); ?></option>
+                                <option><?php echo loadString('pageSettingsUpdateLanguageCalibrationLanguageNorwegian'); ?></option>
+                                <option><?php echo loadString('pageSettingsUpdateLanguageCalibrationLanguagePolish'); ?></option>
+                                <option><?php echo loadString('pageSettingsUpdateLanguageCalibrationLanguageSwedish'); ?></option>
+                                <option><?php echo loadString('pageSettingsUpdateLanguageCalibrationLanguageSpain'); ?></option>
+                                <option><?php echo loadString('pageSettingsUpdateLanguageCalibrationLanguageSlowenian'); ?></option>
+                                <option><?php echo loadString('pageSettingsUpdateLanguageCalibrationLanguageCzech'); ?></option>                                                                
                             </select>
-                            <input type="submit" name="btLanguageMC" id="btLanguageMC" value="Setzen">
+                            <input type="submit" name="btLanguageMC" id="btLanguageMC" value="<?php echo loadString('pageSettingsUpdateLanguageCalibrationButtonSetup'); ?>">
                             </form>
                         </td>
                         <td>
                         <form id="startKalibrierungWork" method="post" action="" enctype="multipart/form-data">
-                            <input type="hidden" name="startKalibrierung" value="Work"><input type="submit" id="btStartKalibrierungWork" name="btStartKalibrierungWork" value="Starte Werksseitige Kalibrierung">
+                            <input type="hidden" name="startKalibrierung" value="Work"><input type="submit" id="btStartKalibrierungWork" name="btStartKalibrierungWork" value="<?php echo loadString('pageSettingsUpdateLanguageCalibrationButtonStartCalibrationFactory'); ?>">
                         </form>
                         </td>
                     </tr>
-                    <tr><td class="infoName">Sprache</td>
+                    <tr><td class="infoName"><?php echo loadString('pageSettingsUpdateLanguageCalibrationLanguage'); ?></td>
                         <td>
                             <form id="setLanguageCC" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data">
                             <select id="languageCC" name="languageCC">
@@ -242,12 +242,12 @@
                                 }
                             ?>
                             </select>
-                            <input type="submit" name="btLanguageCC" id="btLanguageCC" value="Setzen">
+                            <input type="submit" name="btLanguageCC" id="btLanguageCC" value="<?php echo loadString('pageSettingsUpdateLanguageCalibrationButtonSetup'); ?>">
                             </form>
                         </td>
                         <td>
                         <form id="startKalibrierungService" method="post" action="" enctype="multipart/form-data">
-                            <input type="hidden" name="startKalibrierung" value="Service"><input type="submit" id="btStartKalibrierungService" name="btStartKalibrierungService" value="Starte Serviceseitige Kalibrierung">
+                            <input type="hidden" name="startKalibrierung" value="Service"><input type="submit" id="btStartKalibrierungService" name="btStartKalibrierungService" value="<?php echo loadString('pageSettingsUpdateLanguageCalibrationButtonStartCalibrationService'); ?>">
                         </form>
                         </td>
                         
