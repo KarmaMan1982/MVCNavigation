@@ -72,19 +72,53 @@ class View {
         $this->header = '<div class="klaroHeader"><div class="klaroTitle"><span class="firstLetters">KL</span><span class="klaroType">'.$this->softwareType.'</span></div><img class="klaroLogo" src="./img/KLARO-Logo.png"></div>';
     }
     private function createNavigation($navigationID){
-        $tabs = '<ul>';
-        $content = '';
-            foreach ($this->model->getNavigation() AS $tab){
-                $tabs .= '<li><a href="#'.$tab["id"].'">'.$tab["title"].'</a></li>';
-                $content .= '<div id="'.$tab["id"].'">'.$tab["content"].'</div>';
-            }
-        $content .= '';
-        $tabs .= '</ul>';
-        $this->navigation = '<div id="'.$navigationID.'">';
-        $this->navigation .= $tabs;
-        $this->navigation .= $content;
-        $this->navigation .= '</div>';
-        $this->navigation .= '<script type="text/javascript" language="JavaScript"> $( "#'.$navigationID.'" ).tabs(); </script>';
+        switch($_SESSION['rotation']){
+            case 'landscape':
+                $tabs = '<ul>';
+                $content = '';
+                    foreach ($this->model->getNavigation() AS $tab){
+                        $tabs .= '<li><a href="#'.$tab["id"].'">'.$tab["title"].'</a></li>';
+                        $content .= '<div id="'.$tab["id"].'">'.$tab["content"].'</div>';
+                    }
+                $content .= '';
+                $tabs .= '</ul>';
+                $this->navigation = '<div id="'.$navigationID.'">';
+                $this->navigation .= $tabs;
+                $this->navigation .= $content;
+                $this->navigation .= '</div>';
+                $this->navigation .= '<script type="text/javascript" language="JavaScript"> $( "#'.$navigationID.'" ).tabs(); </script>';                                
+            break;
+            case 'portrait':
+                $elements = '';
+                    foreach ($this->model->getNavigation() AS $tab){
+                        $elements .= '<h3>'.$tab["title"].'</h3>';
+                        $elements .= '<div>'.$tab["content"].'</div>';
+                    }
+                $this->navigation = '<div id="'.$navigationID.'">';
+                $this->navigation .= $elements;
+                $this->navigation .= '</div>';
+                $this->navigation .= '<style type="text/css">'
+                        . '.ui-accordion-content-active { height: auto !important; }'
+                        . '</style>';
+                $this->navigation .= '<script type="text/javascript" language="JavaScript"> $( "#'.$navigationID.'" ).accordion(); </script>';                                
+            break;
+            default:
+                $tabs = '<ul>';
+                $content = '';
+                    foreach ($this->model->getNavigation() AS $tab){
+                        $tabs .= '<li><a href="#'.$tab["id"].'">'.$tab["title"].'</a></li>';
+                        $content .= '<div id="'.$tab["id"].'">'.$tab["content"].'</div>';
+                    }
+                $content .= '';
+                $tabs .= '</ul>';
+                $this->navigation = '<div id="'.$navigationID.'">';
+                $this->navigation .= $tabs;
+                $this->navigation .= $content;
+                $this->navigation .= '</div>';
+                $this->navigation .= '<script type="text/javascript" language="JavaScript"> $( "#'.$navigationID.'" ).tabs(); </script>';                
+            break;
+        }
+
     }
     public function setSoftwareType($type){
         $this->softwareType = $type;
