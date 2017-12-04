@@ -13,7 +13,8 @@ if(isset($_SESSION['screen_width']) AND isset($_SESSION['screen_height'])){
     $_SESSION['screen_height'] = $_REQUEST['height'];
     header('Location: ' . $_SERVER['PHP_SELF']);
 } else {
-    echo '<script type="text/javascript">window.location = "' . $_SERVER['PHP_SELF'] . '?width="+screen.width+"&height="+screen.height;</script>';
+    #echo '<script type="text/javascript">window.location = "' . $_SERVER['PHP_SELF'] . '?width="+screen.width+"&height="+screen.height;</script>';
+    echo '<script type="text/javascript">window.location = "' . $_SERVER['PHP_SELF'] . '?width="+window.innerWidth+"&height="+window.innerHeight;</script>';
 }
 ?>
 <html>
