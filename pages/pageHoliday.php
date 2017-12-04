@@ -62,7 +62,7 @@ require_once ('./lib/globalFunctions.php');
     width: 100%;
 }
 </style>
-
+<?php if($_SESSION['rotation'] == 'landscape') { ?>
 <div class="columnHoliday" id="columnHoliday1">  
     <div class="dragbox" id="item1" >  
         <h2><?php echo loadString('pageHolidaykHeaderDisplayHolidayPeriod'); ?></h2>  
@@ -90,7 +90,19 @@ require_once ('./lib/globalFunctions.php');
         </div>  
     </div>  
 </div>
-
+<?php } else { ?>
+        <div class="AVheaderBlock"><?php echo loadString('pageHolidaykHeaderDisplayHolidayPeriod'); ?></div>
+        <table class="AVTable">
+                    <tr><td class="attributeColumn infoName"><?php echo loadString('pageHolidaykDisplayHolidayStart'); ?></td><td class="valueColumn" colspan="2"><span id="statusHolidayStart"></span></td></tr>
+                    <tr><td class="attributeColumn infoName"><?php echo loadString('pageHolidaykDisplayHolidayStop'); ?></td><td class="valueColumn" colspan="2"><span id="statusHolidayStop"></span></td></tr>
+        </table>
+        <div class="AVheaderBlock"><?php echo loadString('pageHolidaykHeaderSetupHolidayPeriod'); ?></div>
+        <table class="AVTable">
+                    <tr><td class="attributeColumn infoName"><?php echo loadString('pageHolidaykSetupHolidayStart'); ?></td><td class="valueColumnHalf colTime"><input name="tbStartHoliday" id="tbStartHoliday" type="text"></td><td class="valueColumnHalf colButton"><button id="btSetStartHoliday" class="ui-button ui-widget ui-corner-all"><?php echo loadString('pageHolidaykSetupHolidayStartButton'); ?></button></td></tr>
+                    <tr><td class="attributeColumn infoName"><?php echo loadString('pageHolidaykSetupHolidayStop'); ?></td><td class="valueColumnHalf colTime"><input name="tbStopHoliday" id="tbStopHoliday" type="text"></td><td class="valueColumnHalf colButton"><button id="btSetStopHoliday" class="ui-button ui-widget ui-corner-all"><?php echo loadString('pageHolidaykSetupHolidayStopButton'); ?></button></td></tr>
+                    <tr><td id="validationInfo" colspan="3"></td></tr>
+        </table>                
+<?php } ?>
 
 <script type="text/javascript" language="JavaScript">
     if (!Date.now) {

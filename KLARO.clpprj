@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="C:\inetpub\wwwroot\mvc\KLARO.clpprj">
+	<settings><PM_URL><![CDATA[C:/Users/ebma/AppData/Roaming/ClPhpEd/Projects/]]></PM_URL><PM_HOME_URL><![CDATA[C:/Users/ebma/AppData/Roaming/ClPhpEd/Projects/]]></PM_HOME_URL><PM_LIBS><![CDATA[]]></PM_LIBS><PM_FTP_CONNECTION><![CDATA[]]></PM_FTP_CONNECTION><PM_FTP_DIR><![CDATA[]]></PM_FTP_DIR><PM_FTP_UPLOAD_ON_SAVE><![CDATA[INT:0]]></PM_FTP_UPLOAD_ON_SAVE></settings><removed value=";"/><added value=""/><lastopfiles>
+		<file name="C:\inetpub\wwwroot\mvc\pages\pageSettings.php"/>
+	</lastopfiles>
+	<errors version="5.11">
+		<errfile name="C:\inetpub\wwwroot\mvc\pages\pageSettings.php">
+			<error val="30;281;52;281;2002;1;"/>
+		</errfile>
+	</errors>
+	<cakedata>
+	</cakedata>
+	<dplmenupath>
+	</dplmenupath><laravael>
+	</laravael><smartyassings>
+	</smartyassings><twigtemplate>
+	</twigtemplate><yiidata>
+	</yiidata>
+	<todoblock>
+	</todoblock>
+	<filescache>
+		<file name="C:\inetpub\wwwroot\mvc\style\mobile.css" crc="1512381094"/>
+		<file name="C:\inetpub\wwwroot\mvc\style\header.css" crc="1510148815"/>
+		<file name="C:\inetpub\wwwroot\mvc\scripts\updateValues.php" crc="1511800590"/>
+		<file name="C:\inetpub\wwwroot\mvc\pages\pageWorkingHours.php" crc="1512131381"/>
+		<file name="C:\inetpub\wwwroot\mvc\pages\pageSettings.php" crc="1512389620"/>
+		<file name="C:\inetpub\wwwroot\mvc\pages\pageReadValues.php" crc="1512378507"/>
+		<file name="C:\inetpub\wwwroot\mvc\pages\pageOldAlerts.php" crc="1512388439"/>
+		<file name="C:\inetpub\wwwroot\mvc\pages\pageManual.php" crc="1509101871"/>
+		<file name="C:\inetpub\wwwroot\mvc\pages\pageHoliday.php" crc="1512382109"/>
+		<file name="C:\inetpub\wwwroot\mvc\pages\pageDateClock.php" crc="1512380880"/>
+		<file name="C:\inetpub\wwwroot\mvc\pages\pageActionCode.php" crc="1509102027"/>
+		<file name="C:\inetpub\wwwroot\mvc\nbproject\private\private.xml" crc="1512133120"/>
+		<file name="C:\inetpub\wwwroot\mvc\nbproject\project.xml" crc="1509084115"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\uploader\js\script.js" crc="1368101662"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\uploader\js\jquery.ui.widget.js" crc="1363648854"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\uploader\js\jquery.knob.js" crc="1368019469"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\uploader\js\jquery.iframe-transport.js" crc="1363648854"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\uploader\js\jquery.fileupload.js" crc="1363648854"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\uploader\css\style.css" crc="1510830137"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\uploader\upload.php" crc="1510828075"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\switchBox\TwbsToggleButtons.js" crc="1494492011"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\switchBox\jquerysctipttop.css" crc="1413813504"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\switchBox\jquery.twbs-toggle-buttons.min.js" crc="1494492011"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\switchBox\jquery.twbs-toggle-buttons.js" crc="1494492011"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\switchBox\bootstrap.min.css" crc="1483723352"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\vader\theme.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\vader\jquery-ui.min.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\vader\jquery-ui.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\ui-lightness\theme.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\ui-lightness\jquery-ui.min.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\ui-lightness\jquery-ui.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\ui-darkness\theme.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\ui-darkness\jquery-ui.min.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\ui-darkness\jquery-ui.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\trontastic\theme.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\trontastic\jquery-ui.min.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\trontastic\jquery-ui.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\swanky-purse\theme.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\swanky-purse\jquery-ui.min.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\swanky-purse\jquery-ui.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\sunny\theme.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\sunny\jquery-ui.min.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\sunny\jquery-ui.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\start\theme.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\start\jquery-ui.min.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\start\jquery-ui.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\south-street\theme.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\south-street\jquery-ui.min.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\south-street\jquery-ui.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\smoothness\theme.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\smoothness\jquery-ui.min.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\smoothness\jquery-ui.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\redmond\theme.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\redmond\jquery-ui.min.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\redmond\jquery-ui.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\pepper-grinder\theme.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\pepper-grinder\jquery-ui.min.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\pepper-grinder\jquery-ui.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\overcast\theme.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\overcast\jquery-ui.min.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\overcast\jquery-ui.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\mint-choc\theme.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\mint-choc\jquery-ui.min.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\mint-choc\jquery-ui.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\le-frog\theme.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\le-frog\jquery-ui.min.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\le-frog\jquery-ui.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\humanity\theme.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\humanity\jquery-ui.min.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\humanity\jquery-ui.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\hot-sneaks\theme.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\hot-sneaks\jquery-ui.min.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\hot-sneaks\jquery-ui.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\flick\theme.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\flick\jquery-ui.min.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\flick\jquery-ui.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\excite-bike\theme.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\excite-bike\jquery-ui.min.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\excite-bike\jquery-ui.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\eggplant\theme.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\eggplant\jquery-ui.min.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\eggplant\jquery-ui.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\dot-luv\theme.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\dot-luv\jquery-ui.min.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\dot-luv\jquery-ui.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\dark-hive\theme.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\dark-hive\jquery-ui.min.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\dark-hive\jquery-ui.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\cupertino\theme.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\cupertino\jquery-ui.min.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\cupertino\jquery-ui.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\blitzer\theme.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\blitzer\jquery-ui.min.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\blitzer\jquery-ui.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\black-tie\theme.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\black-tie\jquery-ui.min.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\black-tie\jquery-ui.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\base\theme.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\base\jquery-ui.min.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\themes\base\jquery-ui.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\LICENSE.txt" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\jquery-ui.theme.min.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\jquery-ui.theme.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\jquery-ui.structure.min.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\jquery-ui.structure.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\jquery-ui.min.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\jquery-ui.css" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-themes-1.12.1\AUTHORS.txt" crc="1473863650"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-1.12.1\external\jquery\jquery.js" crc="1473863646"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-1.12.1\LICENSE.txt" crc="1473863646"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-1.12.1\jquery-ui.theme.min.css" crc="1473863646"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-1.12.1\jquery-ui.theme.css" crc="1473863646"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-1.12.1\jquery-ui.structure.min.css" crc="1473863646"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-1.12.1\jquery-ui.structure.css" crc="1473863646"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-1.12.1\jquery-ui.min.js" crc="1473863646"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-1.12.1\jquery-ui.min.css" crc="1473863646"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-1.12.1\jquery-ui.js" crc="1473863646"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-1.12.1\jquery-ui.css" crc="1473863646"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-1.12.1\index.html" crc="1473863646"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-1.12.1\AUTHORS.txt" crc="1473863646"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-timepicker-addon.js" crc="1511871842"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\jquery-ui-timepicker-addon.css" crc="1509098630"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\globalFunctions.php" crc="1511886986"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\getLocalTimeFormat.php" crc="1511872091"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\getLocalTime.php" crc="1511874420"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\classUpdateController.php" crc="1511880002"/>
+		<file name="C:\inetpub\wwwroot\mvc\lib\classMVC.php" crc="1512123627"/>
+		<file name="C:\inetpub\wwwroot\mvc\languageEditor\style\index.css" crc="1511773937"/>
+		<file name="C:\inetpub\wwwroot\mvc\languageEditor\js\index.js" crc="1511512114"/>
+		<file name="C:\inetpub\wwwroot\mvc\languageEditor\languageBlockBackup.php" crc="1511511861"/>
+		<file name="C:\inetpub\wwwroot\mvc\languageEditor\index.php" crc="1511946181"/>
+		<file name="C:\inetpub\wwwroot\mvc\js\index.js" crc="1509098969"/>
+		<file name="C:\inetpub\wwwroot\mvc\mobile.php" crc="1512375001"/>
+		<file name="C:\inetpub\wwwroot\mvc\index.php" crc="1512120381"/>
+		<file name="C:\inetpub\wwwroot\mvc\desktop.php" crc="1512375056"/>
+	</filescache>
+</project>

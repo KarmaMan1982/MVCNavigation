@@ -1,7 +1,7 @@
 <?php
     require_once ('./lib/globalFunctions.php');
     function createUpdateButton($buttonID){
-        echo '<span class="update"><a href="#" id="'.$buttonID.'"><img src="./img/refresh.png"></a></span>';
+        echo '<span class="update"><a href="#" id="'.$buttonID.'"><img src="./img/refreshOrange.png"></a></span>';
     }
 ?>
 <style type="text/css">
@@ -95,6 +95,7 @@
     </tbody>    
 </table>
 -->
+<?php if($_SESSION['rotation'] == 'landscape') { ?>
 <div class="columnReadValues" id="columnReadValues1">  
     <div class="dragbox" id="item1" >  
         <h2><?php echo loadString('pageReadValuesHeaderMotorStatus'); ?> <?php createUpdateButton('btUpdateMotor'); ?></h2>  
@@ -141,7 +142,32 @@
         </div>  
     </div>
 </div> 
-
+<?php } else { ?>
+        <div class="AVheaderBlock"><?php echo loadString('pageReadValuesHeaderMotorStatus'); ?> <?php createUpdateButton('btUpdateMotor'); ?></div>
+        <table class="AVTable">
+                    <tr><td class="attributeColumn infoName"><?php echo loadString('pageReadValuesSMotor'); ?> 1</td><td class="valueColumn"><span id="statusMotor1" class="motorOpen"><?php echo loadString('pageReadValuesSMotorOpen'); ?></span></tr>
+                    <tr><td class="attributeColumn infoName"><?php echo loadString('pageReadValuesSMotor'); ?> 2</td><td class="valueColumn"><span id="statusMotor2" class="motorClose"><?php echo loadString('pageReadValuesSMotorClosed'); ?></span></tr>
+                    <tr><td class="attributeColumn infoName"><?php echo loadString('pageReadValuesSMotor'); ?> 3</td><td class="valueColumn"><span id="statusMotor3" class="motorOpen"><?php echo loadString('pageReadValuesSMotorOpen'); ?></span></tr>
+                    <tr><td class="attributeColumn infoName"><?php echo loadString('pageReadValuesSMotor'); ?> 4</td><td class="valueColumn"><span id="statusMotor4" class="motorClose"><?php echo loadString('pageReadValuesSMotorClosed'); ?></span></tr>
+        </table>
+        <div class="AVheaderBlock"><?php echo loadString('pageReadValuesHeaderInputs'); ?> <?php createUpdateButton('btUpdateInput'); ?></div>
+        <table class="AVTable">
+                    <tr><td id="nameInput1" class="attributeColumn infoName"><?php echo loadString('pageReadValuesPotFreeContact'); ?></td><td id="valueInput1" class="valueColumn colValue"><?php echo loadString('pageReadValuesStatusUsed'); ?></td></tr>
+                    <tr><td id="nameInput2" class="attributeColumn infoName"><?php echo loadString('pageReadValuesFreeInput'); ?></td><td id="valueInput2" class="valueColumn colValue"><?php echo loadString('pageReadValuesStatusNotUsed'); ?></td></tr>
+                    <tr><td id="nameInput3" class="attributeColumn infoName"><?php echo loadString('pageReadValuesProtectGuard'); ?> 1</td><td id="valueInput3" class="valueColumn colValue"><?php echo loadString('pageReadValuesStatusProtectConnected'); ?></td></tr>
+                    <tr><td id="nameInput4" class="attributeColumn infoName"><?php echo loadString('pageReadValuesProtectGuard'); ?> 2</td><td id="valueInput4" class="valueColumn colValue"><?php echo loadString('pageReadValuesStatusCompressorConnected'); ?></td></tr>
+                    <tr><td id="nameInput5" class="attributeColumn infoName"><?php echo loadString('pageReadValuesSwimmerSwitch'); ?> 1</td><td id="valueInput5" class="valueColumn colValue"><?php echo loadString('pageReadValuesStatusOn'); ?></td></tr>
+                    <tr><td id="nameInput6" class="attributeColumn infoName"><?php echo loadString('pageReadValuesSwimmerSwitch'); ?> 2</td><td id="valueInput6" class="valueColumn colValue"><?php echo loadString('pageReadValuesStatusOff'); ?></td></tr>
+                    <tr><td id="nameInput7" class="attributeColumn infoName"><?php echo loadString('pageReadValuesSwimmerSwitch'); ?> 3</td><td id="valueInput7" class="valueColumn colValue"><?php echo loadString('pageReadValuesStatusOn'); ?></td></tr>                    
+        </table>
+        <div class="AVheaderBlock"><?php echo loadString('pageReadValuesHeaderSensors'); ?> <?php createUpdateButton('btUpdateSensor'); ?></div>
+        <table class="AVTable">
+                    <tr><td id="nameSensor1" class="attributeColumn infoName"><?php echo loadString('pageReadValuesTempSensorPlatine'); ?></td><td id="valueSensor1" class="valueColumnHalf colValue">70</td><td id="unitSensor1" class="valueColumnHalf colUnit"><?php echo loadString('pageReadValuesUnitDegree'); ?></td></tr>
+                    <tr><td id="nameSensor2" class="attributeColumn infoName"><?php echo loadString('pageReadValuesTempSensorExtern'); ?></td><td id="valueSensor2" class="valueColumnHalf colValue">40</td><td id="unitSensor2" class="valueColumnHalf colUnit"><?php echo loadString('pageReadValuesUnitDegree'); ?></td></tr>
+                    <tr><td id="nameSensor3" class="attributeColumn infoName"><?php echo loadString('pageReadValuesPressureSensor'); ?> 1</td><td id="valueSensor3" class="valueColumnHalf colValue">5</td><td id="unitSensor3" class="valueColumnHalf colUnit"><?php echo loadString('pageReadValuesUnitAirPressure'); ?></td></tr>
+                    <tr><td id="nameSensor4" class="attributeColumn infoName"><?php echo loadString('pageReadValuesPressureSensor'); ?> 2</td><td id="valueSensor4" class="valueColumnHalf colValue">15</td><td id="unitSensor4" class="valueColumnHalf colUnit"><?php echo loadString('pageReadValuesUnitAirPressure'); ?></td></tr>
+        </table>        
+<?php } ?>
 
 <script type="text/javascript" language="JavaScript">
     $('.columnReadValues').sortable({  

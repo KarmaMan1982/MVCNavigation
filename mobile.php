@@ -2,7 +2,8 @@
 <?php
 session_start();
 if(isset($_SESSION['screen_width']) AND isset($_SESSION['screen_height'])){
-    if($_SESSION['screen_width'] < $_SESSION['screen_height']){ $_SESSION['rotation'] = 'portrait'; } else { $_SESSION['rotation'] = 'landscape';  }
+    #if($_SESSION['screen_width'] < $_SESSION['screen_height']){ $_SESSION['rotation'] = 'portrait'; } else { $_SESSION['rotation'] = 'landscape';  }
+    if($_SESSION['screen_width'] < $_SESSION['screen_height']){ $_SESSION['rotation'] = 'portrait'; } else { $_SESSION['rotation'] = 'portrait';  }
     #echo 'User resolution: ' . $_SESSION['screen_width'] . 'x' . $_SESSION['screen_height'];
 } else if(isset($_REQUEST['width']) AND isset($_REQUEST['height'])) {
     $_SESSION['screen_width'] = $_REQUEST['width'];

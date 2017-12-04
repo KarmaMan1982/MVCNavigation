@@ -1,0 +1,78 @@
+<codestructure version="5.13">
+<phptree>
+<treenode node="../lib/classUpdateController.php;PHP:PHP Include;C:\inetpub\wwwroot\mvc\scripts\updateValues.php;f18;2;50;2;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+</treenode>
+<treenode node="../lib/globalFunctions.php;PHP:PHP Include;C:\inetpub\wwwroot\mvc\scripts\updateValues.php;f19;1;45;1;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+</treenode>
+<treenode node="./globalFunctions.php;PHP:PHP Include;C:\inetpub\wwwroot\mvc\lib\getLocalTimeFormat.php;f15;1;36;1;;C:\inetpub\wwwroot\mvc\lib\getLocalTime.php;f15;1;36;1;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+</treenode>
+<treenode node="./lib/classMVC.php;PHP:PHP Include;C:\inetpub\wwwroot\mvc\mobile.php;f22;40;40;40;;C:\inetpub\wwwroot\mvc\desktop.php;f22;40;40;40;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+</treenode>
+<treenode node="./lib/globalFunctions.php;PHP:PHP Include;C:\inetpub\wwwroot\mvc\pages\pageWorkingHours.php;f19;3;44;3;;C:\inetpub\wwwroot\mvc\pages\pageReadValues.php;f19;1;44;1;;C:\inetpub\wwwroot\mvc\pages\pageOldAlerts.php;f19;3;44;3;;C:\inetpub\wwwroot\mvc\pages\pageHoliday.php;f15;1;40;1;;C:\inetpub\wwwroot\mvc\pages\pageDateClock.php;f15;1;40;1;;C:\inetpub\wwwroot\mvc\lib\classMVC.php;f15;1;40;1;;C:\inetpub\wwwroot\mvc\pages\pageSettings.php;f19;3;44;3;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+</treenode>
+<treenode node="Controller;PHP:Class Name;C:\inetpub\wwwroot\mvc\lib\classMVC.php;f0;134;1;142;;;;vpos;;v;;r;;d17,134;;b0,0;;m">
+<treenode node="__construct;PHP:Function Name;C:\inetpub\wwwroot\mvc\lib\classMVC.php;f11;136;5;138;;;;vpos;;v;;r;;d46,136;;b1,0;;mmodel;;p">
+</treenode>
+<treenode node="textClicked;PHP:Function Name;C:\inetpub\wwwroot\mvc\lib\classMVC.php;f11;139;5;141;;;;vpos;;v;;r;;d34,139;;b1,0;;m">
+</treenode>
+</treenode>
+<treenode node="Model;PHP:Class Name;C:\inetpub\wwwroot\mvc\lib\classMVC.php;f0;2;1;57;;;;vpos;;v;;r;;d12,2;;b0,0;;m">
+<treenode node="__construct;PHP:Function Name;C:\inetpub\wwwroot\mvc\lib\classMVC.php;f11;6;5;46;;;;vpos;;v;;r;;d34,6;;b1,0;;m">
+</treenode>
+<treenode node="getNavigation;PHP:Function Name;C:\inetpub\wwwroot\mvc\lib\classMVC.php;f11;54;5;56;;;;vpos;;v;;r;;d35,54;;b1,0;;m">
+</treenode>
+<treenode node="loadPage;PHP:Function Name;C:\inetpub\wwwroot\mvc\lib\classMVC.php;f12;47;5;53;;;;vpos;;v;;r;;d36,47;;b3,0;;mPage;;p">
+</treenode>
+</treenode>
+<treenode node="UpdateController;PHP:Class Name;C:\inetpub\wwwroot\mvc\lib\classUpdateController.php;f0;1;1;227;;;;vpos;;v;;r;;d23,1;;b0,0;;m">
+<treenode node="__construct;PHP:Function Name;C:\inetpub\wwwroot\mvc\lib\classUpdateController.php;f11;6;5;10;;;;vpos;;v;;r;;d39,6;;b1,0;;mdata;;p">
+</treenode>
+<treenode node="btSetStartHoliday;PHP:Function Name;C:\inetpub\wwwroot\mvc\lib\classUpdateController.php;f11;170;5;191;;;;vpos;;v;;r;;d39,170;;b1,0;;m">
+</treenode>
+<treenode node="btSetStopHoliday;PHP:Function Name;C:\inetpub\wwwroot\mvc\lib\classUpdateController.php;f11;192;5;213;;;;vpos;;v;;r;;d38,192;;b1,0;;m">
+</treenode>
+<treenode node="btUpdateInput;PHP:Function Name;C:\inetpub\wwwroot\mvc\lib\classUpdateController.php;f11;145;5;169;;;;vpos;;v;;r;;d36,145;;b1,0;;m">
+</treenode>
+<treenode node="btUpdateMotor;PHP:Function Name;C:\inetpub\wwwroot\mvc\lib\classUpdateController.php;f11;102;5;125;;;;vpos;;v;;r;;d36,102;;b1,0;;m">
+</treenode>
+<treenode node="btUpdateSensor;PHP:Function Name;C:\inetpub\wwwroot\mvc\lib\classUpdateController.php;f11;126;5;144;;;;vpos;;v;;r;;d37,126;;b1,0;;m">
+</treenode>
+<treenode node="loadHolidayStart;PHP:Function Name;C:\inetpub\wwwroot\mvc\lib\classUpdateController.php;f12;80;5;90;;;;vpos;;v;;r;;d39,80;;b3,0;;m">
+</treenode>
+<treenode node="loadHolidayStop;PHP:Function Name;C:\inetpub\wwwroot\mvc\lib\classUpdateController.php;f12;91;5;101;;;;vpos;;v;;r;;d38,91;;b3,0;;m">
+</treenode>
+<treenode node="Output;PHP:Function Name;C:\inetpub\wwwroot\mvc\lib\classUpdateController.php;f11;224;5;226;;;;vpos;;v;;r;;d28,224;;b1,0;;m">
+</treenode>
+<treenode node="receiveTimeFromServer;PHP:Function Name;C:\inetpub\wwwroot\mvc\lib\classUpdateController.php;f12;11;5;29;;;;vpos;;v;;r;;d44,11;;b3,0;;m">
+</treenode>
+<treenode node="saveHolidayStart;PHP:Function Name;C:\inetpub\wwwroot\mvc\lib\classUpdateController.php;f12;58;5;68;;;;vpos;;v;;r;;d44,58;;b3,0;;mdate;;p">
+</treenode>
+<treenode node="saveHolidayStop;PHP:Function Name;C:\inetpub\wwwroot\mvc\lib\classUpdateController.php;f12;69;5;79;;;;vpos;;v;;r;;d43,69;;b3,0;;mdate;;p">
+</treenode>
+<treenode node="tmUpdateHoliday;PHP:Function Name;C:\inetpub\wwwroot\mvc\lib\classUpdateController.php;f11;218;5;223;;;;vpos;;v;;r;;d37,218;;b1,0;;m">
+</treenode>
+<treenode node="tmUpdateTime;PHP:Function Name;C:\inetpub\wwwroot\mvc\lib\classUpdateController.php;f11;214;5;217;;;;vpos;;v;;r;;d34,214;;b1,0;;m">
+</treenode>
+<treenode node="validateHoliday;PHP:Function Name;C:\inetpub\wwwroot\mvc\lib\classUpdateController.php;f12;30;5;57;;;;vpos;;v;;r;;d38,30;;b3,0;;m">
+</treenode>
+</treenode>
+<treenode node="View;PHP:Class Name;C:\inetpub\wwwroot\mvc\lib\classMVC.php;f0;59;1;132;;;;vpos;;v;;r;;d11,59;;b0,0;;m">
+<treenode node="__construct;PHP:Function Name;C:\inetpub\wwwroot\mvc\lib\classMVC.php;f11;64;5;69;;;;vpos;;v;;r;;d46,64;;b1,0;;mmodel;;p">
+</treenode>
+<treenode node="createHeader;PHP:Function Name;C:\inetpub\wwwroot\mvc\lib\classMVC.php;f12;70;5;72;;;;vpos;;v;;r;;d35,70;;b3,0;;m">
+</treenode>
+<treenode node="createNavigation;PHP:Function Name;C:\inetpub\wwwroot\mvc\lib\classMVC.php;f12;73;5;121;;;;vpos;;v;;r;;d52,73;;b3,0;;mnavigationID;;p">
+</treenode>
+<treenode node="output;PHP:Function Name;C:\inetpub\wwwroot\mvc\lib\classMVC.php;f11;125;5;131;;;;vpos;;v;;r;;d29,125;;b1,0;;m">
+</treenode>
+<treenode node="setSoftwareType;PHP:Function Name;C:\inetpub\wwwroot\mvc\lib\classMVC.php;f11;122;5;124;;;;vpos;;v;;r;;d42,122;;b1,0;;mtype;;p">
+</treenode>
+</treenode>
+<treenode node="createUpdateButton;PHP:Function Name;C:\inetpub\wwwroot\mvc\pages\pageReadValues.php;f4;2;5;4;;;;vpos;;v;;r;;d42,2;;b0,0;;mbuttonID;;p">
+</treenode>
+<treenode node="isMobile;PHP:Function Name;C:\inetpub\wwwroot\mvc\index.php;f0;6;1;15;;;;vpos;;v;;r;;d32,6;;b0,0;;mmobile;;p">
+</treenode>
+<treenode node="loadString;PHP:Function Name;C:\inetpub\wwwroot\mvc\lib\globalFunctions.php;f0;3;1;18;;;;vpos;;v;;r;;d32,3;;b0,0;;mstringName;;p">
+</treenode>
+</phptree>
+</codestructure>
