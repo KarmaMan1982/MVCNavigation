@@ -14,11 +14,13 @@ function isMobile(array $mobile){
      }
   }
 }
-
+session_start();
 $useragent=$_SERVER['HTTP_USER_AGENT'];
 if( isMobile($mobile) ){
+    $_SESSION['modus'] = 'mobile';
     header('Location: ./mobile.php');
 } else {
+    $_SESSION['modus'] = 'desktop';
     header('Location: ./desktop.php');
 }
 ?>

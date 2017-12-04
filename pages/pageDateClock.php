@@ -53,7 +53,7 @@ require_once ('./lib/globalFunctions.php');
     width: 100%;
 }
 </style>
-<?php if($_SESSION['rotation'] == 'landscape') { ?>
+<?php if($_SESSION['modus'] == 'classic') { ?>
 <div class="columnDateClock" id="columnDateClock1">  
     <div class="dragbox" id="item1" >  
         <h2><?php echo loadString('pageDateClockHeaderShowTime'); ?></h2>  
@@ -80,6 +80,18 @@ require_once ('./lib/globalFunctions.php');
         </div>  
     </div>  
 </div>
+<?php } ?>
+<?php if($_SESSION['rotation'] == 'landscape') { ?>
+        <div class="AVheaderBlock"><?php echo loadString('pageDateClockHeaderShowTime'); ?></div>
+        <table class="AVTable">
+                    <tr><td class="attributeColumn infoName"><?php echo loadString('pageDateClockMC'); ?></td><td class="valueColumn" colspan="2"><span id="statusMCTime"></span></td></tr>
+                    <tr><td class="attributeColumn infoName"><?php echo loadString('pageDateClockCC'); ?></td><td class="valueColumn" colspan="2"><span id="statusUNIXTime"></span></td></tr>
+        </table>
+        <div class="AVheaderBlock"><?php echo loadString('pageDateClockHeaderSetupTime'); ?></div>
+        <table class="AVTable">
+                    <tr><td class="attributeColumn infoName"><?php echo loadString('pageDateClockInternetTime'); ?></td><td class="valueColumnHalf colTime"><span id="statusINTERNETTime"></span></td><td class="valueColumnHalf colButton"><button id="btSetInternetTime" class="ui-button ui-widget ui-corner-all"><?php echo loadString('pageDateClockSyncInternetTime'); ?></button></td></tr>
+                    <tr><td class="attributeColumn infoName"><?php echo loadString('pageDateClockManualTime'); ?></td><td class="valueColumnHalf colTime"><input name="tbManualTime" id="tbManualTime" type="text"></td><td class="valueColumnHalf colButton"><button id="btSetManualTime" class="ui-button ui-widget ui-corner-all"><?php echo loadString('pageDateClockSyncManualTime'); ?></button></td></tr>
+        </table>  
 <?php } else { ?>
         <div class="AVheaderBlock"><?php echo loadString('pageDateClockHeaderShowTime'); ?></div>
         <table class="AVTable">
