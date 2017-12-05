@@ -222,6 +222,18 @@ class UpdateController {
         $configField['stopHoliday']=$this->loadHolidayStop();
         $this->dataConverted = json_encode($configField);
     }
+    public function windowChangeLayout(){
+        if(!isset($_SESSION)){ session_start(); }
+        $_SESSION['screen_width'] = $this->data['width'];
+        $_SESSION['screen_height'] = $this->data['height'];
+        $_SESSION['rotate'] = $this->data['rotate'];
+        $debugField = array(
+            'input' => $this->data,
+            'session' => $_SESSION,
+            'rotate' => $this->data['rotate']
+        );
+        $this->dataConverted = json_encode($debugField);
+    }
     public function Output(){
         echo $this->dataConverted;
     }

@@ -4,6 +4,7 @@ if(!isset($_SESSION['modus'])){
     session_start();
     $_SESSION['modus']='modern';
 }
+#var_dump($_SESSION['rotate']);
 if(isset($_SESSION['screen_width']) AND isset($_SESSION['screen_height'])){
     if($_SESSION['screen_width'] < $_SESSION['screen_height']){ $_SESSION['rotation'] = 'portrait'; } else { $_SESSION['rotation'] = 'landscape';  }
     #if($_SESSION['screen_width'] < $_SESSION['screen_height']){ $_SESSION['rotation'] = 'landscape'; } else { $_SESSION['rotation'] = 'landscape';  }

@@ -4,9 +4,17 @@ if(!isset($_SESSION['modus'])){
     session_start();
     $_SESSION['modus']='modern';
 }
-var_dump($_SESSION);
+#var_dump($_SESSION['rotate']);
 if(isset($_SESSION['screen_width']) AND isset($_SESSION['screen_height'])){
     if($_SESSION['screen_width'] < $_SESSION['screen_height']){ $_SESSION['rotation'] = 'portrait'; } else { $_SESSION['rotation'] = 'landscape';  }
+    if(isset($_SESSION['rotate'])){
+        if($_SESSION['rotate'] == 'true'){
+            switch($_SESSION['rotation']){
+                case 'portrait' : $_SESSION['rotation'] = 'landscape'; break;
+                case 'landscape' : $_SESSION['rotation'] = 'portrait'; break;                
+            }
+        }
+    }
     #if($_SESSION['screen_width'] < $_SESSION['screen_height']){ $_SESSION['rotation'] = 'landscape'; } else { $_SESSION['rotation'] = 'landscape';  }
     #echo 'User resolution: ' . $_SESSION['screen_width'] . 'x' . $_SESSION['screen_height'];
 } else if(isset($_REQUEST['width']) AND isset($_REQUEST['height'])) {
