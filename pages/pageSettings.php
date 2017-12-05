@@ -621,11 +621,15 @@
                 break;
             }
         }
-
+        <?php if(strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE 6.') !== false) { ?>
+          
+        <?php } else { ?>
         $( ".controlgroup" ).controlgroup();
         $(".btn-group-toggle").twbsToggleButtons();
+        <?php } ?>
         toggleStationForm($("input[name='rbWLANType']").val());
         $("input[name='rbWLANType']").on("click", function() {
             toggleStationForm($(this).val());
-        });        
+        });
+        
 </script>

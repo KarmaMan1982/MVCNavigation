@@ -61,7 +61,27 @@
     }
     #btSetStartWorkingHours, #btSetStopWorkingHours {
         width: 100%;
-    }    
+    }
+
+            .progressTable{
+                font-family: "Lucida Grande",Verdana,segoe ui,Arial,sans-serif;
+                font-size: 16px;
+                font-weight: 400;
+                border: none;
+                border-collapse: collapse;
+            }
+            .progressTable tr td{
+                text-align: center;
+                background: #cbcbcb;
+                color: white;
+                padding-bottom: 8.8px;
+                padding-top: 8.8px;
+            }
+            .progressTable tr td.aktiv{
+                background: #006BB5;
+                color: #E79800;
+                font-weight: 600;                
+            }     
 </style>
 <?php if($_SESSION['modus'] == 'classic') { ?>
 <div class="columnWorkingHours" id="columnWorkingHours1">  
@@ -126,7 +146,8 @@
                 <tr><td class="attributeColumn"><?php echo loadString('pageWorkingHourCountPump'); ?></td><td class="valueColumn"><?php echo loadString('pageWorkingHourCountTimeInformationText'); ?></td></tr>
                 <tr><td class="attributeColumn"><?php echo loadString('pageWorkingHourCountUVLamp'); ?></td><td class="valueColumn"><?php echo loadString('pageWorkingHourCountTimeInformationText'); ?></td></tr>
                 <tr><td class="attributeColumn"><?php echo loadString('pageWorkingHourCountWPT'); ?></td><td class="valueColumn"><?php echo loadString('pageWorkingHourCountTimeInformationText'); ?></td></tr>
-                <tr><td class="attributeColumn"><?php echo loadString('pageWorkingHourCountCOP'); ?></td><td class="valueColumn"><?php echo loadString('pageWorkingHourCountCOPValue'); ?></td></tr>         
+                <tr><td class="attributeColumn"><?php echo loadString('pageWorkingHourCountCOP'); ?></td><td class="valueColumn"><?php echo loadString('pageWorkingHourCountCOPValue'); ?></td></tr>
+                <tr><td class="attributeColumn">Zyklus</td><td class="valueColumn"><?php createProgressTable(loadString('pageWorkingHourCountCOPValue')); ?></td></tr>                
         </table>
         <div class="AVheaderBlock"><?php echo loadString('pageWorkingHourCountHeaderDeviceInformation'); ?></div>
         <table class="AVTable">
@@ -153,7 +174,8 @@
                 <tr><td class="attributeColumn"><?php echo loadString('pageWorkingHourCountPump'); ?></td><td class="valueColumn"><?php echo loadString('pageWorkingHourCountTimeInformationText'); ?></td></tr>
                 <tr><td class="attributeColumn"><?php echo loadString('pageWorkingHourCountUVLamp'); ?></td><td class="valueColumn"><?php echo loadString('pageWorkingHourCountTimeInformationText'); ?></td></tr>
                 <tr><td class="attributeColumn"><?php echo loadString('pageWorkingHourCountWPT'); ?></td><td class="valueColumn"><?php echo loadString('pageWorkingHourCountTimeInformationText'); ?></td></tr>
-                <tr><td class="attributeColumn"><?php echo loadString('pageWorkingHourCountCOP'); ?></td><td class="valueColumn"><?php echo loadString('pageWorkingHourCountCOPValue'); ?></td></tr>         
+                <tr><td class="attributeColumn"><?php echo loadString('pageWorkingHourCountCOP'); ?></td><td class="valueColumn"><?php echo loadString('pageWorkingHourCountCOPValue'); ?></td></tr>
+                <tr><td class="attributeColumn">Zyklus</td><td class="valueColumn"><?php createProgressTable(loadString('pageWorkingHourCountCOPValue')); ?></td></tr> 
         </table>
         <div class="AVheaderBlock"><?php echo loadString('pageWorkingHourCountHeaderDeviceInformation'); ?></div>
         <table class="AVTable">

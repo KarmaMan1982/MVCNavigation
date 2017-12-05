@@ -20,12 +20,16 @@ if(isset($_SESSION['screen_width']) AND isset($_SESSION['screen_height'])){
 ?>
 <html>
     <head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <title>KLARO Web-Dummy</title>
+        <?php if(strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE 6.') !== false) { ?>
+        <link href="lib/jquery-ui-1.9.2.custom/css/excite-bike/jquery-ui-1.9.2.custom.css" rel="stylesheet" type="text/css"/>  
+        <?php } else { ?>
         <link href="lib/jquery-ui-themes-1.12.1/jquery-ui.css" rel="stylesheet" type="text/css"/>
         <link href="lib/jquery-ui-themes-1.12.1/jquery-ui.theme.css" rel="stylesheet" type="text/css"/>
         <link href="lib/jquery-ui-themes-1.12.1/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css"/>
         <link href="lib/jquery-ui-themes-1.12.1/themes/excite-bike/theme.css" rel="stylesheet" type="text/css"/>
+        <?php } ?>
         <link href="lib/jquery-ui-timepicker-addon.css" rel="stylesheet" type="text/css"/>
         <link href="lib/switchBox/jquerysctipttop.css" rel="stylesheet" type="text/css"/>
         <link href="lib/switchBox/bootstrap.min.css" rel="stylesheet" type="text/css"/>        
@@ -34,9 +38,14 @@ if(isset($_SESSION['screen_width']) AND isset($_SESSION['screen_height'])){
         <!--
         <link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel='stylesheet' />
         <link href="lib/uploader/css/style.css" rel="stylesheet" />
-        -->
+        --> 
+       <?php if(strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE 6.') !== false) { ?>
+        <script src="lib/jquery-ui-1.9.2.custom/js/jquery-1.8.3.js" type="text/javascript"></script> 
+        <script src="lib/jquery-ui-1.9.2.custom/js/jquery-ui-1.9.2.custom.js" type="text/javascript"></script>         
+        <?php } else { ?>        
         <script src="lib/jquery-ui-1.12.1/external/jquery/jquery.js" type="text/javascript"></script>
         <script src="lib/jquery-ui-1.12.1/jquery-ui.js" type="text/javascript"></script>
+        <?php } ?>
         <script src="lib/jquery-ui-timepicker-addon.js" type="text/javascript"></script>
         <script src="lib/switchBox/jquery.twbs-toggle-buttons.min.js" type="text/javascript"></script>        
         <script src="js/index.js" type="text/javascript"></script>

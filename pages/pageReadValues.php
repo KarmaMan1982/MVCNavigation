@@ -176,7 +176,7 @@
         cursor: 'move',  
         placeholder: 'placeholder',  
         forcePlaceholderSize: true,  
-        opacity: 0.4,  
+        opacity: 0.4  
     })  
     .disableSelection();
     
