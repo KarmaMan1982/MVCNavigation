@@ -3,17 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/inetpub/wwwroot/mvc/pages/pageSettings.php</file>
-            <file>file:/C:/inetpub/wwwroot/mvc/pages/pageReadValues.php</file>
-            <file>file:/C:/inetpub/wwwroot/mvc/pages/pageHoliday.php</file>
             <file>file:/C:/inetpub/wwwroot/mvc/pages/pageWorkingHours.php</file>
-            <file>file:/C:/inetpub/wwwroot/mvc/pages/pageOldAlerts.php</file>
-            <file>file:/C:/inetpub/wwwroot/mvc/pages/pageDateClock.php</file>
-            <file>file:/C:/inetpub/wwwroot/mvc/style/mobile.css</file>
+            <file>file:/C:/inetpub/wwwroot/mvc/lib/globalFunctions.php</file>
+            <file>file:/C:/inetpub/wwwroot/mvc/style/oldIE.css</file>
             <file>file:/C:/inetpub/wwwroot/mvc/desktop.php</file>
-            <file>file:/C:/inetpub/wwwroot/mvc/mobile.php</file>
-            <file>file:/C:/inetpub/wwwroot/mvc/index.php</file>
-            <file>file:/C:/inetpub/wwwroot/mvc/lib/classMVC.php</file>
         </group>
     </open-files>
 </project-private>

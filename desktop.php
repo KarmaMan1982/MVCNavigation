@@ -23,7 +23,8 @@ if(isset($_SESSION['screen_width']) AND isset($_SESSION['screen_height'])){
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <title>KLARO Web-Dummy</title>
         <?php if(strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE 6.') !== false) { ?>
-        <link href="lib/jquery-ui-1.9.2.custom/css/excite-bike/jquery-ui-1.9.2.custom.css" rel="stylesheet" type="text/css"/>  
+        <link href="lib/jquery-ui-1.9.2.custom/css/excite-bike/jquery-ui-1.9.2.custom.css" rel="stylesheet" type="text/css"/>
+        <link href="style/oldIE.css" rel="stylesheet" type="text/css"/> 
         <?php } else { ?>
         <link href="lib/jquery-ui-themes-1.12.1/jquery-ui.css" rel="stylesheet" type="text/css"/>
         <link href="lib/jquery-ui-themes-1.12.1/jquery-ui.theme.css" rel="stylesheet" type="text/css"/>
