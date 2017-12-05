@@ -5,6 +5,7 @@ if(!isset($_SESSION['modus'])){
     $_SESSION['modus']='modern';
 }
 #var_dump($_SESSION['rotate']);
+#var_dump($_SESSION['scale']);
 if(isset($_SESSION['screen_width']) AND isset($_SESSION['screen_height'])){
     if($_SESSION['screen_width'] < $_SESSION['screen_height']){ $_SESSION['rotation'] = 'portrait'; } else { $_SESSION['rotation'] = 'landscape';  }
     if(isset($_SESSION['rotate'])){
@@ -28,7 +29,12 @@ if(isset($_SESSION['screen_width']) AND isset($_SESSION['screen_height'])){
 ?>
 <html>
     <head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <?php if(isset($_SESSION['scale'])){ ?>
+        <meta name="viewport" content="width=device-width, initial-scale=<?php echo $_SESSION['scale']; ?>, user-scalable=no">
+        <?php } else { ?>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">        
+        <?php } ?>
         <title>KLARO Web-Dummy Mobile</title>
         <link href="lib/jquery-ui-themes-1.12.1/jquery-ui.css" rel="stylesheet" type="text/css"/>
         <link href="lib/jquery-ui-themes-1.12.1/jquery-ui.theme.css" rel="stylesheet" type="text/css"/>
