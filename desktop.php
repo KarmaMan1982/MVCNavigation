@@ -22,7 +22,13 @@ if(isset($_SESSION['screen_width']) AND isset($_SESSION['screen_height'])){
     <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <title>KLARO Web-Dummy</title>
-        <?php if(strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE 6.') !== false) { ?>
+        <?php
+        $oldFirefox = false;
+        $browser = get_browser(null, true);
+        if($browser['browser'] == 'Firefox' && $browser['majorver'] <= 10){ $oldFirefox = true; }
+        ?>
+        <?php if(strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE 6.') !== false || $oldFirefox == true) { ?>
+        <link href="style/reset.css" rel="stylesheet" type="text/css"/> 
         <link href="lib/jquery-ui-1.9.2.custom/css/excite-bike/jquery-ui-1.9.2.custom.css" rel="stylesheet" type="text/css"/>
         <link href="style/oldIE.css" rel="stylesheet" type="text/css"/> 
         <?php } else { ?>
@@ -41,7 +47,7 @@ if(isset($_SESSION['screen_width']) AND isset($_SESSION['screen_height'])){
         <link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel='stylesheet' />
         <link href="lib/uploader/css/style.css" rel="stylesheet" />
         --> 
-       <?php if(strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE 6.') !== false) { ?>
+       <?php if(strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE 6.') !== false || $oldFirefox == true) { ?>
         <script src="lib/jquery-ui-1.9.2.custom/js/jquery-1.8.3.js" type="text/javascript"></script> 
         <script src="lib/jquery-ui-1.9.2.custom/js/jquery-ui-1.9.2.custom.js" type="text/javascript"></script>         
         <?php } else { ?>        
