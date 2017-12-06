@@ -45,6 +45,7 @@ if(isset($_SESSION['screen_width']) AND isset($_SESSION['screen_height'])){
         <link href="lib/switchBox/bootstrap.min.css" rel="stylesheet" type="text/css"/>        
         <link href="style/header.css" rel="stylesheet" type="text/css"/>
         <link href="style/mobile.css" rel="stylesheet" type="text/css"/>
+        <link href="style/ProgressTable.css" rel="stylesheet" type="text/css"/>
         <!--
         <link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel='stylesheet' />
         <link href="lib/uploader/css/style.css" rel="stylesheet" />

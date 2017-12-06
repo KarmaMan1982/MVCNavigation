@@ -2,6 +2,7 @@
     $now   = new DateTime;
     $displayNow = $now->format('H:i:s d.m.Y');
     require_once ('./lib/globalFunctions.php');
+    require_once('./scripts/getZyklus.php');    
 ?>
 <style type="text/css">
     .no-close .ui-dialog-titlebar-close {
@@ -147,7 +148,7 @@
                 <tr><td class="attributeColumn"><?php echo loadString('pageWorkingHourCountUVLamp'); ?></td><td class="valueColumn"><?php echo loadString('pageWorkingHourCountTimeInformationText'); ?></td></tr>
                 <tr><td class="attributeColumn"><?php echo loadString('pageWorkingHourCountWPT'); ?></td><td class="valueColumn"><?php echo loadString('pageWorkingHourCountTimeInformationText'); ?></td></tr>
                 <tr><td class="attributeColumn"><?php echo loadString('pageWorkingHourCountCOP'); ?></td><td class="valueColumn"><?php echo loadString('pageWorkingHourCountCOPValue'); ?></td></tr>
-                <tr><td class="attributeColumn">Zyklus</td><td class="valueColumn"><?php createProgressTable(loadString('pageWorkingHourCountCOPValue')); ?></td></tr>                
+                <tr><td class="attributeColumn">Zyklus</td><td class="valueColumn"><?php echo $ZyklusObject->outputHTML(); ?></td></tr>                
         </table>
         <div class="AVheaderBlock"><?php echo loadString('pageWorkingHourCountHeaderDeviceInformation'); ?></div>
         <table class="AVTable">
@@ -175,7 +176,7 @@
                 <tr><td class="attributeColumn"><?php echo loadString('pageWorkingHourCountUVLamp'); ?></td><td class="valueColumn"><?php echo loadString('pageWorkingHourCountTimeInformationText'); ?></td></tr>
                 <tr><td class="attributeColumn"><?php echo loadString('pageWorkingHourCountWPT'); ?></td><td class="valueColumn"><?php echo loadString('pageWorkingHourCountTimeInformationText'); ?></td></tr>
                 <tr><td class="attributeColumn"><?php echo loadString('pageWorkingHourCountCOP'); ?></td><td class="valueColumn"><?php echo loadString('pageWorkingHourCountCOPValue'); ?></td></tr>
-                <tr><td class="attributeColumn">Zyklus</td><td class="valueColumn"><?php createProgressTable(loadString('pageWorkingHourCountCOPValue')); ?></td></tr> 
+                <tr><td class="attributeColumn">Zyklus</td><td class="valueColumn"><?php echo $ZyklusObject->outputHTML(); ?></td></tr> 
         </table>
         <div class="AVheaderBlock"><?php echo loadString('pageWorkingHourCountHeaderDeviceInformation'); ?></div>
         <table class="AVTable">
@@ -192,3 +193,22 @@
                 <tr><td class="attributeColumn infoError"><?php echo loadString('pageWorkingHourCountDisorder'); ?> 4</td><td class="valueColumn"><button id="btConfirmError4" class="ui-button ui-widget ui-corner-all"><?php echo loadString('pageWorkingHourCountNoted'); ?></button></td></tr>       
         </table>        
 <?php } ?>
+<script type="text/javascript" language="JavaScript">
+    setInterval(function(){
+        $.post('./scripts/getZyklus.php',{
+            output: 'outputJSON',
+            data: null
+        }, function(data){
+            //console.log(data);
+            for (e in data.ProgressField){
+                var ProgressID = data.ProgressField[e].ProgressID;
+                var ProgressName = data.ProgressField[e].ProgressName;
+                var ProgressTime = data.ProgressField[e].ProgressTime;
+                var ProgressStaus = data.ProgressField[e].ProgressStatus;
+                //$('#'+ProgressID).removeAttr('class');
+                $('#'+ProgressID).attr('class',ProgressStaus);
+                //console.log(data.ProgressField[e].ProgressID);
+            }
+       },'json');
+    },1000);    
+</script>
