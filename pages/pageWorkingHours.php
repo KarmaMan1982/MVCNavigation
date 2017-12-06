@@ -148,7 +148,8 @@
                 <tr><td class="attributeColumn"><?php echo loadString('pageWorkingHourCountUVLamp'); ?></td><td class="valueColumn"><?php echo loadString('pageWorkingHourCountTimeInformationText'); ?></td></tr>
                 <tr><td class="attributeColumn"><?php echo loadString('pageWorkingHourCountWPT'); ?></td><td class="valueColumn"><?php echo loadString('pageWorkingHourCountTimeInformationText'); ?></td></tr>
                 <tr><td class="attributeColumn"><?php echo loadString('pageWorkingHourCountCOP'); ?></td><td class="valueColumn"><?php echo loadString('pageWorkingHourCountCOPValue'); ?></td></tr>
-                <tr><td class="attributeColumn">Aktiver Zyklus <?php echo $ZyklusObject->outputName(); ?></td><td class="valueColumn"><?php echo $ZyklusObject->outputHTML(); ?></td></tr>                
+                <tr><td class="attributeColumn">Aktiver Zyklus <?php echo $ZyklusObject->outputName(); ?></td><td class="valueColumn"><?php echo $ZyklusObject->outputHTML(); ?></td></tr>
+                <tr><td class="attributeColumn">Temparatur</td><td class="valueColumn"><img src="./img/temparatur.php"></td></tr>
         </table>
         <div class="AVheaderBlock"><?php echo loadString('pageWorkingHourCountHeaderDeviceInformation'); ?></div>
         <table class="AVTable">
@@ -176,7 +177,8 @@
                 <tr><td class="attributeColumn"><?php echo loadString('pageWorkingHourCountUVLamp'); ?></td><td class="valueColumn"><?php echo loadString('pageWorkingHourCountTimeInformationText'); ?></td></tr>
                 <tr><td class="attributeColumn"><?php echo loadString('pageWorkingHourCountWPT'); ?></td><td class="valueColumn"><?php echo loadString('pageWorkingHourCountTimeInformationText'); ?></td></tr>
                 <tr><td class="attributeColumn"><?php echo loadString('pageWorkingHourCountCOP'); ?></td><td class="valueColumn"><?php echo loadString('pageWorkingHourCountCOPValue'); ?></td></tr>
-                <tr><td class="attributeColumn">Aktiver Zyklus <?php echo $ZyklusObject->outputName(); ?></td><td class="valueColumn"><?php echo $ZyklusObject->outputHTML(); ?></td></tr> 
+                <tr><td class="attributeColumn">Aktiver Zyklus <?php echo $ZyklusObject->outputName(); ?></td><td class="valueColumn"><?php echo $ZyklusObject->outputHTML(); ?></td></tr>
+                <tr><td class="attributeColumn">Temparatur</td><td class="valueColumn"><img src="./img/temparatur.php"></td></tr>
         </table>
         <div class="AVheaderBlock"><?php echo loadString('pageWorkingHourCountHeaderDeviceInformation'); ?></div>
         <table class="AVTable">
