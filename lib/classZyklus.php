@@ -54,7 +54,7 @@ class ZyklusController{
     public function addProgress($name,$time){
         $Progress = array(
             'ProgressName' => $name,
-            'ProgressTime' => $time / 1000
+            'ProgressTime' => $time / 10
         );
         $this->progressField[] = $Progress;
     }
@@ -87,18 +87,20 @@ class ZyklusController{
         return $output;
     }
     public function outputJSON(){
+        $this->calcActiveZyklus();
         $returnProgress = array();
         $progressNumber = 0;
         foreach ($this->progressField AS $Progress){
             $ProgressName = $Progress['ProgressName'];
             $ProgressTime = $Progress['ProgressTime'];
             $ProgressID = 'ProgressElement'.$progressNumber;
+            $ProgressStatus = '';
             if($this->activeZyklus == $Progress['ProgressName']) { $ProgressStatus = 'Active'; }
-            else { $ProgressStatus= ''; }
+            else { $ProgressStatus= 'Inactive'; }
             $pointerProgress = array(
                     'ProgressName' => $ProgressName,
                     'ProgressTime' => $ProgressTime,
-                    'ProgressStaus' => $ProgressStatus,
+                    'ProgressStatus' => $ProgressStatus,
                     'ProgressID' => $ProgressID
             );
             $returnProgress[]=$pointerProgress;
@@ -109,6 +111,9 @@ class ZyklusController{
             'ProgressField' => $returnProgress
         );
         return json_encode($returnField);
+    }
+    public function outputName(){
+        return $this->name;
     }
 }
 ?>
