@@ -59,5 +59,6 @@ $(document).ready(function() {
         startOrientation = 'portrait';
     }
     //console.log(window.location.href);
+    $('.editText').width(104);
     $("#basic_example_1").datetimepicker();
 });

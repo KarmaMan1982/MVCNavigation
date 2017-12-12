@@ -266,6 +266,20 @@
         <table class="AVTable">
                 <tbody>            
                     <tr><td class="attributeColumn infoName">Modus</td><td class="valueColumn">
+                        <?php if ($_SESSION['oldBrowser'] == true){ ?>
+                        <div class="form-group radio-toggle">
+                                <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="radio" name="rbWLANType" id="rbWLANType1" value="Server" required>
+                                            Server
+                                        </label>
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="radio" name="rbWLANType" id="rbWLANType2" value="Client">
+                                            Client
+                                        </label>
+                                </div>
+                        </div>                            
+                        <?php } else { ?>
                         <div class="btn-group btn-group-toggle form-control" data-toggle="buttons">
                             <label class="btn active" role="button">
                                 <input type="radio" name="rbWLANType" value="Server" required>Server
@@ -273,7 +287,11 @@
                             <label class="btn" role="button">
                                 <input type="radio" name="rbWLANType" value="Client">Client
                             </label>
-                        </div>
+                        </div>                            
+                        <?php } ?>    
+                            
+                            
+
                         <span id="serverType"></span>                        
                     </td></tr>
                 </tbody>
@@ -431,6 +449,20 @@
         <table class="AVTable">
                 <tbody>            
                     <tr><td class="attributeColumn infoName">Modus</td><td class="valueColumn">
+                        <?php if ($_SESSION['oldBrowser'] == true){ ?>
+                        <div class="form-group radio-toggle">
+                                <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="radio" name="rbWLANType" value="Server" checked>
+                                            Server
+                                        </label>
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="radio" name="rbWLANType" value="Client">
+                                            Client
+                                        </label>
+                                </div>
+                        </div>                            
+                        <?php } else { ?>
                         <div class="btn-group btn-group-toggle form-control" data-toggle="buttons">
                             <label class="btn active" role="button">
                                 <input type="radio" name="rbWLANType" value="Server" required>Server
@@ -438,7 +470,8 @@
                             <label class="btn" role="button">
                                 <input type="radio" name="rbWLANType" value="Client">Client
                             </label>
-                        </div>
+                        </div>                            
+                        <?php } ?>  
                         <span id="serverType"></span>                        
                     </td></tr>
                 </tbody>
@@ -621,8 +654,15 @@
                 break;
             }
         }
-        <?php if(strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE 6.') !== false) { ?>
-          
+        <?php if($_SESSION['oldBrowser'] == true) { ?>
+        $('.radio-toggle').toggleInput();
+        $(document).ready(function(){
+            $('.radio-toggle').click(function(){
+                //alert($("input[name$='rbWLANType']:checked").val());
+                toggleStationForm($("input[name$='rbWLANType']:checked").val());                
+            });
+            toggleStationForm($("input[name$='rbWLANType']:checked").val());
+        });
         <?php } else { ?>
         $( ".controlgroup" ).controlgroup();
         $(".btn-group-toggle").twbsToggleButtons();

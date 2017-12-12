@@ -37,7 +37,13 @@ class Model {
                 'id' => 'pageSettings',
                 'title' => loadString('navigationSettings'),
                 'content' => $this->loadPage('pageSettings')
-            )/*,
+            ),
+            array(
+                'id' => 'pageZyklusEditor',
+                'title' => 'Zyklus-Editor', //loadString('navigationSettings'),
+                'content' => $this->loadPage('pageZyklusEditor')
+            )
+            /*,
             array(
                 'id' => 'pageActionCode',
                 'title' => 'Aktions-Code',

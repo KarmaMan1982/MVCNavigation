@@ -12,3 +12,11 @@ and open the template in the editor.
     padding-top: 2px !important;
     padding-left: 0.4em !important;
 }
+.AVheaderBlock{
+    height: auto !important;
+    width: 99.5% !important;
+    float: left !important;
+}
+.AVTable {
+    display: table !important;
+}
