@@ -28,10 +28,14 @@ if(isset($_SESSION['screen_width']) AND isset($_SESSION['screen_height'])){
         $browser = get_browser(null, true);
         if($browser['browser'] == 'Firefox' && $browser['majorver'] <= 10){ $oldFirefox = true; }
         if($browser['browser'] == 'Firefox' && $browser['majorver'] <= 4){ $veryOldFirefox = true; }
+        if($browser['browser'] == 'IE'){
+            echo '<meta http-equiv="x-ua-compatible" content="'.$browser['browser'].'='.$browser['majorver'].'">';
+        }
         ?>
-        <?php if(strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE 6.') !== false || $oldFirefox == true) { ?>
+        <?php if(strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE 6.') !== false || strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE 7.') !== false || strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE 8.') !== false || $oldFirefox == true) { ?>
         <link href="style/reset.css" rel="stylesheet" type="text/css"/> 
         <link href="lib/jquery-ui-1.9.2.custom/css/excite-bike/jquery-ui-1.9.2.custom.css" rel="stylesheet" type="text/css"/>
+        <link href="lib/jquery-ui-1.9.2.custom/selectmenu/themes/base/jquery.ui.selectmenu.css" rel="stylesheet" type="text/css"/>
         <link href="style/oldIE.css" rel="stylesheet" type="text/css"/>
         <?php if($oldFirefox == true || $veryOldFirefox == true) { ?>
         <link href="style/oldFF.css" rel="stylesheet" type="text/css"/>
@@ -55,7 +59,7 @@ if(isset($_SESSION['screen_width']) AND isset($_SESSION['screen_height'])){
         https://192.168.10.242/chili/svn/p000135-klaro/firmware/webinterface
 
         --> 
-       <?php if(strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE 6.') !== false || $oldFirefox == true) { ?>
+       <?php if(strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE 6.') !== false || strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE 7.') !== false || strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE 8.') !== false || $oldFirefox == true) { ?>
         <?php if($veryOldFirefox == true) { ?>
         <script src="lib/jquery-ui-1.9.2.custom/js/jquery-1.8.3.js" type="text/javascript"></script>
         <?php } else { ?>
@@ -63,7 +67,8 @@ if(isset($_SESSION['screen_width']) AND isset($_SESSION['screen_height'])){
         <?php } ?>
         <script src="lib/jquery-ui-1.9.2.custom/js/jquery-ui-1.9.2.custom.js" type="text/javascript"></script>
         <script src="lib/jquery.toggleinput.js" type="text/javascript"></script>
-        
+        <script src="lib/jquery-ui-1.9.2.custom/selectmenu/ui/jquery.ui.position.js" type="text/javascript"></script>
+        <script src="lib/jquery-ui-1.9.2.custom/selectmenu/ui/jquery.ui.selectmenu.js" type="text/javascript"></script>
         <?php } else { ?>        
         <script src="lib/jquery-ui-1.12.1/external/jquery/jquery.js" type="text/javascript"></script>
         <script src="lib/jquery-ui-1.12.1/jquery-ui.js" type="text/javascript"></script>
@@ -71,9 +76,12 @@ if(isset($_SESSION['screen_width']) AND isset($_SESSION['screen_height'])){
         <script src="lib/jquery-ui-timepicker-addon.js" type="text/javascript"></script>
         <script src="lib/switchBox/jquery.twbs-toggle-buttons.min.js" type="text/javascript"></script>        
         <script src="js/index.js" type="text/javascript"></script>
-        <?php if(strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE 6.') !== false || $oldFirefox == true) { ?>
+        <?php if(strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE 6.') !== false || strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE 7.') !== false) { ?>
         <script src="js/indexIE6.js" type="text/javascript"></script>
         <?php } ?>
+        <?php if($oldFirefox == true) { ?>
+        <script src="js/indexOldFF.js" type="text/javascript"></script>
+        <?php } ?>        
     </head>
     <body>
         <?php

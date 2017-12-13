@@ -107,7 +107,7 @@
             $colspan = sizeof($this->columns) - 2;
             $this->footer = '<tfoot><tr>';
             $this->footer .= '<td><label for="CollectionName">Modell-Typ</label></td><td><input type="text" class="editText" name="CollectionName" id="CollectionName" value="'.$this->name.'"></td>';
-            $this->footer .= '<td colspan="'.$colspan.'" class="buttonCell"><input type="submit" value="Zyklen speichern"></td>';
+            $this->footer .= '<td colspan="'.$colspan.'" class="buttonCell"><input id="btSaveZyklus" type="submit" value="Zyklen speichern"></td>';
             $this->footer .= '</tr></tfoot>';
         }
         private function createPrintFooter(){

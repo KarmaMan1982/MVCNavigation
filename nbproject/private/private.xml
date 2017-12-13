@@ -3,18 +3,21 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/inetpub/wwwroot/klaro/index.php</file>
-            <file>file:/C:/inetpub/wwwroot/klaro/lib/html_table.php</file>
-            <file>file:/C:/inetpub/wwwroot/klaro/lib/FPDI-1.4/fpdi_pdf_parser.php</file>
-            <file>file:/C:/inetpub/wwwroot/klaro/lib/FPDI-1.4/pdf_context.php</file>
-            <file>file:/C:/inetpub/wwwroot/klaro/lib/FPDI-1.4/fpdf_tpl.php</file>
+            <file>file:/C:/inetpub/wwwroot/klaro/pages/pageHoliday.php</file>
+            <file>file:/C:/inetpub/wwwroot/klaro/style/oldFF.css</file>
+            <file>file:/C:/inetpub/wwwroot/klaro/lib/classZyklusEditor.php</file>
             <file>file:/C:/inetpub/wwwroot/klaro/pages/pageZyklusEditor.php</file>
             <file>file:/C:/inetpub/wwwroot/klaro/js/indexIE6.js</file>
-            <file>file:/C:/inetpub/wwwroot/klaro/lib/FPDI-1.4/fpdi.php</file>
             <file>file:/C:/inetpub/wwwroot/klaro/js/index.js</file>
-            <file>file:/C:/inetpub/wwwroot/klaro/indexPDF.php</file>
-            <file>file:/C:/inetpub/wwwroot/klaro/lib/FPDI-1.4/pdf_parser.php</file>
-            <file>file:/C:/inetpub/wwwroot/klaro/lib/fpdf181/fpdf.php</file>
+            <file>file:/C:/inetpub/wwwroot/klaro/scripts/saveActiveTab.php</file>
+            <file>file:/C:/inetpub/wwwroot/klaro/pages/pageSettings.php</file>
+            <file>file:/C:/inetpub/wwwroot/klaro/lib/jquery-ui-themes-1.12.1/themes/excite-bike/jquery-ui.css</file>
+            <file>file:/C:/inetpub/wwwroot/klaro/style/oldIE.css</file>
+            <file>file:/C:/inetpub/wwwroot/klaro/lib/classMVC.php</file>
+            <file>file:/C:/inetpub/wwwroot/klaro/js/indexOldFF.js</file>
+            <file>file:/C:/inetpub/wwwroot/klaro/lib/jquery-ui-1.9.2.custom/css/excite-bike/jquery-ui-1.9.2.custom.css</file>
+            <file>file:/C:/inetpub/wwwroot/klaro/pages/pageReadValues.php</file>
+            <file>file:/C:/inetpub/wwwroot/klaro/lib/jquery-ui-1.9.2.custom/selectmenu/themes/base/jquery.ui.selectmenu.css</file>
             <file>file:/C:/inetpub/wwwroot/klaro/desktop.php</file>
         </group>
     </open-files>

@@ -1,5 +1,7 @@
 <?php
 require_once ('./lib/globalFunctions.php');
+if(!isset($_SESSION)){ session_start(); }
+
 class Model {
     public $text;
     private $navigation;
@@ -92,7 +94,17 @@ class View {
                 $this->navigation .= $tabs;
                 $this->navigation .= $content;
                 $this->navigation .= '</div>';
-                $this->navigation .= '<script type="text/javascript" language="JavaScript"> $( "#'.$navigationID.'" ).tabs(); </script>';                                
+                $this->navigation .= '<script type="text/javascript" language="JavaScript"> var $navigationTabs = $( "#'.$navigationID.'" ).tabs({'
+                        . 'activate: function(event,ui){ '
+                        . 'var active = 0;'
+                        . 'active = $navigationTabs.tabs("option", "active"); '
+                        . 'saveActiveTab(active); }'
+                        . '});'
+                        . ''
+                        . '</script>';
+                if(isset($_SESSION['activeTab'])){ $this->navigation .= '<script type="text/javascript" language="JavaScript">'
+                        . '$( "#'.$navigationID.'" ).tabs( "option", "active", '.$_SESSION['activeTab'].' ); '
+                        . '</script>';}
             break;
             case 'portrait':
                 $elements = '';
@@ -121,7 +133,17 @@ class View {
                 $this->navigation .= $tabs;
                 $this->navigation .= $content;
                 $this->navigation .= '</div>';
-                $this->navigation .= '<script type="text/javascript" language="JavaScript"> $( "#'.$navigationID.'" ).tabs(); </script>';                
+                $this->navigation .= '<script type="text/javascript" language="JavaScript"> var $navigationTabs = $( "#'.$navigationID.'" ).tabs({'
+                        . 'activate: function(event,ui){ '
+                        . 'var active = 0;'
+                        . 'active = $navigationTabs.tabs("option", "active"); '
+                        . 'saveActiveTab(active); }'
+                        . '});'
+                        . ''
+                        . '</script>';
+                if(isset($_SESSION['activeTab'])){ $this->navigation .= '<script type="text/javascript" language="JavaScript">'
+                        . '$( "#'.$navigationID.'" ).tabs( "option", "active", '.$_SESSION['activeTab'].' ); '
+                        . '</script>';}               
             break;
         }
 

@@ -50,6 +50,15 @@ function resizeDevice(e){
 window.onorientationchange = readDeviceOrientation;
 window.onresize = resizeDevice;
 
+function saveActiveTab(tabID){
+        $.post('./scripts/saveActiveTab.php',{
+            activeTabID: tabID},
+        function(data){
+            console.log(data);
+            
+        },'json');    
+}
+
 $(document).ready(function() {
     var deviceWidth=window.outerWidth;
     var deviceHeight=window.outerHeight;

@@ -49,3 +49,6 @@
             ?>
         <br>
         <a href="indexPDF.php">PDF erstellen</a> <a href="indexCSV.php">CSV erstellen</a>
+        <script type="text/javascript" language="JavaScript">
+            $('#btSaveZyklus').addClass('ui-button ui-widget ui-corner-all');
+        </script>
