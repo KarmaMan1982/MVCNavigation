@@ -263,7 +263,7 @@
 <?php } ?>
 <?php if($_SESSION['rotation'] == 'landscape') { ?>
         <div class="AVheaderBlock"><?php echo loadString('pageSettingsHeaderWLANSettings'); ?></div>        
-        <table class="AVTable">
+        <table class="AVTable WLANModus">
                 <tbody>            
                     <tr><td class="attributeColumn infoName">Modus</td><td class="valueColumn">
                         <?php if ($_SESSION['oldBrowser'] == true){ ?>

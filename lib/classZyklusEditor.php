@@ -1,4 +1,6 @@
 <?php
+    require_once('globalFunctions.php');
+
     function cleanData(&$str){
         $str = preg_replace("/\t/", "\\t", $str);
         $str = preg_replace("/\r?\n/", "\\n", $str);
@@ -21,6 +23,8 @@
         private $printCellWidth;
         private $name;
         private $CSVField;
+        private $createNewZyklus;
+        private $zyklusDeleteElements;
         
         private function createHeaderElementWithClass($class,$name){
             $this->headerElements[] = '<th class="'.$class.'">'.$name.'</th>';
@@ -105,9 +109,12 @@
         }
         private function createFooter(){
             $colspan = sizeof($this->columns) - 2;
+            if($this->zyklusDeleteElements != ''){
+                $this->zyklusDeleteElements .= '<input id="btDeleteZyklus" type="submit" name="btEditorAction" value="'.loadString('pageZyklusEditorBTEditorActionDelete').'">';
+            }
             $this->footer = '<tfoot><tr>';
             $this->footer .= '<td><label for="CollectionName">Modell-Typ</label></td><td><input type="text" class="editText" name="CollectionName" id="CollectionName" value="'.$this->name.'"></td>';
-            $this->footer .= '<td colspan="'.$colspan.'" class="buttonCell"><input id="btSaveZyklus" type="submit" value="Zyklen speichern"></td>';
+            $this->footer .= '<td colspan="'.$colspan.'" class="buttonCell"><input id="btSaveZyklus" type="submit" name="btEditorAction" value="'.loadString('pageZyklusEditorBTEditorAction').'"><input id="btNewZyklus" type="submit" name="btEditorAction" value="'.loadString('pageZyklusEditorBTEditorActionNew').'">'.$this->zyklusDeleteElements.'</td>';
             $this->footer .= '</tr></tfoot>';
         }
         private function createPrintFooter(){
@@ -158,6 +165,10 @@
             }
             $this->createHeader();
             $this->createPrintHeader();
+            $this->zyklusDeleteElements = '';
+        }
+        public function insertNewZyklus($insertZyklus){
+            $this->createNewZyklus = $insertZyklus;
         }
         public function loadJSON($jsonFile){
             if(file_exists($jsonFile)){
@@ -165,12 +176,14 @@
                 $this->name = $inputObject->CollectionName;
                 #var_dump($inputObject->ZyklusField);
                 $zeilenNummer = 0;
+                $this->zyklusDeleteElements = '<select id="sbDeleteZyklus" name="sbDeleteZyklus">';
                 foreach($inputObject->ZyklusField AS $ZyklusElement){
                     #$inputZyklus = new ZyklusController($ZyklusElement->ZyklusName);
                     $zeile = array();
                     $zeile[0] = array(
                         'ZyklusName' => $ZyklusElement->ZyklusName
                     );
+                    $this->zyklusDeleteElements .= '<option value="'.$ZyklusElement->ZyklusName.'">'.$ZyklusElement->ZyklusName.'</option>';
                     #$zeile[0] = $ZyklusElement->ZyklusName;
                     foreach ($ZyklusElement->ProgressField AS $Progress){
                         #var_dump($Progress);
@@ -186,15 +199,34 @@
                     $this->createBody();
                     $this->createPrintBody();
                     #var_dump($ZyklusElement);
+                    #echo 'Zeilen-Nummer: '.$zeilenNummer;
                     $zeilenNummer++;
+                    if($this->createNewZyklus == 'true' && $zeilenNummer == sizeof($inputObject->ZyklusField)){
+                        $zeile = array();
+                        $zeile[0] = array(
+                            'ZyklusName' => ''
+                        );
+                        foreach ($ZyklusElement->ProgressField AS $Progress){
+                            $searchPosition = $this->getPositionFromColumn($Progress->ProgressName);
+                            if($searchPosition != null){$zeile[$searchPosition]=array(
+                                'ProgressName' => $Progress->ProgressName,
+                                'ProgressTime' => ''
+                            );}
+                        }
+                        $this->createBodyRow($zeilenNummer,$zeile);
+                        $this->createBody();
+                        $_SESSION['displayNewRow'] = true;
+                    }                    
                 }
+                $this->zyklusDeleteElements .= '</select>';
+                #echo 'Letzte Zeilen-Nummer: '.$zeilenNummer;
                 $this->createFooter();
                 $this->createPrintFooter();
             }            
         }
         public function outputTable(){
             echo '<form id="ZyklusEditForm" method="POST" action="'.$_SERVER['PHP_SELF'].'">';
-            echo '<table id="ZyklusEditTable">';
+            echo '<table id="ZyklusEditTable" class="controlgroup">';
             echo $this->header;
             echo $this->body;
             echo $this->footer;

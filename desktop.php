@@ -25,9 +25,12 @@ if(isset($_SESSION['screen_width']) AND isset($_SESSION['screen_height'])){
         <?php
         $oldFirefox = false;
         $veryOldFirefox = false;
+        $veryNewFirefox = false;
         $browser = get_browser(null, true);
         if($browser['browser'] == 'Firefox' && $browser['majorver'] <= 10){ $oldFirefox = true; }
         if($browser['browser'] == 'Firefox' && $browser['majorver'] <= 4){ $veryOldFirefox = true; }
+        if($browser['browser'] == 'Firefox' && $browser['majorver'] >= 57){ $veryNewFirefox = true; }
+        if($browser['browser'] == 'Navigator' && $browser['majorver'] <= 9){ $oldFirefox = true; $veryOldFirefox = true; }
         if($browser['browser'] == 'IE'){
             echo '<meta http-equiv="x-ua-compatible" content="'.$browser['browser'].'='.$browser['majorver'].'">';
         }
@@ -40,6 +43,9 @@ if(isset($_SESSION['screen_width']) AND isset($_SESSION['screen_height'])){
         <?php if($oldFirefox == true || $veryOldFirefox == true) { ?>
         <link href="style/oldFF.css" rel="stylesheet" type="text/css"/>
         <?php } ?>
+        <?php if($veryOldFirefox == true) { ?>
+        <link href="style/veryOldFF.css" rel="stylesheet" type="text/css"/>
+        <?php } ?>        
         <link href="lib/jquery.toggleinput.css" rel="stylesheet" type="text/css"/>
         <?php $_SESSION['oldBrowser'] = true; } else { $_SESSION['oldBrowser'] = false; ?>
         <link href="lib/jquery-ui-themes-1.12.1/jquery-ui.css" rel="stylesheet" type="text/css"/>
@@ -81,7 +87,10 @@ if(isset($_SESSION['screen_width']) AND isset($_SESSION['screen_height'])){
         <?php } ?>
         <?php if($oldFirefox == true) { ?>
         <script src="js/indexOldFF.js" type="text/javascript"></script>
-        <?php } ?>        
+        <?php } ?>  
+        <?php if($veryNewFirefox == true) { ?>
+        <script src="js/indexNewFF.js" type="text/javascript"></script>
+        <?php } ?>          
     </head>
     <body>
         <?php
