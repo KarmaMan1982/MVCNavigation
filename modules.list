@@ -1,0 +1,1113 @@
+
+Data Source Analysed
+
+Directories                                         22
+Files                                              772
+Errors                                               0
+
+
+Extensions Analysis
+
+    Extension  Matches REF      EXT min/Max PHP min/Max     PHP all 
+    Core               Core     5.3.0       5.3.0                   php7.0 php7.0-cli php7.0-fpm php7.0-phpdbg php-tcpdf libapache2-mod-php7.0 apache2 apache2-bin apache2-data apache2-doc apache2-utils
+    bcmath             bcmath   4.0.0       4.0.0                   php7.0-bcmath
+    ctype              ctype    4.0.4       4.0.4                   
+    date               date     5.3.0       5.3.0                   
+    gd                 gd       4.3.2       4.3.2                   php7.0-gd
+    iconv              iconv    4.0.5       4.0.5                   
+    json               json     5.2.0       5.2.0                   php7.0-json
+    mbstring           mbstring 4.0.6       4.0.6                   php7.0-mbstring
+    pcre               pcre     4.3.0       4.3.0                   
+    session            session  4.0.0       4.0.0                   
+    standard           standard 5.0.0       5.0.0 => 5.6.32         
+    xml                xml      4.0.0       4.0.0                   php7.0-xml
+    zlib               zlib     4.0.1       4.0.1                   
+    Total [13]                              5.3.0 => 5.6.32         
+
+Namespaces Analysis
+
+    Namespace Matches REF  EXT min/Max PHP min/Max     PHP all 
+    +global           Core             5.4.0 => 5.6.32         
+    Total [1]                          5.4.0 => 5.6.32         
+
+No interface found
+
+No trait found
+
+Classes Analysis
+
+    Class                    Matches REF  EXT min/Max PHP min/Max     PHP all 
+    AccBarPlot               12      user             5.0.0                   
+    AccLinePlot              2       user             5.0.0                   
+    AntiSpam                 1       user             5.0.0                   
+    AquaTheme                2       user             5.0.0                   
+    Axis                     5       user             5.0.0                   
+    AxisPrototype            2       user             5.0.0                   
+  U BackendFactory           18      user             4.0.0                   
+ C  BarPlot                  172     user             5.0.0                   
+  U BarcodeFactory           17      user             4.0.0                   
+    Bezier                   1       user             5.0.0                   
+    BoxPlot                  3       user             5.0.0                   
+    CCBPGraph                2       user             5.0.0                   
+    CanvasGraph              43      user             5.0.0                   
+    CanvasRectangleText      4       user             5.0.0                   
+    CanvasScale              7       user             5.0.0                   
+    ColorFactory             1       user             5.0.0                   
+  U ColorMap                 1       user             4.0.0                   
+    ColorMapDriver           1       user             5.0.0                   
+    Contour                  1       user             5.0.0                   
+    ContourPlot              12      user             5.0.0                   
+    Controller               2       user             5.0.0                   
+  U DatamatrixBackendFactory 9       user             4.0.0                   
+  U DatamatrixFactory        9       user             4.0.0                   
+    DateInterval             1       date 5.3.0       5.3.0                   
+    DateLocale               3       user             5.0.0                   
+    DateScale                1       user             5.0.0                   
+    DateScaleUtils           6       user             5.0.0                   
+    DateTime                 15      date 5.2.0       5.2.0                   
+    DigitalLED74             21      user             5.0.0                   
+    DisplayValue             4       user             5.0.0                   
+    Driver                   2       user             5.1.0                   
+    ErrMsgText               5       user             5.0.0                   
+    ErrorLinePlot            2       user             5.0.0                   
+    ErrorPlot                5       user             5.0.0                   
+    Exception                6       Core 5.1.0       5.1.0                   
+    FPDF                     9       user             5.1.0 => 5.6.32         
+    FPDF_TPL                 1       user             5.0.0                   
+    FPDI                     2       user             4.0.4                   
+    FPDI_Protection                  user             4.0.0                   
+    FieldArrow               1       user             5.0.0                   
+    FieldPlot                1       user             5.0.0                   
+  U FilledContourPlot        7       user             4.0.0                   
+ C  FilterASCII85            1       user             4.0.0                   
+    FilterASCII85_FPDI       1       user             4.0.0                   
+ C  FilterLZW                1       user             4.0.0                   
+    FilterLZW_FPDI           1       user             4.0.0                   
+    FlagCache                1       user             4.0.0                   
+ C  FlagImages               5       user             5.0.0                   
+    Footer                   2       user             5.0.0                   
+    Form                     1       user             4.0.0                   
+    FuncGenerator            10      user             5.0.0                   
+    GB2312toUTF8             1       user             5.0.0                   
+ C  GTextTable               28      user             5.0.0                   
+    GTextTableCell           2       user             5.0.0                   
+    GanttActivityInfo        1       user             5.0.0                   
+    GanttBar                 62      user             5.0.0                   
+    GanttConstraint          1       user             5.0.0                   
+    GanttGraph               44      user             5.0.0                   
+    GanttLink                8       user             5.0.0                   
+    GanttPlotObject          5       user             5.0.0                   
+    GanttScale               1       user             5.0.0                   
+    GanttVLine               19      user             5.0.0                   
+    Gradient                 8       user             5.0.0                   
+    Graph                    337     user             5.0.0                   
+    GraphTabTitle            1       user             5.0.0                   
+    GreenTheme               1       user             5.0.0                   
+    Grid                     3       user             5.0.0                   
+    GroupBarPlot             23      user             5.0.0                   
+  U GroupbarPlot             1       user             4.0.0                   
+    HandDigits               2       user             5.0.0                   
+    HeaderProperty           6       user             5.0.0                   
+    HorizontalGridLine       1       user             5.0.0                   
+    IconImage                3       user             5.0.0                   
+ C  IconPlot                 11      user             5.0.0                   
+    Image                    14      user             5.0.0                   
+    ImgData                  6       user             5.0.0                   
+    ImgData_Balls            1       user             5.0.0                   
+    ImgData_Bevels           1       user             5.0.0                   
+    ImgData_Diamonds         1       user             5.0.0                   
+    ImgData_PushPins         1       user             5.0.0                   
+    ImgData_Squares          1       user             5.0.0                   
+    ImgData_Stars            1       user             5.0.0                   
+    ImgStreamCache           3       user             5.0.0                   
+ C  ImgTrans                 5       user             5.0.0                   
+  U JpGRaphError             1       user             4.0.0                   
+  U JpGraph                  2       user             4.0.0                   
+    JpGraphErrObject         2       user             5.0.0                   
+    JpGraphErrObjectImg      2       user             4.0.2                   
+    JpGraphError             308     user             5.0.0                   
+    JpGraphException         9       user             5.1.0                   
+    JpGraphExceptionL        1       user             5.0.0                   
+    JpgTimer                 2       user             5.0.0                   
+  U JpgraphError             14      user             4.0.0                   
+    LanguageConv             5       user             5.0.0                   
+  U LayoutHor                24      user             4.0.0                   
+  U LayoutVert               14      user             4.0.0                   
+    Legend                   1       user             5.0.0                   
+    LegendStyle              1       user             5.0.0                   
+    LineErrorPlot                    user             5.0.0                   
+  U LinePLot                 3       user             4.0.0                   
+    LinePlot                 229     user             5.0.0                   
+    LineProperty             8       user             5.0.0                   
+    LinearRegression         1       user             5.0.0                   
+    LinearScale              12      user             5.0.0                   
+    LinearTicks              2       user             5.0.0                   
+    LinkArrow                2       user             5.0.0                   
+    LogScale                 6       user             5.0.0                   
+    LogTicks                 1       user             5.0.0                   
+    MGraph                   5       user             5.0.0                   
+  U MatrixGraph              15      user             4.0.0                   
+  U MatrixPlot               15      user             4.0.0                   
+    MeshInterpolate          2       user             5.0.0                   
+    MileStone                13      user             5.0.0                   
+    Model                    4       user             5.0.0                   
+    OceanTheme               1       user             5.0.0                   
+  U OdoGraph                 34      user             4.0.0                   
+  U Odometer                 47      user             4.0.0                   
+    OrangeTheme              1       user             5.0.0                   
+    PDF                      6       user             5.0.0                   
+  U PDF417BackendFactory     9       user             4.0.0                   
+  U PDF417Barcode            9       user             4.0.0                   
+    ParseArgs                1       user             4.3.0                   
+    PastelTheme              1       user             5.0.0                   
+    PieGraph                 40      user             5.0.0                   
+    PiePlot                  32      user             5.0.0                   
+ C  PiePlot3D                7       user             5.0.0                   
+  U PiePlot3d                5       user             4.0.0                   
+    PiePlotC                 4       user             5.0.0                   
+    Plot                     8       user             5.0.0                   
+ C  PlotBand                 33      user             5.0.0                   
+ C  PlotLine                 9       user             5.0.0                   
+    PlotMark                 8       user             5.0.0                   
+    PolarAxis                1       user             5.0.0                   
+    PolarGraph               18      user             5.0.0                   
+    PolarLogScale            1       user             5.0.0                   
+    PolarPlot                18      user             5.0.0                   
+    PolarScale               1       user             5.0.0                   
+    PredefIcons              1       user             5.0.0                   
+    Progress                 1       user             5.0.0                   
+  U QRCodeBackendFactory     15      user             4.0.0                   
+  U QREncoder                15      user             4.0.0                   
+    RGB                      7       user             5.0.0                   
+    RadarAxis                1       user             5.0.0                   
+    RadarGraph               17      user             5.0.0                   
+    RadarGrid                1       user             5.0.0                   
+    RadarLinearTicks         1       user             5.0.0                   
+    RadarLogTicks            1       user             4.0.0                   
+    RadarPlot                23      user             5.0.0                   
+    ReadFileData                     user             5.0.0                   
+    RectPattern              8       user             5.0.0                   
+    RectPattern3DPlane       1       user             5.0.0                   
+    RectPatternCross         1       user             5.0.0                   
+    RectPatternDiagCross     1       user             5.0.0                   
+    RectPatternFactory       6       user             5.0.0                   
+    RectPatternHor           2       user             4.0.0                   
+    RectPatternLDiag         2       user             4.0.0                   
+    RectPatternRDiag         2       user             4.0.0                   
+    RectPatternSolid         1       user             4.0.0                   
+    RectPatternVert          2       user             4.0.0                   
+    Rectangle                9       user             5.0.0                   
+    RoseTheme                1       user             5.0.0                   
+    RotImage                 3       user             5.0.0                   
+    ScatterPlot              21      user             5.0.0                   
+    Shape                    6       user             5.0.0                   
+    SoftyTheme               1       user             5.0.0                   
+    Spline                   1       user             5.0.0                   
+    StockPlot                3       user             5.0.0                   
+    SuperScriptText                  user             5.0.0                   
+    SymChar                  10      user             4.0.0                   
+ CU TCPDF                    1       user             4.0.0                   
+    TTF                      1       user             5.0.0                   
+    TTFParser                1       user             5.1.0                   
+    TestDriver               1       user             5.0.0                   
+ C  Text                     49      user             5.0.0                   
+    TextProperty             7       user             5.0.0                   
+    TextPropertyBelow        1       user             4.0.0                   
+    Theme                    9       user             5.0.0                   
+    Ticks                    4       user             5.0.0                   
+    USPS_Confirmation        2       user             4.0.0                   
+    UniversalTheme           12      user             5.0.0                   
+    UpdateController         1       user             5.4.0                   
+    View                     2       user             5.0.0                   
+    VividTheme               1       user             5.0.0                   
+    WindroseGraph            21      user             5.0.0                   
+    WindrosePlot             23      user             5.0.0                   
+    WindrosePlotScale        1       user             5.0.0                   
+    ZyklusCollector          1       user             5.2.0                   
+    ZyklusController         5       user             5.2.0                   
+    ZyklusEditor             7       user             5.3.0                   
+  U barPlot                  1       user             4.0.0                   
+    fpdi_pdf_parser          1       user             4.0.4                   
+    parent                   102     Core 5.0.0       5.0.0                   
+ C  pdf_context              4       user             4.0.4                   
+ C  pdf_parser               1       user             4.3.0                   
+    self                     6       Core 5.0.0       5.0.0                   
+    Total [195]                                       5.4.0 => 5.6.32         
+
+Functions Analysis
+
+    Function                   Matches REF      EXT min/Max PHP min/Max           
+    CheckPHPVersion            1       user                 4.0.0                 
+    DEFINE                     69      Core     4.0.0       4.0.0                 
+    DEFINED                    1       Core     4.0.0       4.0.0                 
+    Date                       4       date     4.0.0       4.0.0                 
+    Error                      12      user                 4.0.0                 
+    FCallback                          user                 4.0.0                 
+    FldCallback                        user                 4.0.0                 
+    GenImgName                 3       user                 5.0.0                 
+    GetInfoFromTrueType        1       user                 4.3.0                 
+    GetInfoFromType1           1       user                 4.0.0           4.2.0 
+    ImageAlphaBlending         1       gd       4.0.6       4.0.6                 
+    ImagePng                   1       gd       4.0.0       4.0.0                 
+    ImageSX                    1       gd       4.0.0       4.0.0                 
+    ImageSY                    1       gd       4.0.0       4.0.0                 
+    ImageTTFBBox               1       gd       4.0.0       4.0.0                 
+    ImageTTFText               2       gd       4.0.0       4.0.0                 
+    LoadMap                    2       user                 4.0.0           4.2.0 
+    MakeDefinitionFile         1       user                 4.0.0                 
+    MakeFont                   2       user                 4.0.0 => 5.6.32 4.0.1 
+    MakeFontDescriptor         1       user                 4.0.0                 
+    MakeFontEncoding           1       user                 4.0.0                 
+    MakeUnicodeArray           1       user                 4.0.0                 
+    MakeWidthArray             1       user                 4.0.0                 
+    Max                        6       user                 4.0.0                 
+    Message                    5       user                 4.2.0                 
+    Min                        13      user                 4.0.0                 
+    Notice                     1       user                 4.0.0                 
+    SaveToFile                 2       user                 4.0.0                 
+    SeaShell                   1       user                 4.0.0                 
+    TimeCallback                       user                 4.0.0                 
+    Warning                    2       user                 4.0.0                 
+    _cb_negate                         user                 4.0.0                 
+    _cmp                               user                 4.0.0                 
+    _phpErrorHandler                   user                 5.0.0                 
+    abs                        98      standard 4.0.0       4.0.0                 
+    accfreq                    2       user                 4.0.4                 
+    acos                       1       standard 4.0.0       4.0.0                 
+ C  array_fill                 13      standard 4.2.0       4.2.0                 
+    array_flip                 1       standard 4.0.0       4.0.0                 
+    array_key_exists           3       standard 4.0.7       4.0.7                 
+    array_keys                 13      standard 4.0.0       4.0.0                 
+    array_merge                10      standard 4.0.0       4.0.0                 
+    array_pad                  2       standard 4.0.0       4.0.0                 
+    array_pop                  2       standard 4.0.0       4.0.0                 
+    array_push                 7       standard 4.0.0       4.0.0                 
+    array_reverse              14      standard 4.0.0       4.0.0                 
+    array_search               3       standard 4.0.5       4.0.5                 
+    array_shift                3       standard 4.0.0       4.0.0                 
+    array_slice                15      standard 4.0.0       4.0.0                 
+    array_sum                  8       standard 4.0.4       4.0.4                 
+    array_unique               1       standard 4.0.1       4.0.1                 
+    array_values               2       standard 4.0.0       4.0.0                 
+    array_walk                 2       standard 4.0.0       4.0.0                 
+    arsort                     1       standard 4.0.0       4.0.0                 
+    assert                     7       standard 4.0.0       4.0.0                 
+    atan                       3       standard 4.0.0       4.0.0                 
+    atan2                      1       standard 4.0.0       4.0.0                 
+    base64_decode              5       standard 4.0.0       4.0.0                 
+    basename                   22      standard 4.0.0       4.0.0                 
+ C  bcpow                      2       bcmath   4.0.0       4.0.0                 
+    bin2hex                    1       standard 4.0.0       4.0.0                 
+    call_user_func             12      standard 4.0.0       4.0.0                 
+    call_user_func_array       14      standard 4.0.4       4.0.4                 
+    cbFmtPercentage                    user                 4.0.0                 
+    ceil                       56      standard 4.0.0       4.0.0                 
+    chdir                      1       standard 4.0.0       4.0.0                 
+    chgrp                      2       standard 4.0.0       4.0.0                 
+    chmod                      2       standard 4.0.0       4.0.0                 
+    chr                        1840    standard 4.0.0       4.0.0                 
+    class_exists               30      Core     5.0.0       5.0.0                 
+    cleanData                          user                 4.0.0           4.0.6 
+    convert_cyr_string         2       standard 4.0.0       4.0.0                 
+    cos                        93      standard 4.0.0       4.0.0                 
+    count                      465     standard 4.0.0       4.0.0                 
+    createProgressTable                user                 4.0.0                 
+    createUpdateButton         9       user                 4.0.0                 
+    ctype_digit                1       ctype    4.0.4       4.0.4                 
+    current                    2       standard 4.0.0       4.0.0                 
+    date                       77      date     4.0.0       4.0.0                 
+    define                     375     Core     4.0.0       4.0.0                 
+    defined                    26      Core     4.0.0       4.0.0                 
+    dir                        2       standard 4.0.0       4.0.0                 
+    dirname                    20      standard 4.0.0       4.0.0                 
+    doMeshInterpolate          9       user                 4.0.0                 
+    each                       7       Core     4.0.0       4.0.0                 
+    end                        2       standard 4.0.0       4.0.0                 
+    error_log                  1       standard 4.0.0       4.0.0                 
+    error_reporting            1       Core     4.0.0       4.0.0                 
+    exp                        5       standard 4.0.0       4.0.0                 
+    explode                    14      standard 4.0.0       4.0.0                 
+    fclose                     13      standard 4.0.0       4.0.0                 
+    feof                       4       standard 4.0.0       4.0.0                 
+    fgetcsv                    4       standard 4.0.0       4.0.0                 
+    file                       13      standard 4.0.0       4.0.0                 
+    file_exists                27      standard 4.0.0       4.0.0                 
+    file_get_contents          21      standard 4.3.0       4.3.0                 
+    file_put_contents          12      standard 5.0.0       5.0.0                 
+    filemtime                  3       standard 4.0.0       4.0.0                 
+    filesize                   1       standard 4.0.0       4.0.0                 
+    floatval                   8       standard 4.2.0       4.2.0                 
+    flock                      8       standard 4.0.0       4.0.0                 
+    floor                      134     standard 4.0.0       4.0.0                 
+    fopen                      16      standard 4.0.0       4.0.0                 
+    formatCallback                     user                 4.0.0                 
+    formatDate                         user                 4.0.0                 
+    fpassthru                  3       standard 4.0.0       4.0.0                 
+    fread                      17      standard 4.0.0       4.0.0                 
+    fseek                      15      standard 4.0.0       4.0.0                 
+    ftell                      3       standard 4.0.0       4.0.0                 
+    func_get_arg               10      Core     4.0.0       4.0.0                 
+    func_get_args              14      Core     4.0.0       4.0.0                 
+    func_num_args              1       Core     4.0.0       4.0.0                 
+    function_exists            18      Core     4.0.0       4.0.0                 
+    fwrite                     14      standard 4.0.0       4.0.0                 
+    get_browser                1       standard 4.3.2       4.3.2                 
+    get_class                  14      Core     4.0.0       4.0.0                 
+    get_defined_vars           1       Core     4.0.4       4.0.4                 
+    get_html_translation_table 1       standard 4.0.0       4.0.0                 
+    get_magic_quotes_gpc       1       standard 4.0.0       4.0.0                 
+    get_magic_quotes_runtime   2       standard 4.0.0       4.0.0                 
+    getcwd                     1       standard 4.0.0       4.0.0                 
+    getenv                     2       standard 4.0.0       4.0.0                 
+    getimagesize               1       standard 4.0.0       4.0.0                 
+    glob                       1       standard 4.3.0       4.3.0                 
+    gmdate                     1       date     4.0.0       4.0.0                 
+ C  gzcompress                 7       zlib     4.0.1       4.0.1                 
+ C  gzuncompress               2       zlib     4.0.1       4.0.1                 
+    header                     29      standard 4.0.0       4.0.0                 
+    headers_sent               3       standard 4.0.0       4.0.0                 
+    hebrev                     1       standard 4.0.0       4.0.0                 
+    hex2dec                    2       user                 4.0.0                 
+    hexdec                     10      standard 4.0.0       4.0.0                 
+    highlight_file             1       standard 4.0.0       4.0.0                 
+    htmlentities               12      standard 4.0.0       4.0.0                 
+    htmlspecialchars           6       standard 4.0.0       4.0.0                 
+ C  iconv                      2       iconv    4.0.5       4.0.5                 
+    imageColorExactAlpha       16      gd       4.0.6       4.0.6                 
+    imageLine                  14      gd       4.0.0       4.0.0                 
+    imageSetPixel              24      gd       4.0.0       4.0.0                 
+    imageSmoothArc             3       user                 4.0.0                 
+    imageSmoothArcDrawSegment  4       user                 4.0.6                 
+ C  imageantialias             1       gd       4.3.2       4.3.2                 
+    imagearc                   1       gd       4.0.0       4.0.0                 
+    imagecolorallocate         14      gd       4.0.0       4.0.0                 
+    imagecolorat               6       gd       4.0.0       4.0.0                 
+    imagecolorresolvealpha     1       gd       4.0.6       4.0.6                 
+    imagecolorstotal           1       gd       4.0.0       4.0.0                 
+    imagecolortransparent      1       gd       4.0.0       4.0.0                 
+    imagecopy                  5       gd       4.0.0       4.0.0                 
+    imagecopymerge             2       gd       4.0.1       4.0.1                 
+    imagecopyresampled         1       gd       4.0.6       4.0.6                 
+    imagecreate                1       gd       4.0.0       4.0.0                 
+ C  imagecreatefromgif         1       gd       4.0.0       4.0.0                 
+ C  imagecreatefromstring      3       gd       4.0.4       4.0.4                 
+    imagecreatetruecolor       11      gd       4.0.6       4.0.6                 
+    imagedestroy               2       gd       4.0.0       4.0.0                 
+    imageellipse               2       gd       4.0.6       4.0.6                 
+    imagefill                  1       gd       4.0.0       4.0.0                 
+    imagefilledarc             2       gd       4.0.6       4.0.6                 
+    imagefilledellipse         4       gd       4.0.6       4.0.6                 
+    imagefilledpolygon         3       gd       4.0.0       4.0.0                 
+    imagefilledrectangle       4       gd       4.0.0       4.0.0                 
+    imagefilltoborder          1       gd       4.0.0       4.0.0                 
+    imagefontheight            2       gd       4.0.0       4.0.0                 
+    imagefontwidth             2       gd       4.0.0       4.0.0                 
+    imageinterlace             2       gd       4.0.0       4.0.0                 
+    imagejpeg                  2       gd       4.0.0       4.0.0                 
+    imageline                  10      gd       4.0.0       4.0.0                 
+    imageloadfont              5       gd       4.0.0       4.0.0                 
+ C  imagepng                   4       gd       4.0.0       4.0.0                 
+    imagerectangle             5       gd       4.0.0       4.0.0                 
+    imagesetpixel              3       gd       4.0.0       4.0.0                 
+    imagesetstyle              2       gd       4.0.6       4.0.6                 
+    imagesetthickness          5       gd       4.0.6       4.0.6                 
+    imagestring                5       gd       4.0.0       4.0.0                 
+    imagestringup              1       gd       4.0.0       4.0.0                 
+    imagesx                    13      gd       4.0.0       4.0.0                 
+    imagesy                    9       gd       4.0.0       4.0.0                 
+ C  imagettfbbox               2       gd       4.0.0       4.0.0                 
+    imagettftext               1       gd       4.0.0       4.0.0                 
+ C  imagetypes                 4       gd       4.0.2       4.0.2                 
+    implode                    3       standard 4.0.0       4.0.0                 
+    in_array                   25      standard 4.0.0       4.0.0                 
+    ini_get                    1       standard 4.0.0       4.0.0                 
+    ini_set                    3       standard 4.0.0       4.0.0                 
+    intval                     7       standard 4.0.0       4.0.0                 
+    isMobile                   1       user                 4.0.0                 
+    is_array                   80      standard 4.0.0       4.0.0                 
+    is_dir                     1       standard 4.0.0       4.0.0                 
+    is_file                    2       standard 4.0.0       4.0.0                 
+    is_float                   3       standard 4.0.0       4.0.0                 
+    is_int                     5       standard 4.0.0       4.0.0                 
+    is_integer                 5       standard 4.0.0       4.0.0                 
+    is_null                    8       standard 4.0.4       4.0.4                 
+    is_numeric                 76      standard 4.0.0       4.0.0                 
+    is_object                  4       standard 4.0.0       4.0.0                 
+    is_readable                3       standard 4.0.0       4.0.0                 
+    is_resource                2       standard 4.0.0       4.0.0                 
+    is_string                  44      standard 4.0.0       4.0.0                 
+    is_subclass_of             20      Core     4.0.0       4.0.0                 
+    is_writeable               2       standard 4.0.0       4.0.0                 
+    json_decode                16      json     5.2.0       5.2.0                 
+    json_encode                26      json     5.2.0       5.2.0                 
+    key                        2       standard 4.0.0       4.0.0                 
+    key_exists                 1       standard 4.0.6       4.0.6                 
+    loadString                 505     user                 5.2.0                 
+    localtime                  2       date     4.0.0       4.0.0                 
+    log                        4       standard 4.0.0       4.0.0                 
+    log10                      20      standard 4.0.0       4.0.0                 
+    markCallback                       user                 4.0.0                 
+    max                        106     standard 4.0.0       4.0.0                 
+ C  mb_convert_encoding        11      mbstring 4.0.6       4.0.6                 
+    mb_detect_encoding         1       mbstring 4.0.6       4.0.6                 
+ C  mb_strlen                  1       mbstring 4.0.6       4.0.6                 
+    mb_substr                  1       mbstring 4.0.6       4.0.6                 
+    md5                        1       standard 4.0.0       4.0.0                 
+    method_exists              3       Core     4.0.0       4.0.0                 
+    microtime                  7       standard 4.0.0       4.0.0                 
+    min                        70      standard 4.0.0       4.0.0                 
+    mkdir                      1       standard 4.0.0       4.0.0                 
+    mktime                     29      date     4.0.0       4.0.0                 
+    move_uploaded_file         1       standard 4.0.3       4.0.3                 
+    mycallback                         user                 4.0.0                 
+    next                       1       standard 4.0.0       4.0.0                 
+    nl2br                      8       standard 4.0.0       4.0.0                 
+    numberToRoman              1       user                 4.0.0                 
+    number_format              6       standard 4.0.0       4.0.0                 
+    ob_clean                   1       standard 4.2.0       4.2.0                 
+    ob_get_clean               2       standard 4.3.0       4.3.0                 
+    ob_get_contents            1       standard 4.0.0       4.0.0                 
+    ob_get_length              2       standard 4.0.2       4.0.2                 
+    ob_start                   2       standard 4.0.0       4.0.0                 
+    octdec                     2       standard 4.0.0       4.0.0                 
+    ord                        60      standard 4.0.0       4.0.0                 
+    pack                       29      standard 4.0.0       4.0.0                 
+    pathinfo                   1       standard 4.0.3       4.0.3                 
+    php_sapi_name              1       standard 4.0.1       4.0.1                 
+    pow                        32      standard 4.0.0       4.0.0                 
+    preg_match                 15      pcre     4.0.0       4.0.0                 
+    preg_match_all             5       pcre     4.0.0       4.0.0                 
+    preg_replace               8       pcre     4.0.0       4.0.0                 
+    preg_split                 22      pcre     4.0.0       4.0.0                 
+    px2mm                      2       user                 4.0.0                 
+    rand                       52      standard 4.0.0       4.0.0                 
+    range                      1       standard 4.0.0       4.0.0                 
+    rawurlencode               2       standard 4.0.0       4.0.0                 
+    readsunspotdata            7       user                 4.0.0                 
+    reset                      13      standard 4.0.0       4.0.0                 
+    rewind                     1       standard 4.0.0       4.0.0                 
+    round                      408     standard 4.0.0       4.0.0                 
+    rsort                      2       standard 4.0.0       4.0.0                 
+    rtrim                      5       standard 4.0.0       4.0.0                 
+    separator1000                      user                 4.0.0                 
+    separator1000_usd                  user                 4.0.0                 
+    session_start              6       session  4.0.0       4.0.0                 
+    set_error_handler          1       Core     4.0.1       4.0.1                 
+    set_exception_handler      5       Core     5.0.0       5.0.0                 
+    set_magic_quotes_runtime   2       standard 4.0.0       4.0.0 => 5.6.32       
+    setlocale                  6       standard 4.0.0       4.0.0                 
+    settype                    4       standard 4.0.0       4.0.0                 
+    sign                       1       user                 4.0.0                 
+    sin                        98      standard 4.0.0       4.0.0                 
+    sizeof                     11      standard 4.0.0       4.0.0                 
+    sleep                      2       standard 4.0.0       4.0.0                 
+    sort                       7       standard 4.0.0       4.0.0                 
+    sprintf                    126     standard 4.0.0       4.0.0                 
+    sqrt                       9       standard 4.0.0       4.0.0                 
+    srand                      5       standard 4.0.0       4.0.0                 
+    str_pad                    1       standard 4.0.1       4.0.1                 
+    str_repeat                 2       standard 4.0.0       4.0.0                 
+    str_replace                24      standard 4.0.0       4.0.0                 
+    strcmp                     1       Core     4.0.0       4.0.0                 
+    strcspn                    1       standard 4.0.0       4.0.0                 
+    strftime                   23      date     4.0.0       4.0.0                 
+    strip_tags                 2       standard 4.0.0       4.0.0                 
+    stripslashes               2       standard 4.0.0       4.0.0                 
+    stristr                    3       standard 4.0.0       4.0.0                 
+    strlen                     58      Core     4.0.0       4.0.0                 
+    strpos                     39      standard 4.0.0       4.0.0                 
+    strrev                     2       standard 4.0.0       4.0.0                 
+    strrpos                    2       standard 4.0.0       4.0.0                 
+    strspn                     1       standard 4.0.0       4.0.0                 
+    strstr                     11      standard 4.0.0       4.0.0                 
+    strtok                     4       standard 4.0.0       4.0.0                 
+    strtolower                 34      standard 4.0.0       4.0.0                 
+    strtotime                  23      date     4.0.0       4.0.0                 
+    strtoupper                 18      standard 4.0.0       4.0.0                 
+    strtr                      1       standard 4.0.0       4.0.0                 
+    strval                     6       standard 4.0.0       4.0.0                 
+    substr                     84      standard 4.0.0       4.0.0                 
+    substr_count               4       standard 4.0.0       4.0.0                 
+    substr_replace             4       standard 4.0.0       4.0.0                 
+    tan                        1       standard 4.0.0       4.0.0                 
+    time                       18      date     4.0.0       4.0.0                 
+    toCelcius                          user                 4.0.0                 
+    toFahrenheit                       user                 4.0.0                 
+    trim                       27      standard 4.0.0       4.0.0                 
+    txtentities                1       user                 4.0.0                 
+    ucfirst                    2       standard 4.0.0       4.0.0                 
+    uniqid                     1       standard 4.0.0       4.0.0                 
+    unlink                     4       standard 4.0.0       4.0.0                 
+    unpack                     9       standard 4.0.0       4.0.0                 
+    unserialize                1       standard 4.0.0       4.0.0                 
+    urldecode                  3       standard 4.0.0       4.0.0                 
+    urlencode                  6       standard 4.0.0       4.0.0                 
+    usort                      1       standard 4.0.0       4.0.0                 
+    utf8_decode                2       xml      4.0.0       4.0.0                 
+    utf8_encode                7       xml      4.0.0       4.0.0                 
+    var_dump                   3       standard 4.0.0       4.0.0                 
+    var_export                 3       standard 4.2.0       4.2.0                 
+    wordwrap                   5       standard 4.0.2       4.0.2                 
+    year_callback                      user                 4.0.0                 
+    Total [312]                                             5.2.0 => 5.6.32       
+
+Constants Analysis
+
+    Constant                     Matches REF      EXT min/Max PHP min/Max  
+    ACTINFO_2D                           user                 4.0.0        
+    ACTINFO_3D                           user                 4.0.0        
+    ACTYPE_GROUP                 6       user                 4.0.0        
+    ACTYPE_MILESTONE             6       user                 4.0.0        
+    ACTYPE_NORMAL                12      user                 4.0.0        
+    ARROWT_OPEN                  1       user                 4.0.0        
+    ARROWT_SOLID                 7       user                 4.0.0        
+    ARROW_DOWN                   3       user                 4.0.0        
+    ARROW_LEFT                   1       user                 4.0.0        
+    ARROW_RIGHT                  4       user                 4.0.0        
+    ARROW_S1                             user                 4.0.0        
+    ARROW_S2                     5       user                 4.0.0        
+    ARROW_S3                             user                 4.0.0        
+    ARROW_S4                             user                 4.0.0        
+    ARROW_S5                             user                 4.0.0        
+    ARROW_UP                     2       user                 4.0.0        
+    ASSUME_EUCJP_ENCODING        1       user                 4.0.0        
+    AXSTYLE_BOXIN                3       user                 4.0.0        
+    AXSTYLE_BOXOUT               16      user                 4.0.0        
+    AXSTYLE_SIMPLE               3       user                 4.0.0        
+    AXSTYLE_YBOXIN               4       user                 4.0.0        
+    AXSTYLE_YBOXOUT              1       user                 4.0.0        
+    BACKEND_ASCII                2       user                 4.0.0        
+    BACKEND_IMAGE                29      user                 4.0.0        
+    BACKEND_PS                   10      user                 4.0.0        
+    BAND_3DPLANE                 9       user                 4.0.0        
+    BAND_DIAGCROSS               5       user                 4.0.0        
+    BAND_HLINE                   5       user                 4.0.0        
+    BAND_HVCROSS                 19      user                 4.0.0        
+    BAND_LDIAG                   9       user                 4.0.0        
+    BAND_RDIAG                   60      user                 4.0.0        
+    BAND_SOLID                   7       user                 4.0.0        
+    BAND_VLINE                   3       user                 4.0.0        
+    BGIMG_CENTER                 2       user                 4.0.0        
+    BGIMG_COPY                   9       user                 4.0.0        
+    BGIMG_FILLFRAME              13      user                 4.0.0        
+    BGIMG_FILLPLOT               12      user                 4.0.0        
+    BGIMG_FREE                   2       user                 4.0.0        
+    BGRAD_FRAME                  1       user                 4.0.0        
+    BGRAD_MARGIN                 6       user                 4.0.0        
+    BGRAD_PLOT                   20      user                 4.0.0        
+    BKG_COLOR                    7       user                 4.0.0        
+ C  CACHE_DIR                    1       user                 4.0.0        
+    CACHE_FILE_GROUP             4       user                 4.0.0        
+    CACHE_FILE_MOD               2       user                 4.0.0        
+    CATCH_PHPERRMSG              1       user                 4.0.0        
+    CHINESE_TTF_FONT             2       user                 4.0.0        
+    CONSTRAIN_ENDEND             2       user                 4.0.0        
+    CONSTRAIN_ENDSTART           6       user                 4.0.0        
+    CONSTRAIN_STARTEND           2       user                 4.0.0        
+    CONSTRAIN_STARTSTART         3       user                 4.0.0        
+    CORNER_BOTTOMLEFT            1       user                 4.0.0        
+    CORNER_BOTTOMRIGHT           1       user                 4.0.0        
+    CORNER_TOPLEFT               1       user                 4.0.0        
+    CORNER_TOPRIGHT              1       user                 4.0.0        
+    CSIMCACHE_DIR                2       user                 4.0.0        
+    CSIMCACHE_HTTP_DIR           1       user                 4.0.0        
+    CYRILLIC_FROM_WINDOWS        1       user                 4.0.0        
+    DATAPERMONTH                 3       user                 4.0.0        
+    DAYADJ_1                     6       user                 4.0.0        
+    DAYADJ_7                             user                 4.0.0        
+    DAYADJ_WEEK                  2       user                 4.0.0        
+    DAYSTYLE_CUSTOM              2       user                 4.0.0        
+    DAYSTYLE_LONG                2       user                 4.0.0        
+    DAYSTYLE_LONGDAYDATE1        2       user                 4.0.0        
+    DAYSTYLE_LONGDAYDATE2        2       user                 4.0.0        
+    DAYSTYLE_ONELETTER           2       user                 4.0.0        
+    DAYSTYLE_SHORT               2       user                 4.0.0        
+    DAYSTYLE_SHORTDATE1          2       user                 4.0.0        
+    DAYSTYLE_SHORTDATE2          2       user                 4.0.0        
+    DAYSTYLE_SHORTDATE3          2       user                 4.0.0        
+    DAYSTYLE_SHORTDATE4          2       user                 4.0.0        
+    DAYSTYLE_SHORTDAYDATE1       3       user                 4.0.0        
+    DAYSTYLE_SHORTDAYDATE2       2       user                 4.0.0        
+    DAYSTYLE_SHORTDAYDATE3       3       user                 4.0.0        
+    DEFAULT_ERROR_MESSAGE        354     user                 4.0.0        
+ C  DEFAULT_ERR_LOCALE           1       user                 4.0.0        
+    DEFAULT_GFORMAT              5       user                 4.0.0        
+    DEFAULT_THEME_CLASS          1       user                 4.0.0        
+    DEPTH_BACK                   15      user                 4.0.0        
+    DEPTH_FRONT                  12      user                 4.0.0        
+    DMAT_20x20                   1       user                 4.0.0        
+    DMAT_44x44                   1       user                 4.0.0        
+    DMAT_64x64                   1       user                 4.0.0        
+    DSUTILS_DAY1                 4       user                 4.0.0        
+    DSUTILS_DAY2                 4       user                 4.0.0        
+    DSUTILS_DAY4                 5       user                 4.0.0        
+    DSUTILS_MONTH                        user                 4.0.0        
+    DSUTILS_MONTH1               5       user                 4.0.0        
+    DSUTILS_MONTH2               3       user                 4.0.0        
+    DSUTILS_MONTH3               3       user                 4.0.0        
+    DSUTILS_MONTH6               3       user                 4.0.0        
+    DSUTILS_WEEK1                3       user                 4.0.0        
+    DSUTILS_WEEK2                3       user                 4.0.0        
+    DSUTILS_WEEK4                2       user                 4.0.0        
+    DSUTILS_YEAR1                2       user                 4.0.0        
+    DSUTILS_YEAR2                3       user                 4.0.0        
+    DSUTILS_YEAR5                3       user                 4.0.0        
+    ENCODING_ASCII               1       user                 4.0.0        
+    ENCODING_BASE256             3       user                 4.0.0        
+    ENCODING_BOOKLAND            1       user                 4.0.0        
+    ENCODING_CODABAR             1       user                 4.0.0        
+    ENCODING_CODE11              1       user                 4.0.0        
+    ENCODING_CODE128             3       user                 4.0.0        
+    ENCODING_CODE25              1       user                 4.0.0        
+    ENCODING_CODE39              5       user                 4.0.0        
+    ENCODING_CODEI25             7       user                 4.0.0        
+    ENCODING_EAN128              3       user                 4.0.0        
+    ENCODING_EAN13               1       user                 4.0.0        
+    ENCODING_EAN8                1       user                 4.0.0        
+    ENCODING_TEXT                3       user                 4.0.0        
+    ENCODING_UPCA                1       user                 4.0.0        
+    ENCODING_UPCE                1       user                 4.0.0        
+    ERR_DEPRECATED                       user                 4.0.0        
+    FALSE                        15      Core     4.0.0       4.0.0        
+    FF_AHRON                     2       user                 4.0.0        
+    FF_ARIAL                     455     user                 4.0.0        
+    FF_BIG5                      2       user                 4.0.0        
+    FF_CALCULATOR                1       user                 4.0.0        
+    FF_CHINESE                   1       user                 4.0.0        
+    FF_COMIC                     7       user                 4.0.0        
+    FF_COMPUTER                  1       user                 4.0.0        
+    FF_COURIER                   12      user                 4.0.0        
+    FF_DAVID                     2       user                 4.0.0        
+    FF_DEFAULT                   7       user                 4.0.0        
+    FF_DIGITAL                   1       user                 4.0.0        
+    FF_DV_SANSSERIF              5       user                 4.0.0        
+    FF_DV_SANSSERIFCOND          4       user                 4.0.0        
+    FF_DV_SANSSERIFMONO          4       user                 4.0.0        
+    FF_DV_SERIF                  4       user                 4.0.0        
+    FF_DV_SERIFCOND              4       user                 4.0.0        
+    FF_FONT0                     36      user                 4.0.0        
+    FF_FONT1                     417     user                 4.0.0        
+    FF_FONT2                     59      user                 4.0.0        
+    FF_GEORGIA                   4       user                 4.0.0        
+    FF_GOTHIC                    2       user                 4.0.0        
+    FF_MINCHO                    3       user                 4.0.0        
+    FF_MIRIAM                    2       user                 4.0.0        
+    FF_PGOTHIC                   3       user                 4.0.0        
+    FF_PMINCHO                   2       user                 4.0.0        
+    FF_SIMSUN                    2       user                 4.0.0        
+    FF_TIMES                     26      user                 4.0.0        
+    FF_TREBUCHE                  4       user                 4.0.0        
+    FF_USERFONT                  1       user                 4.0.0        
+    FF_USERFONT1                 2       user                 4.0.0        
+    FF_USERFONT2                 2       user                 4.0.0        
+    FF_USERFONT3                 2       user                 4.0.0        
+    FF_VERA                      4       user                 4.0.0        
+    FF_VERAMONO                  4       user                 4.0.0        
+    FF_VERASERIF                 4       user                 4.0.0        
+    FF_VERDANA                   100     user                 4.0.0        
+    FILE_IGNORE_NEW_LINES        10      standard 4.0.0       4.0.0        
+    FILE_SKIP_EMPTY_LINES        10      standard 4.0.0       4.0.0        
+    FLAGSIZE1                    3       user                 4.0.0        
+    FLAGSIZE2                    4       user                 4.0.0        
+    FLAGSIZE3                    2       user                 4.0.0        
+    FLAGSIZE4                    3       user                 4.0.0        
+ C  FPDF_FONTPATH                1       user                 4.0.0        
+    FPDF_VERSION                 1       user                 4.0.0        
+    FPDI_VERSION                         user                 4.0.0        
+    FS_BOLD                      785     user                 4.0.0        
+    FS_BOLDIT                            user                 4.0.0        
+    FS_BOLDITALIC                36      user                 4.0.0        
+    FS_ITALIC                    69      user                 4.0.0        
+    FS_NORMAL                    338     user                 4.0.0        
+    GANTT_3DPLANE                        user                 4.0.0        
+    GANTT_DIAGCROSS                      user                 4.0.0        
+    GANTT_EVEN                   2       user                 4.0.0        
+    GANTT_FROMTOP                2       user                 4.0.0        
+    GANTT_HDAY                   39      user                 4.0.0        
+    GANTT_HGRID1                         user                 4.0.0        
+    GANTT_HGRID2                         user                 4.0.0        
+    GANTT_HHOUR                  4       user                 4.0.0        
+    GANTT_HLINE                          user                 4.0.0        
+    GANTT_HMIN                   2       user                 4.0.0        
+    GANTT_HMONTH                 40      user                 4.0.0        
+    GANTT_HVCROSS                        user                 4.0.0        
+    GANTT_HWEEK                  38      user                 4.0.0        
+    GANTT_HYEAR                  15      user                 4.0.0        
+    GANTT_LDIAG                          user                 4.0.0        
+    GANTT_RDIAG                  2       user                 4.0.0        
+    GANTT_SOLID                  8       user                 4.0.0        
+    GANTT_VLINE                          user                 4.0.0        
+    GICON_CALC                           user                 4.0.0        
+    GICON_ENDCONS                        user                 4.0.0        
+    GICON_FOLDER                 1       user                 4.0.0        
+    GICON_FOLDEROPEN             1       user                 4.0.0        
+    GICON_LOCK                           user                 4.0.0        
+    GICON_MAGNIFIER                      user                 4.0.0        
+    GICON_MAIL                           user                 4.0.0        
+    GICON_STARTCONS                      user                 4.0.0        
+    GICON_STOP                           user                 4.0.0        
+    GICON_TEXT                           user                 4.0.0        
+    GICON_TEXTIMPORTANT          1       user                 4.0.0        
+    GICON_WARNINGRED                     user                 4.0.0        
+    GICON_WARNINGYELLOW                  user                 4.0.0        
+    GOTHIC_TTF_FONT              1       user                 4.0.0        
+    GRAD_CENTER                  2       user                 4.0.0        
+    GRAD_DIAGONAL                1       user                 4.0.0        
+    GRAD_HOR                     24      user                 4.0.0        
+    GRAD_LEFT_REFLECTION         4       user                 4.0.0        
+    GRAD_MIDHOR                  3       user                 4.0.0        
+    GRAD_MIDVER                  5       user                 4.0.0        
+    GRAD_RAISED_PANEL            2       user                 4.0.0        
+    GRAD_RIGHT_REFLECTION        1       user                 4.0.0        
+    GRAD_VER                     2       user                 4.0.0        
+    GRAD_VERT                    6       user                 4.0.0        
+    GRAD_WIDE_MIDHOR             2       user                 4.0.0        
+    GRAD_WIDE_MIDVER             2       user                 4.0.0        
+    GREEK_FROM_WINDOWS           1       user                 4.0.0        
+    HORIZONTAL                   40      user                 4.0.0        
+    HORIZ_EDGE                   7       user                 4.0.0        
+    HOURADJ_1                    5       user                 4.0.0        
+    HOURADJ_12                   2       user                 4.0.0        
+    HOURADJ_2                            user                 4.0.0        
+    HOURADJ_3                            user                 4.0.0        
+    HOURADJ_4                            user                 4.0.0        
+    HOURADJ_6                    2       user                 4.0.0        
+    HOURSTYLE_CUSTOM             4       user                 4.0.0        
+    HOURSTYLE_H24                3       user                 4.0.0        
+    HOURSTYLE_HAMPM              2       user                 4.0.0        
+    HOURSTYLE_HM24               4       user                 4.0.0        
+    HOURSTYLE_HMAMPM             2       user                 4.0.0        
+    HTML_ENTITIES                1       standard 4.0.0       4.0.0        
+    IMG_ARC_EDGED                1       gd       4.0.0       4.0.0        
+    IMG_ARC_NOFILL               1       gd       4.0.0       4.0.0        
+    IMG_ARC_PIE                  1       gd       4.0.0       4.0.0        
+    IMG_COLOR_STYLED             2       gd       4.0.0       4.0.0        
+    IMG_COLOR_TRANSPARENT        2       gd       4.0.0       4.0.0        
+    IMG_GIF                      4       gd       4.0.0       4.0.0        
+    IMG_JPG                      4       gd       4.0.0       4.0.0        
+    IMG_PNG                      5       gd       4.0.0       4.0.0        
+    IMG_WBMP                     4       gd       4.0.0       4.0.0        
+    IMG_XPM                      4       gd       4.0.0       4.0.0        
+    INLINE_NO                            user                 4.0.0        
+    INLINE_YES                           user                 4.0.0        
+    INSTALL_PHP_ERR_HANDLER      1       user                 4.0.0        
+    INTERVAL                     4       user                 4.0.0        
+    JPG_VERSION                          user                 4.0.0        
+    KEYENCODING_ANTICLOCKWISE    2       user                 4.0.0        
+    KEYENCODING_CLOCKWISE        4       user                 4.0.0        
+    LABELBKG_NONE                1       user                 4.0.0        
+    LABELBKG_XAXIS               1       user                 4.0.0        
+    LABELBKG_XAXISFULL           1       user                 4.0.0        
+    LABELBKG_XY                  1       user                 4.0.0        
+    LABELBKG_XYFULL              1       user                 4.0.0        
+    LABELBKG_YAXIS               1       user                 4.0.0        
+    LABELBKG_YAXISFULL           1       user                 4.0.0        
+ C  LANGUAGE_CHARSET             3       user                 4.0.0        
+    LANGUAGE_CYRILLIC            1       user                 4.0.0        
+    LANGUAGE_GREEK               1       user                 4.0.0        
+    LBLALIGN_CENTER              2       user                 4.0.0        
+    LBLALIGN_TOP                 1       user                 4.0.0        
+    LBLPOSITION_CENTER           5       user                 4.0.0        
+    LBLPOSITION_EDGE             2       user                 4.0.0        
+    LC_ALL                       1       standard 4.0.0       4.0.0        
+    LC_TIME                      5       standard 4.0.0       4.0.0        
+    LEDC_BLUE                    2       user                 4.0.0        
+    LEDC_CHOCOLATE               2       user                 4.0.0        
+    LEDC_FORESTGREEN             2       user                 4.0.0        
+    LEDC_GOLDENROD               2       user                 4.0.0        
+    LEDC_GRAY                    2       user                 4.0.0        
+    LEDC_GREEN                   2       user                 4.0.0        
+    LEDC_INVERTGRAY              2       user                 4.0.0        
+    LEDC_KHAKI                   2       user                 4.0.0        
+    LEDC_LIMEGREEN               2       user                 4.0.0        
+    LEDC_NAVY                    2       user                 4.0.0        
+    LEDC_OLIVE                   2       user                 4.0.0        
+    LEDC_PERU                    2       user                 4.0.0        
+    LEDC_RED                     7       user                 4.0.0        
+    LEDC_STEELBLUE               2       user                 4.0.0        
+    LEDC_TEAL                    2       user                 4.0.0        
+    LEDC_YELLOW                  2       user                 4.0.0        
+    LEGEND_HOR                   15      user                 4.0.0        
+    LEGEND_VERT                  3       user                 4.0.0        
+    LINESTYLE_DASHED             1       user                 4.0.0        
+    LINESTYLE_DOTTED             1       user                 4.0.0        
+    LINESTYLE_LONGDASH           1       user                 4.0.0        
+    LINESTYLE_SOLID              3       user                 4.0.0        
+    LOCALE_EN                            user                 4.0.0        
+    LOCALE_SV                            user                 4.0.0        
+    LOCK_EX                      2       standard 4.0.0       4.0.0        
+    LOCK_SH                      1       standard 4.0.0       4.0.0        
+    LOCK_UN                      5       standard 4.0.0       4.0.0        
+    LOGLABELS_MAGNITUDE          2       user                 4.0.0        
+    LOGLABELS_PLAIN              1       user                 4.0.0        
+    LP_AREA_BORDER               1       user                 4.0.0        
+    LP_AREA_FILLED               2       user                 4.0.0        
+    LP_AREA_NOT_FILLED           1       user                 4.0.0        
+    LP_AREA_NO_BORDER                    user                 4.0.0        
+    MARK_CIRCLE                  6       user                 4.0.0        
+    MARK_CROSS                   1       user                 4.0.0        
+    MARK_DIAMOND                 9       user                 4.0.0        
+    MARK_DTRIANGLE               1       user                 4.0.0        
+    MARK_FILLEDCIRCLE            41      user                 4.0.0        
+    MARK_FLAG1                   5       user                 4.0.0        
+    MARK_FLAG2                   1       user                 4.0.0        
+    MARK_FLAG3                   1       user                 4.0.0        
+    MARK_FLAG4                   2       user                 4.0.0        
+    MARK_FLASH                   1       user                 4.0.0        
+    MARK_IMG                     12      user                 4.0.0        
+    MARK_IMG_BALL                3       user                 4.0.0        
+    MARK_IMG_BEVEL               2       user                 4.0.0        
+    MARK_IMG_DIAMOND             5       user                 4.0.0        
+    MARK_IMG_LBALL               3       user                 4.0.0        
+    MARK_IMG_LPUSHPIN            2       user                 4.0.0        
+    MARK_IMG_MBALL               4       user                 4.0.0        
+    MARK_IMG_PUSHPIN             5       user                 4.0.0        
+    MARK_IMG_SBALL               4       user                 4.0.0        
+    MARK_IMG_SPUSHPIN            2       user                 4.0.0        
+    MARK_IMG_SQUARE              2       user                 4.0.0        
+    MARK_IMG_STAR                2       user                 4.0.0        
+    MARK_LEFTTRIANGLE            4       user                 4.0.0        
+    MARK_RIGHTTRIANGLE           4       user                 4.0.0        
+    MARK_SQUARE                  15      user                 4.0.0        
+    MARK_STAR                    5       user                 4.0.0        
+    MARK_UTRIANGLE               6       user                 4.0.0        
+    MARK_X                       2       user                 4.0.0        
+    MAX_GANTTIMG_SIZE_H          1       user                 4.0.0        
+    MAX_GANTTIMG_SIZE_W          1       user                 4.0.0        
+ C  MBTTF_DIR                    1       user                 4.0.0        
+    MINADJ_1                     2       user                 4.0.0        
+    MINADJ_10                    5       user                 4.0.0        
+    MINADJ_15                    5       user                 4.0.0        
+    MINADJ_30                    3       user                 4.0.0        
+    MINADJ_5                     5       user                 4.0.0        
+    MINCHO_TTF_FONT              1       user                 4.0.0        
+    MINUTESTYLE_CUSTOM           1       user                 4.0.0        
+    MINUTESTYLE_MM               4       user                 4.0.0        
+    MIN_PHPVERSION               2       user                 4.0.0        
+    MONTHADJ_1                   1       user                 4.0.0        
+    MONTHADJ_6                           user                 4.0.0        
+    MONTHSTYLE_FIRSTLETTER       1       user                 4.0.0        
+    MONTHSTYLE_LONGNAME          1       user                 4.0.0        
+    MONTHSTYLE_LONGNAMEYEAR2     1       user                 4.0.0        
+    MONTHSTYLE_LONGNAMEYEAR4     1       user                 4.0.0        
+    MONTHSTYLE_SHORTNAME         1       user                 4.0.0        
+    MONTHSTYLE_SHORTNAMEYEAR2    10      user                 4.0.0        
+    MONTHSTYLE_SHORTNAMEYEAR4    17      user                 4.0.0        
+    M_PI                         321     standard 4.0.0       4.0.0        
+    NAN                          1       standard 4.0.0       4.0.0        
+    NDATAPOINTS                  14      user                 4.0.0        
+    NEEDLE_ARROW_LL              2       user                 4.0.0        
+    NEEDLE_ARROW_LM              2       user                 4.0.0        
+    NEEDLE_ARROW_LS              2       user                 4.0.0        
+    NEEDLE_ARROW_ML              2       user                 4.0.0        
+    NEEDLE_ARROW_MM              2       user                 4.0.0        
+    NEEDLE_ARROW_MS              2       user                 4.0.0        
+    NEEDLE_ARROW_SL              2       user                 4.0.0        
+    NEEDLE_ARROW_SM              2       user                 4.0.0        
+    NEEDLE_ARROW_SS              2       user                 4.0.0        
+    NEEDLE_STYLE_ENDARROW        3       user                 4.0.0        
+    NEEDLE_STYLE_LARGE_TRIANGLE  1       user                 4.0.0        
+    NEEDLE_STYLE_MEDIUM_TRIANGLE 6       user                 4.0.0        
+    NEEDLE_STYLE_SIMPLE          1       user                 4.0.0        
+    NEEDLE_STYLE_SMALL_TRIANGLE  5       user                 4.0.0        
+    NEEDLE_STYLE_STRAIGHT        1       user                 4.0.0        
+    NULL                         61      Core     4.0.0       4.0.0        
+    ODO_FULL                     4       user                 4.0.0        
+    ODO_HALF                     4       user                 4.0.0        
+ C  ORD_exclmark                 2       user                 4.0.0        
+ C  ORD_tilde                    1       user                 4.0.0        
+ C  ORD_u                        1       user                 4.0.0        
+ C  ORD_z                        1       user                 4.0.0        
+    PATHINFO_EXTENSION           1       standard 4.0.0       4.0.0        
+    PATTERN_CROSS1               2       user                 4.0.0        
+    PATTERN_CROSS2               1       user                 4.0.0        
+    PATTERN_CROSS3               1       user                 4.0.0        
+    PATTERN_CROSS4               1       user                 4.0.0        
+    PATTERN_DIAG1                1       user                 4.0.0        
+    PATTERN_DIAG2                1       user                 4.0.0        
+    PATTERN_DIAG3                1       user                 4.0.0        
+    PATTERN_DIAG4                1       user                 4.0.0        
+    PATTERN_STRIPE1              1       user                 4.0.0        
+    PATTERN_STRIPE2              1       user                 4.0.0        
+ C  PDF_TYPE_ARRAY               7       user                 4.0.0        
+ C  PDF_TYPE_BOOLEAN             2       user                 4.0.0        
+ C  PDF_TYPE_DICTIONARY          2       user                 4.0.0        
+ C  PDF_TYPE_HEX                 4       user                 4.0.0        
+ C  PDF_TYPE_NULL                3       user                 4.0.0        
+ C  PDF_TYPE_NUMERIC             2       user                 4.0.0        
+ C  PDF_TYPE_OBJDEC              3       user                 4.0.0        
+ C  PDF_TYPE_OBJECT              5       user                 4.0.0        
+ C  PDF_TYPE_OBJREF              8       user                 4.0.0        
+ C  PDF_TYPE_REAL                2       user                 4.0.0        
+ C  PDF_TYPE_STREAM              7       user                 4.0.0        
+ C  PDF_TYPE_STRING              4       user                 4.0.0        
+ C  PDF_TYPE_TOKEN               5       user                 4.0.0        
+    PGOTHIC_TTF_FONT             1       user                 4.0.0        
+    PHP_OS                       3       Core     4.0.0       4.0.0        
+    PHP_SAPI                     5       Core     4.2.0       4.2.0        
+    PHP_VERSION                  2       Core     4.0.0       4.0.0        
+    PIE_VALUE_ABS                2       user                 4.0.0        
+    PIE_VALUE_ADJPER                     user                 4.0.0        
+    PIE_VALUE_ADJPERCENTAGE              user                 4.0.0        
+    PIE_VALUE_PER                9       user                 4.0.0        
+    PIE_VALUE_PERCENTAGE                 user                 4.0.0        
+    PMINCHO_TTF_FONT             1       user                 4.0.0        
+    POLAR_180                    11      user                 4.0.0        
+    POLAR_360                    8       user                 4.0.0        
+    PREG_OFFSET_CAPTURE          1       pcre     4.3.0       4.3.0        
+    PREG_SPLIT_DELIM_CAPTURE     2       pcre     4.0.5       4.0.5        
+    PREG_SPLIT_NO_EMPTY          1       pcre     4.0.0       4.0.0        
+    RANGE_DISCRETE               1       user                 4.0.0        
+    RANGE_OVERLAPPING            2       user                 4.0.0        
+    READ_CACHE                   2       user                 4.0.0        
+    SAMPLERATE                   16      user                 4.0.0        
+    SECADJ_1                     2       user                 4.0.0        
+    SECADJ_10                    1       user                 4.0.0        
+    SECADJ_15                    1       user                 4.0.0        
+    SECADJ_30                            user                 4.0.0        
+    SECADJ_5                     2       user                 4.0.0        
+    SECPERDAY                    29      user                 4.0.0        
+    SECPERHOUR                   22      user                 4.0.0        
+    SECPERMIN                    10      user                 4.0.0        
+    SECPERYEAR                   7       user                 4.0.0        
+    SEEK_CUR                     1       standard 4.0.0       4.0.0        
+    SEEK_END                     1       standard 4.0.0       4.0.0        
+    SEEK_SET                     6       standard 4.0.0       4.0.0        
+    SIDE_BOTTOM                  10      user                 4.0.0        
+    SIDE_DOWN                    30      user                 4.0.0        
+    SIDE_LEFT                    40      user                 4.0.0        
+    SIDE_RIGHT                   17      user                 4.0.0        
+    SIDE_TOP                             user                 4.0.0        
+    SIDE_UP                      5       user                 4.0.0        
+    SKEW3D_DOWN                  5       user                 4.0.0        
+    SKEW3D_LEFT                  2       user                 4.0.0        
+    SKEW3D_RIGHT                 3       user                 4.0.0        
+    SKEW3D_UP                    4       user                 4.0.0        
+    SORT_NUMERIC                 2       standard 4.0.0       4.0.0        
+    STDERR                       10      Core     4.3.0       4.3.0        
+    SUPERSAMPLING                        user                 4.0.0        
+    SUPERSAMPLING_SCALE          14      user                 4.0.0        
+    TABTITLE_WIDTHFIT            2       user                 4.0.0        
+    TABTITLE_WIDTHFULL           2       user                 4.0.0        
+    TGRID_DOUBLE                 9       user                 4.0.0        
+    TGRID_DOUBLE2                13      user                 4.0.0        
+    TGRID_SINGLE                 21      user                 4.0.0        
+    TICKD_DENSE                  5       user                 4.0.0        
+    TICKD_NORMAL                 8       user                 4.0.0        
+    TICKD_SPARSE                 3       user                 4.0.0        
+    TICKD_VERYSPARSE             3       user                 4.0.0        
+    TIMG_HEIGHT                  4       user                 4.0.0        
+    TIMG_WIDTH                   3       user                 4.0.0        
+    TITLEBKG_FILLSTYLE_HSTRIPED  5       user                 4.0.0        
+    TITLEBKG_FILLSTYLE_SOLID     2       user                 4.0.0        
+    TITLEBKG_FILLSTYLE_VSTRIPED  1       user                 4.0.0        
+    TITLEBKG_FRAME_BEVEL         7       user                 4.0.0        
+    TITLEBKG_FRAME_BOTTOM        1       user                 4.0.0        
+    TITLEBKG_FRAME_FULL          2       user                 4.0.0        
+    TITLEBKG_FRAME_NONE          1       user                 4.0.0        
+    TITLEBKG_STYLE1              5       user                 4.0.0        
+    TITLEBKG_STYLE2              4       user                 4.0.0        
+    TITLEBKG_STYLE3              1       user                 4.0.0        
+    TRUE                         3       Core     4.0.0       4.0.0        
+ C  TTF_DIR                      2       user                 4.0.0        
+    TTF_FONTFILE                 1       user                 4.0.0        
+    TTF_TEXT                     1       user                 4.0.0        
+    USE_CACHE                    3       user                 4.0.0        
+ C  USE_IMAGE_ERROR_HANDLER      1       user                 4.0.0        
+    USE_LIBRARY_IMAGETTFBBOX     1       user                 4.0.0        
+    USE_NC                       2       user                 4.0.0        
+    USE_TC                       1       user                 4.0.0        
+    VERTICAL                     8       user                 4.0.0        
+    VERT_EDGE                    6       user                 4.0.0        
+    WEEKSTYLE_FIRSTDAY           25      user                 4.0.0        
+    WEEKSTYLE_FIRSTDAY2          2       user                 4.0.0        
+    WEEKSTYLE_FIRSTDAY2WNBR      5       user                 4.0.0        
+    WEEKSTYLE_FIRSTDAYWNBR       9       user                 4.0.0        
+    WEEKSTYLE_WNBR               3       user                 4.0.0        
+    WINDROSE_TYPE16              10      user                 4.0.0        
+    WINDROSE_TYPE4               3       user                 4.0.0        
+    WINDROSE_TYPE8               7       user                 4.0.0        
+    WINDROSE_TYPEFREE            7       user                 4.0.0        
+    WIND_HEIGHT                  5       user                 4.0.0        
+    WIND_WIDTH                   5       user                 4.0.0        
+    WORLDMAP                     2       user                 4.0.0        
+    YEARADJ_1                    3       user                 4.0.0        
+    YEARADJ_2                            user                 4.0.0        
+    YEARADJ_5                            user                 4.0.0        
+    _CSIM_DISPLAY                3       user                 4.0.0        
+    _CSIM_SPECIALFILE            9       user                 4.0.0        
+    _DEFAULT_LPM_SIZE            2       user                 4.0.0        
+    _FIRST_FONT                  1       user                 4.0.0        
+    _FORCE_IMGDIR                1       user                 4.0.0        
+    _FORCE_IMGTOFILE             1       user                 4.0.0        
+    _IMG_AUTO                            user                 4.0.0        
+    _IMG_HANDLER                 11      user                 4.0.0        
+    _JPG_DEBUG                   4       user                 4.0.0        
+    _LAST_FONT                   1       user                 4.0.0        
+    __CLASS__                    1       Core     4.3.0       4.3.0        
+    __DEBUG                      4       user                 4.0.0        
+    __FILE__                     18      Core     4.0.0       4.0.0        
+    __LR_EPSILON                 1       user                 4.0.0        
+    __NAMESPACE__                1       Core     5.3.0       5.3.0        
+    false                        813     Core     4.0.0       4.0.0        
+    null                         454     Core     4.0.0       4.0.0        
+    true                         585     Core     4.0.0       4.0.0        
+    Total [498]                                               5.3.0        
+
+Conditions Analysis
+
+    Condition                              Matches REF      EXT min/Max PHP min/Max  
+    class_exists(BarPlot)                  2       user                 4.0.0        
+    class_exists(FilterASCII85)            1       user                 4.0.0        
+    class_exists(FilterLZW)                1       user                 4.0.0        
+    class_exists(FlagImages)               2       user                 4.0.0        
+    class_exists(GTextTable)               1       user                 4.0.0        
+    class_exists(IconPlot)                 5       user                 4.0.0        
+    class_exists(ImgTrans)                 5       user                 4.0.0        
+    class_exists(PiePlot3D)                1       user                 4.0.0        
+    class_exists(PlotBand)                 3       user                 4.0.0        
+    class_exists(PlotLine)                 3       user                 4.0.0        
+    class_exists(TCPDF)                    1       user                 4.0.0        
+    class_exists(Text)                     2       user                 4.0.0        
+    class_exists(pdf_context)              1       user                 4.0.0        
+    class_exists(pdf_parser)               1       user                 4.0.0        
+    defined(CACHE_DIR)                     2       user                 4.0.0        
+    defined(DEFAULT_ERR_LOCALE)            1       user                 4.0.0        
+    defined(FPDF_FONTPATH)                 1       user                 4.0.0        
+    defined(LANGUAGE_CHARSET)              2       user                 4.0.0        
+    defined(MBTTF_DIR)                     1       user                 4.0.0        
+    defined(ORD_exclmark)                  1       user                 4.0.0        
+    defined(ORD_tilde)                     1       user                 4.0.0        
+    defined(ORD_u)                         1       user                 4.0.0        
+    defined(ORD_z)                         1       user                 4.0.0        
+    defined(PDF_TYPE_ARRAY)                1       user                 4.0.0        
+    defined(PDF_TYPE_BOOLEAN)              1       user                 4.0.0        
+    defined(PDF_TYPE_DICTIONARY)           1       user                 4.0.0        
+    defined(PDF_TYPE_HEX)                  1       user                 4.0.0        
+    defined(PDF_TYPE_NULL)                 1       user                 4.0.0        
+    defined(PDF_TYPE_NUMERIC)              1       user                 4.0.0        
+    defined(PDF_TYPE_OBJDEC)               1       user                 4.0.0        
+    defined(PDF_TYPE_OBJECT)               1       user                 4.0.0        
+    defined(PDF_TYPE_OBJREF)               1       user                 4.0.0        
+    defined(PDF_TYPE_REAL)                 1       user                 4.0.0        
+    defined(PDF_TYPE_STREAM)               1       user                 4.0.0        
+    defined(PDF_TYPE_STRING)               1       user                 4.0.0        
+    defined(PDF_TYPE_TOKEN)                1       user                 4.0.0        
+    defined(TTF_DIR)                       1       user                 4.0.0        
+    defined(USE_IMAGE_ERROR_HANDLER)       1       user                 4.0.0        
+    function_exists(array_fill)            1       standard 4.2.0       4.2.0        
+    function_exists(bcpow)                 2       bcmath   4.0.0       4.0.0        
+    function_exists(gzcompress)            2       zlib     4.0.1       4.0.1        
+    function_exists(gzuncompress)          2       zlib     4.0.1       4.0.1        
+    function_exists(iconv)                 1       iconv    4.0.5       4.0.5        
+    function_exists(imageantialias)        1       gd       4.3.2       4.3.2        
+    function_exists(imagecreatefromgif)    1       gd       4.0.0       4.0.0        
+    function_exists(imagecreatefromstring) 2       gd       4.0.4       4.0.4        
+    function_exists(imagepng)              1       gd       4.0.0       4.0.0        
+    function_exists(imagettfbbox)          1       gd       4.0.0       4.0.0        
+    function_exists(imagetypes)            2       gd       4.0.2       4.0.2        
+    function_exists(mb_convert_encoding)   1       mbstring 4.0.6       4.0.6        
+    function_exists(mb_strlen)             1       mbstring 4.0.6       4.0.6        
+    Total [51]                                                          4.3.2        
+
+Requires PHP 5.4.0 (min), PHP 5.6.32 (max), PHP 5.4.0 (all)
