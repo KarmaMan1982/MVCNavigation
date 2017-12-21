@@ -1,19 +1,5 @@
 <?php if (isset($_REQUEST['btLanguageCC'])) { header("Refresh:0"); } ?>
 <?php
-#var_dump($_SERVER["SCRIPT_FILENAME"]);
-$scriptFeld = explode("/",$_SERVER["SCRIPT_FILENAME"]);
-#var_dump($scriptFeld);
-$scriptFeld[sizeof($scriptFeld)-1]='full_php_browscap.ini';
-$browscapFile = '';
-foreach($scriptFeld AS $scriptElement){
-    if($scriptElement != ''){
-        $browscapFile .= "/".$scriptElement;
-    }
-}
-#var_dump($browscapFile);
-if(file_exists($browscapFile)){
-    ini_set('browscap',$browscapFile);
-}
 if(!isset($_SESSION['modus'])){
     session_start();
     $_SESSION['modus']='modern';
